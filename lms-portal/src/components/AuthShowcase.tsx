@@ -8,7 +8,7 @@ const TESTIMONIALS = [
     avatar: "/alumni/alumni_1.jpg",
     name: "Ahmad Fauzi",
     role: "Fullstack Engineer di Bukalapak",
-    quote: "Review submission kode dari expert reviewer beneran detail per baris. Standar clean architecture terpakai langsung.",
+    quote: "Review submission kode dari praktisi beneran detail per baris. Standar clean architecture terpakai langsung di kantor.",
   },
   {
     avatar: "/alumni/alumni_2.jpg",
@@ -19,8 +19,8 @@ const TESTIMONIALS = [
   {
     avatar: "/alumni/alumni_3.jpg",
     name: "Budi Santoso",
-    role: "AI & ML Specialist di Telkom",
-    quote: "Sertifikasi dan portofolio proyek di Anvieo diakui langsung saat interview. Transisi karir sangat mulus.",
+    role: "AI Specialist di Telkom",
+    quote: "Sertifikasi dan portofolio proyek di Anvieo diakui langsung saat interview teknis. Transisi karir sangat mulus.",
   },
 ];
 
@@ -39,75 +39,63 @@ export default function AuthShowcase() {
   return (
     <div className="portal-showcase-clean">
       <div>
-        {/* Line Model Eyebrow (Tanpa Badge / Menggunakan Model Garis AUI) */}
+        {/* Line Model Eyebrow (Model Garis AUI) */}
         <div className="portal-showcase-line-label">
           <span className="portal-gold-line" aria-hidden="true" />
           <span>PORTAL AKADEMI TERAKREDITASI</span>
         </div>
 
-        {/* Main Display Heading */}
+        {/* Main Display Heading (Fraunces Serif) */}
         <h1 className="portal-showcase-heading">
           Akselerasi Disiplin Berstandar Industri
         </h1>
 
         <p className="portal-showcase-subtext">
-          Portal terpadu untuk mengakses silabus mutakhir, ruang review kode 1-on-1 bersama praktisi terverifikasi, dan sertifikasi kompetensi berbobot internasional.
+          Portal terpadu untuk mengakses silabus mutakhir, evaluasi kode 1-on-1 bersama praktisi terverifikasi, dan sertifikasi kompetensi berbobot internasional.
         </p>
 
-        {/* Feature List */}
+        {/* High-Impact Feature Highlights */}
         <div className="portal-feature-list">
           <div className="portal-feature-item">
             <div className="portal-feature-icon-box">
-              <FlatIcon type="brain" size={16} />
+              <FlatIcon type="brain" size={17} />
             </div>
             <div>
-              <div className="portal-feature-title">Socratic AI Copilot</div>
+              <div className="portal-feature-title">Socratic AI &amp; Interactive Guidance</div>
               <div className="portal-feature-desc">
-                Petunjuk logika dan bedah error interaktif 24/7 tanpa jalan pintas instan.
+                Petunjuk logika komputasi dan bedah error interaktif 24/7 tanpa jalan pintas instan.
               </div>
             </div>
           </div>
 
           <div className="portal-feature-item">
             <div className="portal-feature-icon-box">
-              <FlatIcon type="terminal" size={16} />
+              <FlatIcon type="terminal" size={17} />
             </div>
             <div>
-              <div className="portal-feature-title">Evaluasi Kode Human-Reviewer</div>
+              <div className="portal-feature-title">Evaluasi Kode Human-Reviewer 1x24 Jam</div>
               <div className="portal-feature-desc">
-                Setiap baris kode tugas ditelaah manual oleh praktisi senior sesuai rubrik industri.
-              </div>
-            </div>
-          </div>
-
-          <div className="portal-feature-item">
-            <div className="portal-feature-icon-box">
-              <FlatIcon type="award" size={16} />
-            </div>
-            <div>
-              <div className="portal-feature-title">Sertifikat &amp; Jalur Rekrutmen</div>
-              <div className="portal-feature-desc">
-                Akses langsung ke jaringan 1,200+ Hiring Partner setelah kelulusan submission.
+                Setiap baris kode tugas akhir ditelaah manual oleh praktisi senior sesuai rubrik industri.
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Floating Rotating Testimonial Quote */}
-      <div>
+      {/* Trust & Social Proof Strip */}
+      <div className="portal-trust-card">
         <div className="portal-testimonial-clean">
           <img
             src={currentTesti.avatar}
             alt={currentTesti.name}
             className="portal-testimonial-avatar"
           />
-          <div>
+          <div style={{ flex: 1, minWidth: 0 }}>
             <p className="portal-testimonial-quote">
               &ldquo;{currentTesti.quote}&rdquo;
             </p>
             <div className="portal-testimonial-author">
-              {currentTesti.name} · <span style={{ opacity: 0.8, fontWeight: 500, color: "var(--bx-muted)" }}>{currentTesti.role}</span>
+              <strong>{currentTesti.name}</strong> · <span>{currentTesti.role}</span>
             </div>
           </div>
         </div>
@@ -116,11 +104,11 @@ export default function AuthShowcase() {
         <div className="portal-stats-row">
           <div className="portal-stat-col">
             <span className="portal-stat-num">128,400+</span>
-            <span className="portal-stat-label">Siswa Terdaftar</span>
+            <span className="portal-stat-label">Siswa Aktif</span>
           </div>
           <div className="portal-stat-col">
             <span className="portal-stat-num">98.4%</span>
-            <span className="portal-stat-label">Tingkat Lulus Uji</span>
+            <span className="portal-stat-label">Tingkat Lulus</span>
           </div>
           <div className="portal-stat-col">
             <span className="portal-stat-num">4.9 / 5.0</span>

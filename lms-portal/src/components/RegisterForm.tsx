@@ -84,28 +84,23 @@ export default function RegisterForm() {
     <>
       <div className="portal-card-wrap">
         {/* Navigation Tabs (Masuk vs Daftar) */}
-        <div className="portal-nav-tabs">
-          <Link href="/login" className="portal-nav-tab">
-            Masuk Portal
-          </Link>
-          <Link href="/register" className="portal-nav-tab active">
-            Daftar Akun Baru
-          </Link>
-        </div>
-
-        {/* 1-Click Fill Demo Button */}
-        <div className="portal-demo-autofill">
-          <span style={{ color: "var(--gold)", fontWeight: 700, display: "inline-flex", alignItems: "center", gap: "3px" }}>
-            <FlatIcon type="sparkle" size={12} color="var(--gold)" />
-            Coba Demo:
-          </span>
+        <div className="portal-nav-tabs" style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end" }}>
+          <div style={{ display: "flex", gap: "20px" }}>
+            <Link href="/login" className="portal-nav-tab">
+              Masuk Portal
+            </Link>
+            <Link href="/register" className="portal-nav-tab active">
+              Daftar Akun Baru
+            </Link>
+          </div>
           <button
             type="button"
             className="portal-demo-pill"
             onClick={fillSampleData}
             title="Isi formulir dengan data sampel peserta"
+            style={{ marginBottom: "6px" }}
           >
-            📋 Isi Data Sampel
+            📋 Isi Demo
           </button>
         </div>
 

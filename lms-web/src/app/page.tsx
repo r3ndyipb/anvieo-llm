@@ -6,7 +6,6 @@ import dynamic from "next/dynamic";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import FlatIcon from "@/components/FlatIcon";
-import TypewriterHeroText from "@/components/TypewriterHeroText";
 
 const CobeGlobe = dynamic(() => import("@/components/CobeGlobe"), { ssr: false });
 
@@ -1489,7 +1488,7 @@ export default function HomePage() {
                 </div>
 
                 <h1 className="blackbox-hero-h1">
-                  Bangun keahlian masa depan, <TypewriterHeroText />
+                  Bangun keahlian masa depan, <span className="blackbox-hero-h1-blue">akselerasi karir impianmu.</span>
                 </h1>
 
                 <p className="blackbox-hero-desc">
