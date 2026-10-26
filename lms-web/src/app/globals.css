@@ -1489,16 +1489,20 @@ button {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  margin-top: 14px;
+  max-width: 980px;
+  margin: 24px auto 0;
+  justify-content: center;
 }
 
 .global-curriculum-card-compact {
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: var(--radius-sm);
-  padding: 20px 20px 16px;
+  padding: 22px 20px 18px;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
   transition: all var(--transition-fast);
   backdrop-filter: blur(8px);
 }
@@ -2531,19 +2535,23 @@ button {
 .alumni-gallery-bento-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+  gap: 3px;
   width: 100%;
-  margin-top: 8px;
+  margin-top: 16px;
+  background: var(--bx-grid);
+  border: 1px solid var(--bx-grid);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
 }
 
 /* Card base */
 .alumni-bento-card {
   background: var(--bx-surface);
-  border: 1px solid var(--bx-border);
-  border-radius: var(--radius-xs);
+  border: none;
+  border-radius: 0;
   overflow: hidden;
   cursor: pointer;
-  transition: border-color var(--transition-fast), background-color var(--transition-fast);
+  transition: all var(--transition-fast);
   box-shadow: none !important;
   display: flex;
   flex-direction: column;
@@ -2554,8 +2562,6 @@ button {
 
 .alumni-bento-card:hover,
 .alumni-bento-card:focus-visible {
-  border-color: var(--bx-blue);
-  background: var(--bx-surface-card);
   box-shadow: none !important;
 }
 

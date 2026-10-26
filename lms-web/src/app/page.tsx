@@ -1607,11 +1607,11 @@ export default function HomePage() {
               </dl>
             </div>
 
-            <div className="global-curriculum-header">
-              <h2 className="blackbox-sec-title">
+            <div className="global-curriculum-header" style={{ textAlign: "center", maxWidth: "860px", margin: "0 auto 24px" }}>
+              <h2 className="blackbox-sec-title" style={{ textAlign: "center" }}>
                 Kurikulum Berstandar Global Diselaraskan dengan Industri Dunia.
               </h2>
-              <p className="blackbox-sec-sub">
+              <p className="blackbox-sec-sub" style={{ textAlign: "center", margin: "0 auto" }}>
                 Setiap modul dirancang sistematis mengacu pada standar kompetensi internasional, regulasi hukum terbaru, serta praktik rekayasa terbaik korporasi teknologi global.
               </p>
             </div>
@@ -1630,52 +1630,43 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* 3 Compact Feature Cards Below Globe (Learning Value Proposition) */}
-            <div className="curriculum-pillars-bottom-grid">
+            {/* 3 Compact Feature Cards Below Globe (Centered without icons) */}
+            <div className="curriculum-pillars-bottom-grid" style={{ maxWidth: "980px", margin: "24px auto 0", justifyContent: "center" }}>
               {/* Feature 1: Kurikulum Standar Global */}
-              <div className="global-curriculum-card-compact">
-                <div className="compact-card-header">
-                  <div className="compact-card-icon">
-                    <FlatIcon type="aigov" size={18} color="var(--gold)" />
-                  </div>
-                  <h3 className="compact-card-title">Kurikulum Standar Global</h3>
-                </div>
-                <p className="compact-card-desc">
+              <div className="global-curriculum-card-compact" style={{ textAlign: "center", alignItems: "center" }}>
+                <h3 className="compact-card-title" style={{ textAlign: "center", marginBottom: "8px" }}>
+                  Kurikulum Standar Global
+                </h3>
+                <p className="compact-card-desc" style={{ textAlign: "center", marginBottom: "14px" }}>
                   Kurikulum disusun bersama profesional dari industri.
                 </p>
-                <div className="compact-card-standards">
+                <div className="compact-card-standards" style={{ textAlign: "center", margin: "0 auto" }}>
                   KOLABORASI INDUSTRI · STANDAR GLOBAL
                 </div>
               </div>
 
               {/* Feature 2: Materi Relevan Terbaru */}
-              <div className="global-curriculum-card-compact">
-                <div className="compact-card-header">
-                  <div className="compact-card-icon">
-                    <FlatIcon type="backend" size={18} color="var(--gold)" />
-                  </div>
-                  <h3 className="compact-card-title">Materi Relevan Terbaru</h3>
-                </div>
-                <p className="compact-card-desc">
+              <div className="global-curriculum-card-compact" style={{ textAlign: "center", alignItems: "center" }}>
+                <h3 className="compact-card-title" style={{ textAlign: "center", marginBottom: "8px" }}>
+                  Materi Relevan Terbaru
+                </h3>
+                <p className="compact-card-desc" style={{ textAlign: "center", marginBottom: "14px" }}>
                   Materi kelas selalu up-to-date sesuai kebutuhan industri terkini.
                 </p>
-                <div className="compact-card-standards">
+                <div className="compact-card-standards" style={{ textAlign: "center", margin: "0 auto" }}>
                   PEMBAHARUAN BERKALA · TECH STACK TERBARU
                 </div>
               </div>
 
               {/* Feature 3: Fleksibel dan Mandiri */}
-              <div className="global-curriculum-card-compact">
-                <div className="compact-card-header">
-                  <div className="compact-card-icon">
-                    <FlatIcon type="cloud" size={18} color="var(--gold)" />
-                  </div>
-                  <h3 className="compact-card-title">Fleksibel dan Mandiri</h3>
-                </div>
-                <p className="compact-card-desc">
+              <div className="global-curriculum-card-compact" style={{ textAlign: "center", alignItems: "center" }}>
+                <h3 className="compact-card-title" style={{ textAlign: "center", marginBottom: "8px" }}>
+                  Fleksibel dan Mandiri
+                </h3>
+                <p className="compact-card-desc" style={{ textAlign: "center", marginBottom: "14px" }}>
                   Belajar kapan saja, di mana saja. Akses seumur hidup setelah lulus.
                 </p>
-                <div className="compact-card-standards">
+                <div className="compact-card-standards" style={{ textAlign: "center", margin: "0 auto" }}>
                   BELAJAR MANDIRI · LIFETIME ACCESS
                 </div>
               </div>
@@ -1896,78 +1887,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* ==================== 03 // KISAH SUKSES ALUMNI INSPIRATIF (CONTINUOUS MARQUEE SLIDER) ==================== */}
-        <section id="alumni" className="alumni-marquee-sec">
-          <BlackboxRails position="top" />
 
-          <div className="blackbox-frame">
-            <div className="blackbox-strip">
-              <span className="blackbox-strip-label">03 // KISAH SUKSES ALUMNI INSPIRATIF</span>
-              <dl className="blackbox-strip-facts">
-                <div><dt>TOTAL ALUMNI:</dt><dd>250K+ PROFESIONAL</dd></div>
-                <div><dt>PENYERAPAN KERJA:</dt><dd>94.2% KORPORASI TIER-1</dd></div>
-                <div><dt>KENAIKAN KARIR:</dt><dd>RATA-RATA 2.8X</dd></div>
-              </dl>
-            </div>
-
-            <h2 className="blackbox-sec-title">
-              Kisah Nyata Alumni: Menembus Batas Karier Multidisiplin.
-            </h2>
-            <p className="blackbox-sec-sub">
-              Simak bagaimana para alumni Anvieo melipatgandakan dampak karier mereka di industri teknologi, hukum siber, perbankan investasi, dan manajemen produk global.
-            </p>
-          </div>
-
-          {/* Infinite Continuous Loop Marquee Slider */}
-          <div className="alumni-marquee-viewport">
-            <div className="alumni-marquee-track">
-              {[...ALUMNI_STORIES, ...ALUMNI_STORIES].map((alumni, idx) => (
-                <article key={`${alumni.id}-${idx}`} className="alumni-card">
-                  {/* Left: Alumni Photo & Verified Badge */}
-                  <div className="alumni-card-left">
-                    <img
-                      src={alumni.avatar}
-                      alt={alumni.name}
-                      className="alumni-avatar"
-                      loading="lazy"
-                    />
-                    <span className="alumni-verified-badge" title="Lulusan Terverifikasi Anvieo">
-                      ✓
-                    </span>
-                  </div>
-
-                  {/* Right: Description & Meta */}
-                  <div className="alumni-card-right">
-                    <div className="alumni-badge-row">
-                      <span
-                        className="alumni-badge-tag"
-                        style={{
-                          color: alumni.accentColor,
-                          borderColor: alumni.accentColor,
-                          background: alumni.accentBg,
-                        }}
-                      >
-                        {alumni.discipline}
-                      </span>
-                      <span className="alumni-highlight-pill">{alumni.metric}</span>
-                    </div>
-
-                    <p className="alumni-quote">
-                      &ldquo;{alumni.story}&rdquo;
-                    </p>
-
-                    <div className="alumni-author">
-                      <div>
-                        <h4 className="alumni-name">{alumni.name}</h4>
-                        <p className="alumni-role">{alumni.role} • <strong>{alumni.company}</strong></p>
-                      </div>
-                    </div>
-                  </div>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
 
         {/* ==================== 04 // BOOTCAMP (RECURSIVE LEARNING LOOP) ==================== */}
         <section id="bootcamp" className="blackbox-compute-band">
@@ -2385,13 +2305,13 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* ==================== 08 // CAPAIAN & CERITA INSPIRATIF ALUMNI (IMAGE GALLERY NUMPUK KOTAK2 / BENTO GRID) ==================== */}
-        <section id="capaian-dampak" className="blackbox-compute-band">
+        {/* ==================== 03 // VERIFIED ALUMNI IMPACT & PLACEMENT GALLERY ==================== */}
+        <section id="alumni" className="blackbox-compute-band">
           <BlackboxRails position="top" />
 
           <div className="blackbox-frame">
             <div className="blackbox-strip">
-              <span className="blackbox-strip-label">08 // VERIFIED ALUMNI IMPACT &amp; PLACEMENT GALLERY</span>
+              <span className="blackbox-strip-label">03 // VERIFIED ALUMNI IMPACT &amp; PLACEMENT GALLERY</span>
               <dl className="blackbox-strip-facts">
                 <div><dt>TINGKAT PENYERAPAN:</dt><dd>94.2% DALAM 90 HARI</dd></div>
                 <div><dt>KENAIKAN RATA-RATA GAJI:</dt><dd>+68% POST-GRADUATION</dd></div>
@@ -2409,19 +2329,124 @@ export default function HomePage() {
               </div>
               <div className="alumni-gallery-meta-pill">
                 <span className="alumni-gallery-pulse-dot" style={{ background: "var(--gold)" }}></span>
-                <span>MODEL GALERI BENTO • KLIK UNTUK DETAIL INSPIRATIF</span>
+                <span>MODEL GALERI FOTO • KLIK UNTUK DETAIL INSPIRATIF</span>
               </div>
             </div>
 
-            {/* Asymmetrical Stacked Bento Box Image Gallery (Numpuk Kotak-Kotak Testimoni) */}
+            {/* Asymmetrical Stacked Bento Box Image Gallery - Menempel Seperti Image Gallery */}
             <div className="alumni-gallery-bento-grid">
               {VERIFIED_ALUMNI_IMPACT.map((alumni) => {
-                const isTall = alumni.gridSpan === "tall";
+                const isFeatured = alumni.gridSpan === "tall"; // Kisah Utama (Fajar Ardiansyah)
                 const isWide = alumni.gridSpan === "wide";
+
+                if (isFeatured) {
+                  /* Kisah Utama: Satu-satunya yang memiliki kotak putih untuk kontennya */
+                  return (
+                    <div
+                      key={alumni.id}
+                      className="alumni-bento-card alumni-card-tall alumni-featured-card"
+                      onClick={() => {
+                        setSelectedAlumniStory(alumni);
+                        setModalType("alumni-story");
+                      }}
+                      role="button"
+                      tabIndex={0}
+                      aria-label={`Buka kisah utama ${alumni.name}`}
+                    >
+                      {/* Featured Media (Tanpa badge kanan atas) */}
+                      <div className="alumni-card-media tall-media" style={{ height: "250px", position: "relative", overflow: "hidden" }}>
+                        <img
+                          src={alumni.image}
+                          alt={alumni.name}
+                          className="alumni-bento-img"
+                          style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                        />
+                      </div>
+
+                      {/* Kotak Putih untuk Konten Kisah Utama */}
+                      <div
+                        className="alumni-card-content tall-content"
+                        style={{
+                          background: "var(--bx-surface, #FFFFFF)",
+                          padding: "24px 22px",
+                          display: "flex",
+                          flexDirection: "column",
+                          justifyContent: "space-between",
+                          flex: 1,
+                        }}
+                      >
+                        <div>
+                          {/* Full-fill badges di bawah gambar / atas konten */}
+                          <div style={{ display: "flex", alignItems: "center", gap: "6px", marginBottom: "14px", flexWrap: "wrap" }}>
+                            <span style={{ background: "var(--gold)", color: "#0A0A0C", fontWeight: 800, fontSize: "0.6875rem", padding: "4px 9px", borderRadius: "4px", letterSpacing: "0.04em" }}>
+                              ⭐ KISAH UTAMA
+                            </span>
+                            <span style={{ background: "var(--brand, #0A2E52)", color: "#FFFFFF", fontWeight: 700, fontSize: "0.6875rem", padding: "4px 9px", borderRadius: "4px" }}>
+                              {alumni.course}
+                            </span>
+                            <span style={{ background: "#10B981", color: "#FFFFFF", fontWeight: 700, fontSize: "0.6875rem", padding: "4px 9px", borderRadius: "4px" }}>
+                              {alumni.salaryJump}
+                            </span>
+                          </div>
+
+                          <h3 className="alumni-card-title" style={{ fontSize: "1.1rem", fontWeight: 700, lineHeight: 1.35, marginBottom: "10px", color: "var(--bx-ink-bright)" }}>
+                            {alumni.headline}
+                          </h3>
+
+                          <p className="alumni-card-quote" style={{ fontSize: "0.85rem", lineHeight: 1.55, color: "var(--bx-prose-ink)", margin: 0 }}>
+                            &ldquo;{alumni.quote}&rdquo;
+                          </p>
+                        </div>
+
+                        <div style={{ marginTop: "18px", paddingTop: "14px", borderTop: "1px solid var(--bx-grid)" }}>
+                          <div className="alumni-author-row" style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "12px" }}>
+                            <div
+                              className="alumni-avatar-box"
+                              style={{
+                                width: "36px",
+                                height: "36px",
+                                borderRadius: "50%",
+                                background: "var(--gold)",
+                                color: "#0A0A0C",
+                                fontWeight: 800,
+                                display: "flex",
+                                alignItems: "center",
+                                justifyContent: "center",
+                                fontSize: "0.8125rem",
+                                flexShrink: 0,
+                              }}
+                            >
+                              {alumni.initials}
+                            </div>
+                            <div className="alumni-author-info">
+                              <h4 className="alumni-author-name" style={{ margin: 0, fontSize: "0.9375rem", fontWeight: 700, color: "var(--bx-ink-bright)" }}>
+                                {alumni.name}
+                              </h4>
+                              <span className="alumni-author-meta" style={{ fontSize: "0.75rem", color: "var(--bx-text-meta)" }}>
+                                {alumni.role} · <strong>{alumni.company}</strong>
+                              </span>
+                            </div>
+                          </div>
+
+                          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                            <span style={{ fontSize: "0.6875rem", fontWeight: 700, color: "#10B981", letterSpacing: "0.05em" }}>
+                              ✓ TERVERIFIKASI
+                            </span>
+                            <span className="alumni-read-story-btn" style={{ fontSize: "0.75rem", fontWeight: 700, color: "var(--gold)", display: "flex", alignItems: "center", gap: "4px" }}>
+                              BACA KISAH LENGKAP →
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                }
+
+                /* Layout Galeri untuk alumni lainnya: Gambar Penuh, Teks di DALAM gambar di bagian bawah, Tanpa badge kanan atas */
                 return (
                   <div
                     key={alumni.id}
-                    className={`alumni-bento-card ${isTall ? "alumni-card-tall" : isWide ? "alumni-card-wide" : "alumni-card-compact"}`}
+                    className={`alumni-bento-card ${isWide ? "alumni-card-wide" : "alumni-card-compact"} alumni-gallery-photo-card`}
                     onClick={() => {
                       setSelectedAlumniStory(alumni);
                       setModalType("alumni-story");
@@ -2429,209 +2454,95 @@ export default function HomePage() {
                     role="button"
                     tabIndex={0}
                     aria-label={`Buka cerita inspiratif ${alumni.name}`}
+                    style={{ position: "relative", minHeight: isWide ? "310px" : "330px", height: "100%", overflow: "hidden" }}
                   >
-                    {isTall ? (
-                      /* Layout 1: Tall Featured Hero Card (Span 2 rows) */
-                      <>
-                        <div className="alumni-card-media tall-media">
-                          <img
-                            src={alumni.image}
-                            alt={alumni.name}
-                            className="alumni-bento-img"
-                          />
-                          <div className="alumni-media-tag-floating">
-                            <span className="alumni-badge-highlight">⭐ KISAH UTAMA</span>
-                            <span
-                              className="alumni-badge-course"
-                              style={{
-                                background: alumni.accentBg,
-                                color: alumni.accentColor,
-                                borderColor: alumni.accentColor
-                              }}
-                            >
-                              {alumni.course}
-                            </span>
-                          </div>
-                        </div>
+                    {/* Background Image (Covering the entire card) */}
+                    <img
+                      src={alumni.image}
+                      alt={alumni.name}
+                      className="alumni-bento-img"
+                      style={{
+                        position: "absolute",
+                        top: 0,
+                        left: 0,
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
+                        display: "block",
+                        transition: "transform 0.4s cubic-bezier(0.16, 1, 0.3, 1)",
+                      }}
+                    />
 
-                        <div className="alumni-card-content tall-content">
-                          <div>
-                            <div className="alumni-headline-row">
-                              <h3 className="alumni-card-title">{alumni.headline}</h3>
-                            </div>
-
-                            <p className="alumni-card-quote">
-                              &quot;{alumni.quote}&quot;
-                            </p>
-                          </div>
-
-                          <div className="alumni-card-bottom-area">
-                            <div className="alumni-salary-badge">
-                              <FlatIcon type="check" size={13} color="#10B981" />
-                              <span>{alumni.salaryJump}</span>
-                            </div>
-
-                            <div className="alumni-author-row">
-                              <div
-                                className="alumni-avatar-box"
-                                style={{
-                                  background: alumni.accentBg,
-                                  color: alumni.accentColor,
-                                  borderColor: alumni.accentColor
-                                }}
-                              >
-                                {alumni.initials}
-                              </div>
-                              <div className="alumni-author-info">
-                                <h4 className="alumni-author-name">{alumni.name}</h4>
-                                <span className="alumni-author-meta" style={{ color: alumni.accentColor }}>
-                                  {alumni.role} · {alumni.company}
-                                </span>
-                              </div>
-                            </div>
-
-                            <div className="alumni-card-footer-strip">
-                              <span className="alumni-verified-flag">✓ TERVERIFIKASI</span>
-                              <span className="alumni-read-story-btn">
-                                BACA KISAH LENGKAP <PixelArrow color="var(--bx-blue)" size={9} />
-                              </span>
-                            </div>
-                          </div>
-                        </div>
-                      </>
-                    ) : isWide ? (
-                      /* Layout 2: Wide Card (Span 2 columns, Split Horizontal) */
-                      <div className="alumni-wide-split-wrap">
-                        <div className="alumni-card-media wide-media">
-                          <img
-                            src={alumni.image}
-                            alt={alumni.name}
-                            className="alumni-bento-img"
-                          />
-                          <span
-                            className="alumni-badge-course wide-tag"
-                            style={{
-                              background: alumni.accentBg,
-                              color: alumni.accentColor,
-                              borderColor: alumni.accentColor
-                            }}
-                          >
-                            {alumni.course}
-                          </span>
-                        </div>
-
-                        <div className="alumni-card-content wide-content">
-                          <div>
-                            <div className="alumni-wide-top-bar">
-                              <div className="alumni-salary-badge">
-                                <FlatIcon type="check" size={13} color="#10B981" />
-                                <span>{alumni.salaryJump}</span>
-                              </div>
-                              <span className="alumni-hired-time">{alumni.timeToHired}</span>
-                            </div>
-
-                            <h3 className="alumni-card-title wide-title">{alumni.headline}</h3>
-
-                            <p className="alumni-card-quote wide-quote">
-                              &quot;{alumni.quote}&quot;
-                            </p>
-                          </div>
-
-                          <div>
-                            <div className="alumni-skills-tag-row">
-                              {alumni.keySkills.slice(0, 3).map((skill, sIdx) => (
-                                <span key={sIdx} className="alumni-mini-skill">{skill}</span>
-                              ))}
-                            </div>
-
-                            <div className="alumni-wide-footer-row">
-                              <div className="alumni-author-row compact">
-                                <div
-                                  className="alumni-avatar-box mini"
-                                  style={{
-                                    background: alumni.accentBg,
-                                    color: alumni.accentColor,
-                                    borderColor: alumni.accentColor
-                                  }}
-                                >
-                                  {alumni.initials}
-                                </div>
-                                <div className="alumni-author-info">
-                                  <h4 className="alumni-author-name">{alumni.name}</h4>
-                                  <span className="alumni-author-meta" style={{ color: alumni.accentColor }}>
-                                    {alumni.role} · {alumni.company}
-                                  </span>
-                                </div>
-                              </div>
-
-                              <span className="alumni-read-story-btn">
-                                BACA KISAH LENGKAP <PixelArrow color="var(--bx-blue)" size={9} />
-                              </span>
-                            </div>
-                          </div>
-                        </div>
+                    {/* Gradient Scrim Overlay at Bottom (Teks di dalam gambar di bagian bawah) */}
+                    <div
+                      style={{
+                        position: "absolute",
+                        bottom: 0,
+                        left: 0,
+                        right: 0,
+                        background: "linear-gradient(to top, rgba(7, 10, 18, 0.96) 0%, rgba(7, 10, 18, 0.8) 55%, rgba(7, 10, 18, 0.15) 85%, transparent 100%)",
+                        padding: isWide ? "28px 20px 18px" : "24px 16px 16px",
+                        display: "flex",
+                        flexDirection: "column",
+                        gap: "6px",
+                        zIndex: 2,
+                      }}
+                    >
+                      {/* Full-fill badges di simpan di bawah agar terlihat jelas & simpel */}
+                      <div style={{ display: "flex", alignItems: "center", gap: "6px", flexWrap: "wrap", marginBottom: "2px" }}>
+                        <span
+                          style={{
+                            background: "var(--gold)",
+                            color: "#0A0A0C",
+                            fontWeight: 800,
+                            fontSize: "0.6875rem",
+                            padding: "3px 8px",
+                            borderRadius: "4px",
+                            textTransform: "uppercase",
+                            letterSpacing: "0.04em",
+                            lineHeight: 1.2,
+                          }}
+                        >
+                          {alumni.course}
+                        </span>
+                        <span
+                          style={{
+                            background: "#10B981",
+                            color: "#FFFFFF",
+                            fontWeight: 700,
+                            fontSize: "0.6875rem",
+                            padding: "3px 8px",
+                            borderRadius: "4px",
+                            lineHeight: 1.2,
+                          }}
+                        >
+                          {alumni.salaryJump}
+                        </span>
                       </div>
-                    ) : (
-                      /* Layout 3: Compact Square Box (1 col, 1 row) */
-                      <>
-                        <div className="alumni-card-media compact-media">
-                          <img
-                            src={alumni.image}
-                            alt={alumni.name}
-                            className="alumni-bento-img"
-                          />
-                          <span
-                            className="alumni-badge-course compact-tag"
-                            style={{
-                              background: alumni.accentBg,
-                              color: alumni.accentColor,
-                              borderColor: alumni.accentColor
-                            }}
-                          >
-                            {alumni.course}
-                          </span>
-                        </div>
 
-                        <div className="alumni-card-content compact-content">
-                          <div>
-                            <div className="alumni-salary-badge" style={{ marginBottom: "8px" }}>
-                              <FlatIcon type="check" size={13} color="#10B981" />
-                              <span>{alumni.salaryJump}</span>
-                            </div>
+                      <h4 style={{ color: "#FFFFFF", fontSize: isWide ? "1.125rem" : "1.02rem", fontWeight: 700, margin: 0, lineHeight: 1.25 }}>
+                        {alumni.name}
+                      </h4>
 
-                            <div className="alumni-author-row compact">
-                              <div
-                                className="alumni-avatar-box mini"
-                                style={{
-                                  background: alumni.accentBg,
-                                  color: alumni.accentColor,
-                                  borderColor: alumni.accentColor
-                                }}
-                              >
-                                {alumni.initials}
-                              </div>
-                              <div className="alumni-author-info">
-                                <h4 className="alumni-author-name">{alumni.name}</h4>
-                                <span className="alumni-author-meta" style={{ color: alumni.accentColor }}>
-                                  {alumni.role} · {alumni.company}
-                                </span>
-                              </div>
-                            </div>
+                      <p style={{ color: "rgba(255, 255, 255, 0.85)", fontSize: "0.8125rem", margin: 0, lineHeight: 1.35 }}>
+                        {alumni.role} · <strong style={{ color: "#FFFFFF" }}>{alumni.company}</strong>
+                      </p>
 
-                            <p className="alumni-card-quote compact-quote">
-                              &quot;{alumni.quote}&quot;
-                            </p>
-                          </div>
-
-                          <div className="alumni-card-footer-strip compact-strip">
-                            <span className="alumni-verified-flag">✓ TERVERIFIKASI</span>
-                            <span className="alumni-read-story-btn">
-                              BACA KISAH <PixelArrow color="var(--bx-blue)" size={9} />
-                            </span>
-                          </div>
-                        </div>
-                      </>
-                    )}
+                      <p
+                        style={{
+                          color: "rgba(255, 255, 255, 0.7)",
+                          fontSize: "0.75rem",
+                          lineHeight: 1.4,
+                          margin: 0,
+                          display: "-webkit-box",
+                          WebkitLineClamp: isWide ? 2 : 1,
+                          WebkitBoxOrient: "vertical",
+                          overflow: "hidden",
+                        }}
+                      >
+                        &ldquo;{alumni.headline}&rdquo;
+                      </p>
+                    </div>
                   </div>
                 );
               })}

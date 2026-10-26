@@ -42,7 +42,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="id" data-theme="light" suppressHydrationWarning className={`${fraunces.variable} ${karla.variable} ${jetbrainsMono.variable}`}>
+    <html lang="id" data-theme="light" data-scroll-behavior="smooth" suppressHydrationWarning className={`${fraunces.variable} ${karla.variable} ${jetbrainsMono.variable}`}>
       <head>
         <script
           dangerouslySetInnerHTML={{
