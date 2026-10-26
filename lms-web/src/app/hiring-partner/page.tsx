@@ -101,7 +101,7 @@ export default function HiringPartnerPage() {
   };
 
   return (
-    <div className="hiring-partner-page-wrap">
+    <div className="hiring-partner-page-wrap" style={{ paddingTop: "64px", minHeight: "100vh" }}>
       <SiteHeader activeTabOverride="others" />
 
       {/* Breadcrumb Navigation */}

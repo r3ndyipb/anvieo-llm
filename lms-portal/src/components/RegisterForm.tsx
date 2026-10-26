@@ -292,21 +292,21 @@ export default function RegisterForm() {
             </label>
           </div>
 
-          {/* Submit Button */}
+          {/* Submit Button (Black) */}
           <button
             type="submit"
             disabled={isLoading}
-            className="portal-submit-btn"
+            className="portal-submit-btn portal-submit-btn-black"
           >
             {isLoading ? (
               <>
-                <span style={{ display: "inline-block", width: "14px", height: "14px", border: "2px solid #0A2E52", borderTopColor: "transparent", borderRadius: "50%", animation: "spin 0.6s linear infinite" }} />
+                <span style={{ display: "inline-block", width: "14px", height: "14px", border: "2px solid #FFFFFF", borderTopColor: "transparent", borderRadius: "50%", animation: "spin 0.6s linear infinite" }} />
                 <span>MEMBUAT AKUN PORTAL...</span>
               </>
             ) : (
               <>
                 <span>BUAT AKUN BELAJAR SEKARANG</span>
-                <FlatIcon type="arrow-right" size={14} color="#0A2E52" />
+                <FlatIcon type="arrow-right" size={14} color="#FFFFFF" />
               </>
             )}
           </button>
@@ -317,11 +317,11 @@ export default function RegisterForm() {
           <span>atau daftar dengan</span>
         </div>
 
-        {/* SSO Social Logins */}
-        <div className="portal-sso-grid">
+        {/* SSO Social Logins (Google Only) */}
+        <div className="portal-sso-single">
           <button
             type="button"
-            className="portal-sso-btn"
+            className="portal-sso-btn portal-sso-btn-full"
             onClick={() => {
               setFullName("Alumni Google User");
               setEmail("alumni.google@gmail.com");
@@ -330,22 +330,8 @@ export default function RegisterForm() {
               handleSubmit({ preventDefault: () => {} } as React.FormEvent);
             }}
           >
-            <FlatIcon type="google" size={14} />
-            <span>Google</span>
-          </button>
-          <button
-            type="button"
-            className="portal-sso-btn"
-            onClick={() => {
-              setFullName("Developer GitHub User");
-              setEmail("github.student@users.noreply.github.com");
-              setPhone("081234567890");
-              setAgreeTerms(true);
-              handleSubmit({ preventDefault: () => {} } as React.FormEvent);
-            }}
-          >
-            <FlatIcon type="github" size={14} />
-            <span>GitHub</span>
+            <FlatIcon type="google" size={17} />
+            <span>Daftar Cepat dengan Google</span>
           </button>
         </div>
 

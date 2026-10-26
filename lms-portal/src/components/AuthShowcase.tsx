@@ -37,16 +37,11 @@ export default function AuthShowcase() {
   const currentTesti = TESTIMONIALS[activeTestiIndex];
 
   return (
-    <div className="portal-showcase-panel">
-      {/* Background Watermark */}
-      <div className="portal-showcase-watermark" aria-hidden="true">
-        ANVIEO
-      </div>
-
+    <div className="portal-showcase-clean">
       <div>
-        {/* Institutional Pill */}
-        <div className="portal-showcase-pill">
-          <FlatIcon type="shield" size={12} color="var(--gold)" />
+        {/* Line Model Eyebrow (Tanpa Badge / Menggunakan Model Garis AUI) */}
+        <div className="portal-showcase-line-label">
+          <span className="portal-gold-line" aria-hidden="true" />
           <span>PORTAL AKADEMI TERAKREDITASI</span>
         </div>
 
@@ -56,52 +51,52 @@ export default function AuthShowcase() {
         </h1>
 
         <p className="portal-showcase-subtext">
-          Portal terpadu untuk mengakses silabus mutakhir, ruang review kode 1-on-1, dan sertifikasi kompetensi berbobot internasional.
+          Portal terpadu untuk mengakses silabus mutakhir, ruang review kode 1-on-1 bersama praktisi terverifikasi, dan sertifikasi kompetensi berbobot internasional.
         </p>
 
         {/* Feature List */}
         <div className="portal-feature-list">
           <div className="portal-feature-item">
             <div className="portal-feature-icon-box">
-              <FlatIcon type="brain" size={14} />
+              <FlatIcon type="brain" size={16} />
             </div>
             <div>
               <div className="portal-feature-title">Socratic AI Copilot</div>
               <div className="portal-feature-desc">
-                Petunjuk logika dan bedah error interaktif 24/7 tanpa jalan pintas.
+                Petunjuk logika dan bedah error interaktif 24/7 tanpa jalan pintas instan.
               </div>
             </div>
           </div>
 
           <div className="portal-feature-item">
             <div className="portal-feature-icon-box">
-              <FlatIcon type="terminal" size={14} />
+              <FlatIcon type="terminal" size={16} />
             </div>
             <div>
               <div className="portal-feature-title">Evaluasi Kode Human-Reviewer</div>
               <div className="portal-feature-desc">
-                Setiap baris kode ditelaah praktisi senior sesuai rubrik industri.
+                Setiap baris kode tugas ditelaah manual oleh praktisi senior sesuai rubrik industri.
               </div>
             </div>
           </div>
 
           <div className="portal-feature-item">
             <div className="portal-feature-icon-box">
-              <FlatIcon type="award" size={14} />
+              <FlatIcon type="award" size={16} />
             </div>
             <div>
               <div className="portal-feature-title">Sertifikat &amp; Jalur Rekrutmen</div>
               <div className="portal-feature-desc">
-                Akses langsung ke jaringan 1,200+ Hiring Partner setelah kelulusan.
+                Akses langsung ke jaringan 1,200+ Hiring Partner setelah kelulusan submission.
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Floating Rotating Testimonial */}
+      {/* Floating Rotating Testimonial Quote */}
       <div>
-        <div className="portal-testimonial-card">
+        <div className="portal-testimonial-clean">
           <img
             src={currentTesti.avatar}
             alt={currentTesti.name}

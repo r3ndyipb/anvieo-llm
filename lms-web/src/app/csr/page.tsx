@@ -123,7 +123,7 @@ export default function CsrPage() {
   };
 
   return (
-    <div className="csr-page-wrap">
+    <div className="csr-page-wrap" style={{ paddingTop: "64px", minHeight: "100vh" }}>
       <SiteHeader activeTabOverride="others" />
 
       {/* Breadcrumb Navigation */}

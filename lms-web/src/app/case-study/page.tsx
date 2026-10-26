@@ -324,7 +324,7 @@ export default function CaseStudyPage() {
     <>
       <SiteHeader activeTabOverride="others" />
 
-      <main className="blackbox-page" style={{ paddingTop: "60px" }}>
+      <main className="blackbox-page" style={{ paddingTop: "64px" }}>
         {/* Breadcrumb Navigation Rail */}
         <section style={{ borderBottom: "1px solid var(--bx-grid)", padding: "14px 0", background: "var(--bx-bg)" }}>
           <div className="blackbox-frame">

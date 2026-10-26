@@ -3,6 +3,7 @@ import PortalHeader from "@/components/PortalHeader";
 import AuthShowcase from "@/components/AuthShowcase";
 import RegisterForm from "@/components/RegisterForm";
 import BlackboxRails from "@/components/BlackboxRails";
+import SiteFooter from "@/components/SiteFooter";
 
 export const metadata = {
   title: "Daftar Akun Portal Belajar — ANVIEO Academy",
@@ -11,15 +12,15 @@ export const metadata = {
 
 export default function RegisterPage() {
   return (
-    <div className="portal-fit-screen">
+    <div className="portal-page-wrap">
       <PortalHeader currentPage="register" />
 
       <main className="portal-auth-container">
         <BlackboxRails position="both" />
 
-        <div className="blackbox-frame" style={{ height: "100%", display: "flex", alignItems: "center" }}>
+        <div className="blackbox-frame">
           <div className="portal-auth-grid">
-            {/* Left Column: Showcase */}
+            {/* Left Column: Unboxed Editorial Showcase */}
             <AuthShowcase />
 
             {/* Right Column: Register Form */}
@@ -28,12 +29,8 @@ export default function RegisterPage() {
         </div>
       </main>
 
-      {/* Fit Height Compact Footer Bar */}
-      <footer className="portal-auth-footer">
-        <div className="blackbox-frame" style={{ textAlign: "center" }}>
-          <span>© 2026 ANVIEO Academy · High-Trust Multidisciplinary LMS. Standar Kurikulum Global &amp; Evaluasi Praktisi.</span>
-        </div>
-      </footer>
+      {/* Official LMS Web Site Footer */}
+      <SiteFooter />
     </div>
   );
 }

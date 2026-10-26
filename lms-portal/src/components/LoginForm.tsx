@@ -136,21 +136,21 @@ export default function LoginForm() {
             </span>
           </div>
 
-          {/* Submit Button */}
+          {/* Submit Button (Black) */}
           <button
             type="submit"
             disabled={isLoading}
-            className="portal-submit-btn"
+            className="portal-submit-btn portal-submit-btn-black"
           >
             {isLoading ? (
               <>
-                <span style={{ display: "inline-block", width: "16px", height: "16px", border: "2px solid #0A2E52", borderTopColor: "transparent", borderRadius: "50%", animation: "spin 0.6s linear infinite" }} />
+                <span style={{ display: "inline-block", width: "16px", height: "16px", border: "2px solid #FFFFFF", borderTopColor: "transparent", borderRadius: "50%", animation: "spin 0.6s linear infinite" }} />
                 <span>MEMVERIFIKASI...</span>
               </>
             ) : (
               <>
                 <span>MASUK KE PORTAL BELAJAR</span>
-                <FlatIcon type="arrow-right" size={16} color="#0A2E52" />
+                <FlatIcon type="arrow-right" size={16} color="#FFFFFF" />
               </>
             )}
           </button>
@@ -161,29 +161,18 @@ export default function LoginForm() {
           <span>atau masuk dengan</span>
         </div>
 
-        {/* SSO Social Logins */}
-        <div className="portal-sso-grid">
+        {/* SSO Social Logins (Google Only) */}
+        <div className="portal-sso-single">
           <button
             type="button"
-            className="portal-sso-btn"
+            className="portal-sso-btn portal-sso-btn-full"
             onClick={() => {
               setEmail("google.user@gmail.com");
               handleSubmit({ preventDefault: () => {} } as React.FormEvent);
             }}
           >
-            <FlatIcon type="google" size={17} />
-            <span>Google</span>
-          </button>
-          <button
-            type="button"
-            className="portal-sso-btn"
-            onClick={() => {
-              setEmail("github.dev@users.noreply.github.com");
-              handleSubmit({ preventDefault: () => {} } as React.FormEvent);
-            }}
-          >
-            <FlatIcon type="github" size={17} />
-            <span>GitHub</span>
+            <FlatIcon type="google" size={18} />
+            <span>Masuk dengan Google</span>
           </button>
         </div>
 

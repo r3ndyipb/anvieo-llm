@@ -407,7 +407,7 @@ export default function PortalDashboardPreview() {
                 🔄 Ganti Akun / Logout
               </Link>
               <a href="http://localhost:3000" target="_blank" rel="noopener noreferrer" className="portal-demo-pill" style={{ textAlign: "center", padding: "10px", textDecoration: "none" }}>
-                🌐 Buka Katalog Kursus
+                🌐 Ke Halaman Utama
               </a>
             </div>
           </div>

@@ -66,7 +66,7 @@ export default function PortalHeader({ currentPage = "login" }: PortalHeaderProp
               title="Kunjungi website publik LMS"
             >
               <FlatIcon type="globe" size={14} />
-              <span>Katalog Kursus</span>
+              <span>Halaman Utama</span>
             </a>
 
             {currentPage === "login" && (

@@ -203,7 +203,7 @@ export default function SertifikasiPage() {
   ];
 
   return (
-    <div className="sertifikasi-page-wrap">
+    <div className="sertifikasi-page-wrap sert-page-wrap" style={{ paddingTop: "64px", minHeight: "100vh" }}>
       <SiteHeader activeTabOverride="programs" />
 
       {/* Breadcrumb Header */}

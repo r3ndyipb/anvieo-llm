@@ -95,7 +95,7 @@ export default function SingleCourseCheckoutPage() {
     <>
       <SiteHeader activeTabOverride="langganan" />
 
-      <main className="blackbox-page" style={{ paddingTop: "60px", minHeight: "100vh" }}>
+      <main className="blackbox-page" style={{ paddingTop: "64px", minHeight: "100vh" }}>
         {/* Breadcrumb Navigation Rail */}
         <section style={{ borderBottom: "1px solid var(--bx-border)", padding: "14px 0", background: "var(--bx-bg)", position: "relative" }}>
           <div className="blackbox-frame">

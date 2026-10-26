@@ -3794,7 +3794,12 @@ button {
 
 .learning-path-wrapper,
 .subscriptions-page-wrap,
-.token-activation-page-wrap {
+.token-activation-page-wrap,
+.sertifikasi-page-wrap,
+.sert-page-wrap,
+.csr-page-wrap,
+.hiring-partner-page-wrap,
+.impact-page-wrapper {
   min-height: 100vh;
   padding-top: 64px;
   display: flex;
@@ -7367,7 +7372,8 @@ button {
 /* ==========================================================================
    ANVIEO LMS - SERTIFIKASI & UJI KOMPETENSI PAGE STYLES (REDESIGNED)
    ========================================================================== */
-.sert-page-wrap {
+.sert-page-wrap,
+.sertifikasi-page-wrap {
   min-height: 100vh;
   padding-top: 64px;
   background-color: var(--bx-bg);
