@@ -382,21 +382,24 @@ function SiteHeaderContent({ activeTabOverride }: SiteHeaderProps) {
                   </button>
                 </div>
               ) : (
-                <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-                  <Link
-                    href="/register"
-                    className="blackbox-outline"
-                    style={{ padding: "6px 14px", fontSize: "0.8125rem", textDecoration: "none" }}
-                  >
-                    DAFTAR
-                  </Link>
+                <div style={{ display: "flex", alignItems: "center" }}>
                   <Link
                     href="/login"
                     className="blackbox-pill blackbox-pill-black"
-                    style={{ textDecoration: "none" }}
+                    style={{
+                      textDecoration: "none",
+                      borderRadius: "8px",
+                      padding: "8px 22px",
+                      fontSize: "0.8125rem",
+                      fontWeight: 600,
+                      letterSpacing: "0.02em",
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: "6px",
+                    }}
                   >
-                    MASUK
-                    <span style={{ marginLeft: "6px", display: "inline-block" }}>→</span>
+                    <span>MASUK</span>
+                    <span style={{ fontSize: "0.875rem", lineHeight: 1 }}>→</span>
                   </Link>
                 </div>
               )}
@@ -539,19 +542,20 @@ function SiteHeaderContent({ activeTabOverride }: SiteHeaderProps) {
                 </div>
               </div>
 
-              <div style={{ marginTop: "16px", paddingTop: "8px", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "10px" }}>
-                <Link
-                  href="/register"
-                  className="blackbox-outline"
-                  style={{ textAlign: "center", justifyContent: "center", textDecoration: "none", padding: "10px" }}
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  DAFTAR
-                </Link>
+              <div style={{ marginTop: "16px", paddingTop: "8px" }}>
                 <Link
                   href="/login"
                   className="blackbox-pill blackbox-pill-black"
-                  style={{ textAlign: "center", justifyContent: "center", textDecoration: "none", padding: "10px" }}
+                  style={{
+                    display: "flex",
+                    width: "100%",
+                    textAlign: "center",
+                    justifyContent: "center",
+                    textDecoration: "none",
+                    padding: "12px",
+                    borderRadius: "8px",
+                    fontWeight: 600,
+                  }}
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   MASUK →

@@ -29,7 +29,7 @@ export default function PortalHeader({ currentPage = "login" }: PortalHeaderProp
       <div className="blackbox-frame">
         <div className="portal-auth-header-inner">
           {/* Brand Logo & Title */}
-          <Link href="/" className="portal-auth-brand-group" aria-label="ANVIEO ACADEMY PORTAL">
+          <Link href="/" className="portal-auth-brand-group" aria-label="ANVIEO ACADEMY LMS">
             <img
               src={theme === "light" ? "/logo-dark.png" : "/logo-light.png"}
               alt="Anvieo Logo"
@@ -53,7 +53,11 @@ export default function PortalHeader({ currentPage = "login" }: PortalHeaderProp
                 ))}
               </div>
             </div>
-            <span className="portal-badge-portal">PORTAL</span>
+
+            {/* Vertical Divider Line */}
+            <span className="portal-brand-divider" aria-hidden="true" />
+
+            <span className="portal-badge-portal">LMS</span>
           </Link>
 
           {/* Navigation Actions */}

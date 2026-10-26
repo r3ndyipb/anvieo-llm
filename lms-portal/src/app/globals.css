@@ -9409,6 +9409,18 @@ button {
   line-height: 1;
 }
 
+.portal-brand-divider {
+  width: 1px;
+  height: 20px;
+  background-color: var(--bx-border);
+  margin: 0 4px;
+  opacity: 0.85;
+}
+
+[data-theme="dark"] .portal-brand-divider {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
 .portal-badge-portal {
   font-family: var(--font-mono);
   font-size: 0.6875rem;
