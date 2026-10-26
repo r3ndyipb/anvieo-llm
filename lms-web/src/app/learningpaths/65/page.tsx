@@ -38,7 +38,7 @@ interface StageGroup {
 
 interface CurriculumTrack {
   id: string;
-  dicodingPathId: string;
+  anvieoPathId: string;
   title: string;
   category: "ai" | "web" | "mobile" | "cloud";
   categoryLabel: string;
@@ -278,12 +278,12 @@ function createTrackStages(trackTitle: string, courses: CourseStep[]): StageGrou
 }
 
 /* ==========================================================================
-   MASTER LIST OF 14 CURRICULUM TRACKS (DICODING COMPLIANT)
+   MASTER LIST OF 14 CURRICULUM TRACKS (ANVIEO STANDARD)
    ========================================================================== */
 export const ALL_CURRICULUM_TRACKS: CurriculumTrack[] = [
   {
     id: "ai-engineer",
-    dicodingPathId: "65",
+    anvieoPathId: "65",
     title: "AI Engineer",
     category: "ai",
     categoryLabel: "AI & Machine Learning",
@@ -305,7 +305,7 @@ export const ALL_CURRICULUM_TRACKS: CurriculumTrack[] = [
   },
   {
     id: "gen-ai-engineer",
-    dicodingPathId: "68",
+    anvieoPathId: "68",
     title: "Gen AI Engineer",
     category: "ai",
     categoryLabel: "AI & Machine Learning",
@@ -403,7 +403,7 @@ export const ALL_CURRICULUM_TRACKS: CurriculumTrack[] = [
   },
   {
     id: "mlops-engineer",
-    dicodingPathId: "30",
+    anvieoPathId: "30",
     title: "MLOps Engineer",
     category: "ai",
     categoryLabel: "AI & Machine Learning",
@@ -501,7 +501,7 @@ export const ALL_CURRICULUM_TRACKS: CurriculumTrack[] = [
   },
   {
     id: "data-scientist",
-    dicodingPathId: "60",
+    anvieoPathId: "60",
     title: "Data Scientist",
     category: "ai",
     categoryLabel: "AI & Machine Learning",
@@ -614,7 +614,7 @@ export const ALL_CURRICULUM_TRACKS: CurriculumTrack[] = [
   },
   {
     id: "data-analyst",
-    dicodingPathId: "71",
+    anvieoPathId: "71",
     title: "Data Analyst",
     category: "ai",
     categoryLabel: "AI & Machine Learning",
@@ -712,7 +712,7 @@ export const ALL_CURRICULUM_TRACKS: CurriculumTrack[] = [
   },
   {
     id: "frontend-dev",
-    dicodingPathId: "22",
+    anvieoPathId: "22",
     title: "Front-End Web",
     category: "web",
     categoryLabel: "Web & Backend",
@@ -810,7 +810,7 @@ export const ALL_CURRICULUM_TRACKS: CurriculumTrack[] = [
   },
   {
     id: "react-dev",
-    dicodingPathId: "58",
+    anvieoPathId: "58",
     title: "React",
     category: "web",
     categoryLabel: "Web & Backend",
@@ -908,7 +908,7 @@ export const ALL_CURRICULUM_TRACKS: CurriculumTrack[] = [
   },
   {
     id: "backend-js",
-    dicodingPathId: "41",
+    anvieoPathId: "41",
     title: "Back-End JavaScript",
     category: "web",
     categoryLabel: "Web & Backend",
@@ -1021,7 +1021,7 @@ export const ALL_CURRICULUM_TRACKS: CurriculumTrack[] = [
   },
   {
     id: "backend-python",
-    dicodingPathId: "62",
+    anvieoPathId: "62",
     title: "Back-End Python",
     category: "web",
     categoryLabel: "Web & Backend",
@@ -1119,7 +1119,7 @@ export const ALL_CURRICULUM_TRACKS: CurriculumTrack[] = [
   },
   {
     id: "android-dev",
-    dicodingPathId: "7",
+    anvieoPathId: "7",
     title: "Android",
     category: "mobile",
     categoryLabel: "Mobile & Multiplatform",
@@ -1232,7 +1232,7 @@ export const ALL_CURRICULUM_TRACKS: CurriculumTrack[] = [
   },
   {
     id: "multiplatform-dev",
-    dicodingPathId: "21",
+    anvieoPathId: "21",
     title: "Multi-Platform App",
     category: "mobile",
     categoryLabel: "Mobile & Multiplatform",
@@ -1330,7 +1330,7 @@ export const ALL_CURRICULUM_TRACKS: CurriculumTrack[] = [
   },
   {
     id: "ios-dev",
-    dicodingPathId: "9",
+    anvieoPathId: "9",
     title: "iOS",
     category: "mobile",
     categoryLabel: "Mobile & Multiplatform",
@@ -1428,7 +1428,7 @@ export const ALL_CURRICULUM_TRACKS: CurriculumTrack[] = [
   },
   {
     id: "devops-engineer",
-    dicodingPathId: "53",
+    anvieoPathId: "53",
     title: "DevOps Engineer",
     category: "cloud",
     categoryLabel: "Cloud & DevOps",
@@ -1541,7 +1541,7 @@ export const ALL_CURRICULUM_TRACKS: CurriculumTrack[] = [
   },
   {
     id: "google-cloud",
-    dicodingPathId: "52",
+    anvieoPathId: "52",
     title: "Google Cloud Professional",
     category: "cloud",
     categoryLabel: "Cloud & DevOps",
@@ -1637,37 +1637,37 @@ const ALUMNI_DATA = [
     name: "Pravasta Caraka Bramastagiri",
     company: "PT. Tokopedia",
     role: "AI Research Engineer",
-    avatar: "https://d17ivq9b7rppb3.cloudfront.net/small/avatar/202108211002247c49cd8972cc2e4927e3b4d1e684d1b4.png",
+    avatar: "/alumni/alumni_1.jpg",
   },
   {
     name: "Purbayana",
     company: "PT Indosat Ooredoo Tbk",
     role: "Lead Machine Learning",
-    avatar: "https://d17ivq9b7rppb3.cloudfront.net/small/avatar/20210531091942a49ca6bdad1a52d1c38efeea2a385e04.png",
+    avatar: "/alumni/alumni_2.jpg",
   },
   {
     name: "Hafiza Aprilia",
     company: "Bandung Techno Park",
     role: "Computer Vision Specialist",
-    avatar: "https://dicoding-web-img.sgp1.digitaloceanspaces.com/small/avatar/dos:9c8bf8cd261bf0be28cdfeb6fe50a88620210911143449.png",
+    avatar: "/alumni/alumni_3.jpg",
   },
   {
     name: "Rian Asmara Putra",
     company: "Kementerian Kesehatan RI",
     role: "Health AI Data Scientist",
-    avatar: "https://dicoding-web-img.sgp1.digitaloceanspaces.com/small/avatar/dos:a1950372a0b1438650f50ff8db4f928b20220206160031.png",
+    avatar: "/alumni/alumni_4.jpg",
   },
   {
     name: "Haikal Shiddiq",
     company: "VMware by Broadcom",
     role: "Cloud AI Engineer",
-    avatar: "https://d17ivq9b7rppb3.cloudfront.net/small/avatar/202104132218191441deba16b57c4859cd4e01af8cf8b7.png",
+    avatar: "/alumni/alumni_5.jpg",
   },
   {
     name: "R Adhiyaksa Indiharto",
     company: "Komisi Pemilihan Umum RI",
     role: "Data & Systems Specialist",
-    avatar: "https://d17ivq9b7rppb3.cloudfront.net/small/avatar/202006180929403fb85b028e352b47dc3bab8c862c16a6.png",
+    avatar: "/alumni/alumni_6.jpg",
   },
 ];
 
@@ -1770,7 +1770,7 @@ export default function LearningPathPage() {
         </div>
       </div>
 
-      {/* TOP CURRICULUM GROUPING SUBNAV (DICODING LEARNING-PATH-NAV COMPLIANT) */}
+      {/* TOP CURRICULUM GROUPING SUBNAV (ANVIEO LEARNING-PATH-NAV COMPLIANT) */}
       <nav className="lp-subnav-bar" aria-label="Jalur Kurikulum Pembelajaran">
         <div className="blackbox-frame">
           <div className="lp-subnav-content">

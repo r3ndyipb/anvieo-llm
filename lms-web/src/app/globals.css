@@ -351,7 +351,7 @@ button {
   border-radius: 50%;
 }
 
-/* ==================== NAVBAR (BOOTSTRAP & DICODING COMPATIBLE + AUI STYLE) ==================== */
+/* ==================== NAVBAR (BOOTSTRAP & ANVIEO COMPATIBLE + AUI STYLE) ==================== */
 .navbar-nav,
 .blackbox-nav {
   display: flex;
@@ -3783,7 +3783,7 @@ button {
 }
 
 /* ==========================================================================
-   LEARNING PATH TIMELINE PAGE (DICODING 65 REPLICA)
+   LEARNING PATH TIMELINE PAGE (ANVIEO 65 REPLICA)
    ========================================================================== */
 
 .learning-path-wrapper,
@@ -4906,7 +4906,7 @@ button {
 }
 
 /* ==========================================================================
-   SUBSCRIPTIONS PURCHASE PAGE (DICODING PURCHASES REPLICA)
+   SUBSCRIPTIONS PURCHASE PAGE (ANVIEO PURCHASES REPLICA)
    ========================================================================== */
 
 .subs-hero-banner {
@@ -5507,7 +5507,7 @@ button {
 }
 
 /* ==========================================================================
-   TOKEN ACTIVATION PAGE (DICODING TOKENS ACTIVATION REPLICA)
+   TOKEN ACTIVATION PAGE (ANVIEO TOKENS ACTIVATION REPLICA)
    ========================================================================== */
 
 .token-main-section {
@@ -9136,7 +9136,7 @@ button {
 }
 
 /* ==========================================================================
-   LEARNING PATH SUBNAV & ALL CLASSES CATALOG (DICODING COMPLIANT)
+   LEARNING PATH SUBNAV & ALL CLASSES CATALOG (ANVIEO COMPLIANT)
    ========================================================================== */
 .lp-subnav-bar {
   background: var(--bx-bg);

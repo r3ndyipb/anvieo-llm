@@ -11,13 +11,13 @@ export const metadata = {
 
 export default function LoginPage() {
   return (
-    <>
+    <div className="portal-fit-screen">
       <PortalHeader currentPage="login" />
 
       <main className="portal-auth-container">
         <BlackboxRails position="both" />
 
-        <div className="blackbox-frame">
+        <div className="blackbox-frame" style={{ height: "100%", display: "flex", alignItems: "center" }}>
           <div className="portal-auth-grid">
             {/* Left Column: Showcase */}
             <AuthShowcase />
@@ -28,12 +28,12 @@ export default function LoginPage() {
         </div>
       </main>
 
-      {/* Subtle Footer Bar */}
-      <footer style={{ borderTop: "1px solid var(--bx-border)", padding: "16px 0", textAlign: "center", fontSize: "0.75rem", color: "var(--bx-muted)", background: "var(--bx-surface)" }}>
-        <div className="blackbox-frame">
+      {/* Fit Height Compact Footer Bar */}
+      <footer className="portal-auth-footer">
+        <div className="blackbox-frame" style={{ textAlign: "center" }}>
           <span>© 2026 ANVIEO Academy · High-Trust Multidisciplinary LMS. Standar Kurikulum Global &amp; Evaluasi Praktisi.</span>
         </div>
       </footer>
-    </>
+    </div>
   );
 }

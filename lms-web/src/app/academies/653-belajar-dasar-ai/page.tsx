@@ -498,7 +498,7 @@ export default function BelajarDasarAiAcademyPage() {
           </div>
         </section>
 
-        {/* SECTION: SILABUS LENGKAP (ACCORDION PER KATEGORI SEPERTI DICODING) */}
+        {/* SECTION: SILABUS LENGKAP (ACCORDION PER KATEGORI STANDAR ANVIEO) */}
         <section id="course-syllabus-section" style={{ padding: "60px 0 80px", background: "var(--bx-bg)" }}>
           <div className="blackbox-frame">
             <div className="blackbox-section-strip">

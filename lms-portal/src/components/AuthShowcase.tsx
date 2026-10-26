@@ -8,19 +8,19 @@ const TESTIMONIALS = [
     avatar: "/alumni/alumni_1.jpg",
     name: "Ahmad Fauzi",
     role: "Fullstack Engineer di Bukalapak",
-    quote: "Review submission kode dari expert reviewer di Anvieo beneran detail per baris. Standar clean architecture yang diajarkan langsung terpakai di pekerjaan harian.",
+    quote: "Review submission kode dari expert reviewer beneran detail per baris. Standar clean architecture terpakai langsung.",
   },
   {
     avatar: "/alumni/alumni_2.jpg",
     name: "Siti Rahmawati",
     role: "Cloud Architect di Tokopedia",
-    quote: "Modul hands-on berbasis skenario industri riil dan Socratic AI membantuku memecahkan error arsitektur sistem tanpa harus macet berhari-hari.",
+    quote: "Modul industri dan Socratic AI membantuku memecahkan error arsitektur sistem tanpa harus macet berhari-hari.",
   },
   {
     avatar: "/alumni/alumni_3.jpg",
     name: "Budi Santoso",
     role: "AI & ML Specialist di Telkom",
-    quote: "Sertifikasi dan portofolio proyek di Anvieo diakui langsung saat proses wawancara kerja. Transisi karir saya jadi sangat mulus.",
+    quote: "Sertifikasi dan portofolio proyek di Anvieo diakui langsung saat interview. Transisi karir sangat mulus.",
   },
 ];
 
@@ -46,53 +46,53 @@ export default function AuthShowcase() {
       <div>
         {/* Institutional Pill */}
         <div className="portal-showcase-pill">
-          <FlatIcon type="shield" size={14} color="var(--gold)" />
+          <FlatIcon type="shield" size={12} color="var(--gold)" />
           <span>PORTAL AKADEMI TERAKREDITASI</span>
         </div>
 
         {/* Main Display Heading */}
         <h1 className="portal-showcase-heading">
-          Akselerasi Penguasaan Disiplin Berstandar Industri
+          Akselerasi Disiplin Berstandar Industri
         </h1>
 
         <p className="portal-showcase-subtext">
-          Portal terpadu untuk mengakses silabus mutakhir, ruang review kode 1-on-1 bersama praktisi terverifikasi, dan sertifikasi kompetensi berbobot internasional.
+          Portal terpadu untuk mengakses silabus mutakhir, ruang review kode 1-on-1, dan sertifikasi kompetensi berbobot internasional.
         </p>
 
         {/* Feature List */}
         <div className="portal-feature-list">
           <div className="portal-feature-item">
             <div className="portal-feature-icon-box">
-              <FlatIcon type="brain" size={18} />
+              <FlatIcon type="brain" size={14} />
             </div>
             <div>
               <div className="portal-feature-title">Socratic AI Copilot</div>
               <div className="portal-feature-desc">
-                Petunjuk logika dan bedah error interaktif 24/7 tanpa memberi jalan pintas instan.
+                Petunjuk logika dan bedah error interaktif 24/7 tanpa jalan pintas.
               </div>
             </div>
           </div>
 
           <div className="portal-feature-item">
             <div className="portal-feature-icon-box">
-              <FlatIcon type="terminal" size={18} />
+              <FlatIcon type="terminal" size={14} />
             </div>
             <div>
               <div className="portal-feature-title">Evaluasi Kode Human-Reviewer</div>
               <div className="portal-feature-desc">
-                Setiap baris kode submission proyek ditelaah manual oleh praktisi senior sesuai rubrik standar industri.
+                Setiap baris kode ditelaah praktisi senior sesuai rubrik industri.
               </div>
             </div>
           </div>
 
           <div className="portal-feature-item">
             <div className="portal-feature-icon-box">
-              <FlatIcon type="award" size={18} />
+              <FlatIcon type="award" size={14} />
             </div>
             <div>
               <div className="portal-feature-title">Sertifikat &amp; Jalur Rekrutmen</div>
               <div className="portal-feature-desc">
-                Akses langsung ke jaringan 1,200+ Hiring Partner setelah menyelesaikan submission kelulusan.
+                Akses langsung ke jaringan 1,200+ Hiring Partner setelah kelulusan.
               </div>
             </div>
           </div>
@@ -129,7 +129,7 @@ export default function AuthShowcase() {
           </div>
           <div className="portal-stat-col">
             <span className="portal-stat-num">4.9 / 5.0</span>
-            <span className="portal-stat-label">Kepuasan Reviewer</span>
+            <span className="portal-stat-label">Rating Reviewer</span>
           </div>
         </div>
       </div>

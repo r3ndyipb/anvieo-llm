@@ -36,9 +36,7 @@ export default function LoginForm() {
     e.preventDefault();
     setIsLoading(true);
 
-    // Simulate instant template login transition
     setTimeout(() => {
-      // Save simulated profile in localStorage
       if (typeof window !== "undefined") {
         const displayName =
           role === "siswa"
@@ -78,17 +76,14 @@ export default function LoginForm() {
         </div>
 
         {/* Role Selector Tabs */}
-        <div style={{ marginBottom: "16px" }}>
-          <label style={{ display: "block", fontSize: "0.75rem", fontWeight: 700, color: "var(--bx-muted)", textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: "8px" }}>
-            Pilih Peran Akun Portal:
-          </label>
+        <div>
           <div className="portal-role-tabs">
             <button
               type="button"
               className={`portal-role-tab ${role === "siswa" ? "active" : ""}`}
               onClick={() => setDemoRole("siswa")}
             >
-              <FlatIcon type="user" size={14} />
+              <FlatIcon type="user" size={13} />
               <span>Siswa</span>
             </button>
             <button
@@ -96,7 +91,7 @@ export default function LoginForm() {
               className={`portal-role-tab ${role === "reviewer" ? "active" : ""}`}
               onClick={() => setDemoRole("reviewer")}
             >
-              <FlatIcon type="terminal" size={14} />
+              <FlatIcon type="terminal" size={13} />
               <span>Reviewer</span>
             </button>
             <button
@@ -104,7 +99,7 @@ export default function LoginForm() {
               className={`portal-role-tab ${role === "instruktur" ? "active" : ""}`}
               onClick={() => setDemoRole("instruktur")}
             >
-              <FlatIcon type="briefcase" size={14} />
+              <FlatIcon type="briefcase" size={13} />
               <span>Instruktur</span>
             </button>
           </div>
@@ -112,8 +107,8 @@ export default function LoginForm() {
 
         {/* 1-Click Demo Fill Pill Bar */}
         <div className="portal-demo-autofill">
-          <span style={{ color: "var(--gold)", fontWeight: 700, display: "inline-flex", alignItems: "center", gap: "4px" }}>
-            <FlatIcon type="sparkle" size={13} color="var(--gold)" />
+          <span style={{ color: "var(--gold)", fontWeight: 700, display: "inline-flex", alignItems: "center", gap: "3px" }}>
+            <FlatIcon type="sparkle" size={12} color="var(--gold)" />
             Coba Demo:
           </span>
           <button
@@ -148,11 +143,10 @@ export default function LoginForm() {
           <div className="portal-form-group">
             <label htmlFor="email" className="portal-label">
               <span>Email Akun Portal <span style={{ color: "var(--gold)" }}>*</span></span>
-              <span style={{ fontSize: "0.75rem", color: "var(--bx-muted-soft)", fontWeight: 400 }}>Terdaftar di Akademi</span>
             </label>
             <div className="portal-input-wrap">
               <span className="portal-input-icon">
-                <FlatIcon type="email" size={16} />
+                <FlatIcon type="email" size={14} />
               </span>
               <input
                 type="email"
@@ -177,14 +171,14 @@ export default function LoginForm() {
                 type="button"
                 onClick={() => setShowForgotModal(true)}
                 className="portal-link-gold"
-                style={{ fontSize: "0.75rem", background: "none", border: "none", cursor: "pointer", padding: 0 }}
+                style={{ fontSize: "0.71875rem", background: "none", border: "none", cursor: "pointer", padding: 0 }}
               >
-                Lupa Kata Sandi?
+                Lupa Sandi?
               </button>
             </label>
             <div className="portal-input-wrap">
               <span className="portal-input-icon">
-                <FlatIcon type="lock" size={16} />
+                <FlatIcon type="lock" size={14} />
               </span>
               <input
                 type={showPassword ? "text" : "password"}
@@ -205,7 +199,7 @@ export default function LoginForm() {
                   aria-label={showPassword ? "Sembunyikan kata sandi" : "Tampilkan kata sandi"}
                   title={showPassword ? "Sembunyikan" : "Tampilkan"}
                 >
-                  <FlatIcon type={showPassword ? "eye-off" : "eye"} size={16} />
+                  <FlatIcon type={showPassword ? "eye-off" : "eye"} size={14} />
                 </button>
               </span>
             </div>
@@ -221,7 +215,7 @@ export default function LoginForm() {
               />
               <span>Ingat saya di perangkat ini</span>
             </label>
-            <span style={{ fontSize: "0.75rem", color: "var(--bx-muted-soft)" }}>
+            <span style={{ fontSize: "0.6875rem", color: "var(--bx-muted-soft)" }}>
               Sesi 30 Hari
             </span>
           </div>
@@ -234,13 +228,13 @@ export default function LoginForm() {
           >
             {isLoading ? (
               <>
-                <span style={{ display: "inline-block", width: "16px", height: "16px", border: "2px solid #0A2E52", borderTopColor: "transparent", borderRadius: "50%", animation: "spin 0.6s linear infinite" }} />
+                <span style={{ display: "inline-block", width: "14px", height: "14px", border: "2px solid #0A2E52", borderTopColor: "transparent", borderRadius: "50%", animation: "spin 0.6s linear infinite" }} />
                 <span>MEMVERIFIKASI...</span>
               </>
             ) : (
               <>
                 <span>MASUK KE PORTAL BELAJAR</span>
-                <FlatIcon type="arrow-right" size={15} color="#0A2E52" />
+                <FlatIcon type="arrow-right" size={14} color="#0A2E52" />
               </>
             )}
           </button>
@@ -248,7 +242,7 @@ export default function LoginForm() {
 
         {/* SSO Divider */}
         <div className="portal-divider">
-          <span>atau masuk lebih cepat dengan</span>
+          <span>atau masuk dengan</span>
         </div>
 
         {/* SSO Social Logins */}
@@ -261,7 +255,7 @@ export default function LoginForm() {
               handleSubmit({ preventDefault: () => {} } as React.FormEvent);
             }}
           >
-            <FlatIcon type="google" size={16} />
+            <FlatIcon type="google" size={14} />
             <span>Google</span>
           </button>
           <button
@@ -272,22 +266,14 @@ export default function LoginForm() {
               handleSubmit({ preventDefault: () => {} } as React.FormEvent);
             }}
           >
-            <FlatIcon type="github" size={16} />
+            <FlatIcon type="github" size={14} />
             <span>GitHub</span>
           </button>
         </div>
 
-        {/* Template Notice Badge */}
-        <div className="portal-sim-banner">
-          <FlatIcon type="info" size={16} />
-          <div>
-            <strong>Template UI Node.js:</strong> Autentikasi disimulasikan tanpa backend database. Klik tombol Masuk di atas untuk melihat dashboard siswa.
-          </div>
-        </div>
-
         {/* Switch Prompt */}
         <div className="portal-switch-prompt">
-          Belum memiliki akun ANVIEO Academy?{" "}
+          Belum memiliki akun portal?{" "}
           <Link href="/register" className="portal-link-gold">
             Daftar Sekarang (Gratis) →
           </Link>
@@ -303,7 +289,7 @@ export default function LoginForm() {
             setForgotSuccess(false);
           }}
         >
-          <div className="blackbox-modal-card" onClick={(e) => e.stopPropagation()} style={{ maxWidth: "440px" }}>
+          <div className="blackbox-modal-card" onClick={(e) => e.stopPropagation()} style={{ maxWidth: "420px" }}>
             <button
               type="button"
               className="blackbox-modal-close"
@@ -316,27 +302,27 @@ export default function LoginForm() {
               ×
             </button>
 
-            <div style={{ textAlign: "center", marginBottom: "20px" }}>
-              <div style={{ width: "48px", height: "48px", margin: "0 auto 12px", background: "rgba(201,150,46,0.12)", border: "1px solid var(--gold)", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                <FlatIcon type="key" size={22} color="var(--gold)" />
+            <div style={{ textAlign: "center", marginBottom: "16px" }}>
+              <div style={{ width: "42px", height: "42px", margin: "0 auto 10px", background: "rgba(201,150,46,0.12)", border: "1px solid var(--gold)", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                <FlatIcon type="key" size={20} color="var(--gold)" />
               </div>
-              <h3 style={{ fontFamily: "var(--font-heading)", fontSize: "1.3rem", margin: "0 0 6px", color: "var(--bx-ink-bright)" }}>
+              <h3 style={{ fontFamily: "var(--font-heading)", fontSize: "1.2rem", margin: "0 0 4px", color: "var(--bx-ink-bright)" }}>
                 Pemulihan Kata Sandi
               </h3>
-              <p style={{ fontSize: "0.8125rem", color: "var(--bx-muted)", margin: 0 }}>
-                Masukkan alamat email yang terdaftar pada portal. Kami akan mengirimkan tautan reset kata sandi ke kotak masuk Anda.
+              <p style={{ fontSize: "0.78125rem", color: "var(--bx-muted)", margin: 0 }}>
+                Masukkan email yang terdaftar untuk menerima tautan instruksi reset.
               </p>
             </div>
 
             {forgotSuccess ? (
-              <div style={{ textAlign: "center", padding: "16px 0" }}>
-                <div style={{ color: "#10B981", marginBottom: "8px", display: "flex", justifyContent: "center" }}>
-                  <FlatIcon type="check-circle" size={36} color="#10B981" />
+              <div style={{ textAlign: "center", padding: "12px 0" }}>
+                <div style={{ color: "#10B981", marginBottom: "6px", display: "flex", justifyContent: "center" }}>
+                  <FlatIcon type="check-circle" size={32} color="#10B981" />
                 </div>
-                <h4 style={{ fontSize: "1rem", color: "var(--bx-ink-bright)", marginBottom: "6px" }}>
+                <h4 style={{ fontSize: "0.9375rem", color: "var(--bx-ink-bright)", marginBottom: "4px" }}>
                   Tautan Reset Telah Terkirim!
                 </h4>
-                <p style={{ fontSize: "0.8125rem", color: "var(--bx-muted)", marginBottom: "18px" }}>
+                <p style={{ fontSize: "0.78125rem", color: "var(--bx-muted)", marginBottom: "14px" }}>
                   Silakan periksa folder kotak masuk atau spam pada <strong>{forgotEmail || email}</strong>.
                 </p>
                 <button
@@ -347,7 +333,7 @@ export default function LoginForm() {
                     setForgotSuccess(false);
                   }}
                 >
-                  KEMBALI KE HALAMAN LOGIN
+                  KEMBALI KE LOGIN
                 </button>
               </div>
             ) : (
@@ -356,10 +342,10 @@ export default function LoginForm() {
                   e.preventDefault();
                   setForgotSuccess(true);
                 }}
-                style={{ display: "flex", flexDirection: "column", gap: "14px" }}
+                style={{ display: "flex", flexDirection: "column", gap: "12px" }}
               >
                 <div>
-                  <label style={{ display: "block", fontSize: "0.8125rem", fontWeight: 600, marginBottom: "6px", color: "var(--bx-ink)" }}>
+                  <label style={{ display: "block", fontSize: "0.75rem", fontWeight: 600, marginBottom: "4px", color: "var(--bx-ink)" }}>
                     Email Terdaftar
                   </label>
                   <input
@@ -370,12 +356,12 @@ export default function LoginForm() {
                     onChange={(e) => setForgotEmail(e.target.value)}
                     style={{
                       width: "100%",
-                      padding: "10px 14px",
+                      padding: "8px 12px",
                       background: "var(--bx-bg)",
                       border: "1px solid var(--bx-border)",
-                      borderRadius: "6px",
+                      borderRadius: "5px",
                       color: "var(--bx-ink-bright)",
-                      fontSize: "0.875rem",
+                      fontSize: "0.8125rem",
                     }}
                   />
                 </div>
@@ -383,7 +369,6 @@ export default function LoginForm() {
                 <button
                   type="submit"
                   className="portal-submit-btn"
-                  style={{ marginTop: "6px" }}
                 >
                   KIRIM INSTRUKSI RESET →
                 </button>

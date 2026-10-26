@@ -24,7 +24,7 @@
    - Android Developer, Flutter Developer, iOS Developer.
    - DevOps & Cloud Computing (Google Cloud Platform).
 
-2. **Silabus Detail & Interaktif (Dicoding Academy Standard)**:
+2. **Silabus Detail & Interaktif (Standar Kurikulum Global)**:
    - Halaman detail kelas komprehensif (`/academies/653-belajar-dasar-ai`) dengan metrik durasi, rating, jumlah modul, dan fasilitas belajar.
    - Accordion silabus interaktif 5 kategori dengan 39 modul pembelajaran lengkap.
 
@@ -35,7 +35,7 @@
 4. **Gerbang Autentikasi Modern (Google SSO & Email)**:
    - Halaman Login (`/login`) dengan Google Identity SSO dan Email/Password.
    - Halaman Registrasi (`/register` & `/daftar`) dengan indikator kekuatan kata sandi (*Password Strength Meter*).
-   - Tautan legal Syarat & Ketentuan platform (`/termsofuse`) sesuai standar *dicoding.com/termsofuse*.
+   - Tautan legal Syarat & Ketentuan platform (`/termsofuse`) berstandar kepatuhan hukum edisi 2026.
 
 5. **Ekosistem Enterprise & Dampak**:
    - **Hiring Partner Network** (`/hiring-partner`): 850+ perusahaan mitra perekrut.

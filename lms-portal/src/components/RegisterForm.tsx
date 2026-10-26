@@ -29,18 +29,18 @@ export default function RegisterForm() {
     if (score <= 1) return { score: 1, text: "Sangat Lemah", class: "weak" };
     if (score === 2) return { score: 2, text: "Cukup", class: "medium" };
     if (score === 3) return { score: 3, text: "Kuat", class: "strong" };
-    return { score: 4, text: "Sangat Kuat (Aman)", class: "strong" };
+    return { score: 4, text: "Sangat Kuat", class: "strong" };
   };
 
   const strength = getPasswordStrength(password);
 
   // Autofill sample data for fast testing
   const fillSampleData = () => {
-    setFullName("Muhammad Farhan Al-Ghifari");
+    setFullName("Muhammad Farhan");
     setEmail("farhan.alghifari@gmail.com");
     setPhone("081298765432");
     setTrack("fullstack");
-    setPassword("Anvieo2026#DevSecure");
+    setPassword("Anvieo2026#Dev");
     setAgreeTerms(true);
   };
 
@@ -95,130 +95,129 @@ export default function RegisterForm() {
 
         {/* 1-Click Fill Demo Button */}
         <div className="portal-demo-autofill">
-          <span style={{ color: "var(--gold)", fontWeight: 700, display: "inline-flex", alignItems: "center", gap: "4px" }}>
-            <FlatIcon type="sparkle" size={13} color="var(--gold)" />
-            Isi Otomatis:
+          <span style={{ color: "var(--gold)", fontWeight: 700, display: "inline-flex", alignItems: "center", gap: "3px" }}>
+            <FlatIcon type="sparkle" size={12} color="var(--gold)" />
+            Coba Demo:
           </span>
           <button
             type="button"
             className="portal-demo-pill"
             onClick={fillSampleData}
-            title="Isi formulir dengan data sampel"
+            title="Isi formulir dengan data sampel peserta"
           >
-            📋 Isi Data Sampel Peserta
+            📋 Isi Data Sampel
           </button>
         </div>
 
         {/* Main Register Form */}
         <form onSubmit={handleSubmit} className="portal-form">
-          {/* Full Name */}
-          <div className="portal-form-group">
-            <label htmlFor="name" className="portal-label">
-              <span>Nama Lengkap <span style={{ color: "var(--gold)" }}>*</span></span>
-              <span style={{ fontSize: "0.75rem", color: "var(--bx-muted-soft)", fontWeight: 400 }}>Sesuai KTP/Sertifikat</span>
-            </label>
-            <div className="portal-input-wrap">
-              <span className="portal-input-icon">
-                <FlatIcon type="user" size={16} />
-              </span>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                autoComplete="name"
-                required
-                placeholder="cth. Muhammad Farhan"
-                value={fullName}
-                onChange={(e) => setFullName(e.target.value)}
-                className="portal-input"
-              />
+          {/* Row 1: Name & Email */}
+          <div className="portal-form-grid-2">
+            <div className="portal-form-group">
+              <label htmlFor="name" className="portal-label">
+                <span>Nama Lengkap <span style={{ color: "var(--gold)" }}>*</span></span>
+              </label>
+              <div className="portal-input-wrap">
+                <span className="portal-input-icon">
+                  <FlatIcon type="user" size={14} />
+                </span>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  autoComplete="name"
+                  required
+                  placeholder="Muhammad Farhan"
+                  value={fullName}
+                  onChange={(e) => setFullName(e.target.value)}
+                  className="portal-input"
+                />
+              </div>
+            </div>
+
+            <div className="portal-form-group">
+              <label htmlFor="email" className="portal-label">
+                <span>Email Aktif <span style={{ color: "var(--gold)" }}>*</span></span>
+              </label>
+              <div className="portal-input-wrap">
+                <span className="portal-input-icon">
+                  <FlatIcon type="email" size={14} />
+                </span>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  autoComplete="username"
+                  inputMode="email"
+                  required
+                  placeholder="nama@email.com"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="portal-input"
+                />
+              </div>
             </div>
           </div>
 
-          {/* Email */}
-          <div className="portal-form-group">
-            <label htmlFor="email" className="portal-label">
-              <span>Alamat Email Aktif <span style={{ color: "var(--gold)" }}>*</span></span>
-              <span style={{ fontSize: "0.75rem", color: "var(--bx-muted-soft)", fontWeight: 400 }}>Untuk verifikasi &amp; notifikasi</span>
-            </label>
-            <div className="portal-input-wrap">
-              <span className="portal-input-icon">
-                <FlatIcon type="email" size={16} />
-              </span>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                autoComplete="username"
-                inputMode="email"
-                required
-                placeholder="nama@email.com"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className="portal-input"
-              />
+          {/* Row 2: WhatsApp & Track */}
+          <div className="portal-form-grid-2">
+            <div className="portal-form-group">
+              <label htmlFor="phone" className="portal-label">
+                <span>Nomor WhatsApp <span style={{ color: "var(--gold)" }}>*</span></span>
+              </label>
+              <div className="portal-input-wrap">
+                <span className="portal-input-icon">
+                  <FlatIcon type="phone" size={14} />
+                </span>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  autoComplete="tel"
+                  inputMode="tel"
+                  required
+                  placeholder="081234567890"
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
+                  className="portal-input"
+                />
+              </div>
+            </div>
+
+            <div className="portal-form-group">
+              <label htmlFor="track" className="portal-label">
+                <span>Jalur Spesialisasi <span style={{ color: "var(--gold)" }}>*</span></span>
+              </label>
+              <div className="portal-input-wrap">
+                <span className="portal-input-icon">
+                  <FlatIcon type="roadmap" size={14} />
+                </span>
+                <select
+                  id="track"
+                  name="track"
+                  value={track}
+                  onChange={(e) => setTrack(e.target.value)}
+                  className="portal-input"
+                  style={{ cursor: "pointer" }}
+                >
+                  <option value="fullstack">Fullstack Web &amp; AI (Next.js)</option>
+                  <option value="cloud">Cloud &amp; Backend Systems (Go)</option>
+                  <option value="cyberlaw">Cyberlaw &amp; AI Governance</option>
+                  <option value="finance">Financial Modeling &amp; Valuation</option>
+                </select>
+              </div>
             </div>
           </div>
 
-          {/* Phone (WhatsApp) */}
-          <div className="portal-form-group">
-            <label htmlFor="phone" className="portal-label">
-              <span>Nomor WhatsApp <span style={{ color: "var(--gold)" }}>*</span></span>
-              <span style={{ fontSize: "0.75rem", color: "var(--bx-muted-soft)", fontWeight: 400 }}>Notifikasi SLA Review</span>
-            </label>
-            <div className="portal-input-wrap">
-              <span className="portal-input-icon">
-                <FlatIcon type="phone" size={16} />
-              </span>
-              <input
-                type="tel"
-                id="phone"
-                name="phone"
-                autoComplete="tel"
-                inputMode="tel"
-                required
-                placeholder="081234567890"
-                value={phone}
-                onChange={(e) => setPhone(e.target.value)}
-                className="portal-input"
-              />
-            </div>
-          </div>
-
-          {/* Specialization Track */}
-          <div className="portal-form-group">
-            <label htmlFor="track" className="portal-label">
-              <span>Pilihan Jalur Spesialisasi Awal <span style={{ color: "var(--gold)" }}>*</span></span>
-            </label>
-            <div className="portal-input-wrap">
-              <span className="portal-input-icon">
-                <FlatIcon type="roadmap" size={16} />
-              </span>
-              <select
-                id="track"
-                name="track"
-                value={track}
-                onChange={(e) => setTrack(e.target.value)}
-                className="portal-input"
-                style={{ cursor: "pointer" }}
-              >
-                <option value="fullstack">Fullstack Web &amp; AI Architecture (Next.js &amp; Python)</option>
-                <option value="cloud">Cloud &amp; Distributed Backend Systems (Go &amp; Docker)</option>
-                <option value="cyberlaw">Cyberlaw, Data Privacy &amp; AI Governance</option>
-                <option value="finance">Financial Engineering &amp; Valuation Modeling</option>
-              </select>
-            </div>
-          </div>
-
-          {/* Password */}
+          {/* Row 3: Password */}
           <div className="portal-form-group">
             <label htmlFor="new-password" className="portal-label">
               <span>Kata Sandi Baru <span style={{ color: "var(--gold)" }}>*</span></span>
-              <span style={{ fontSize: "0.75rem", color: "var(--bx-muted-soft)" }}>Min. 8 Karakter</span>
+              <span style={{ fontSize: "0.6875rem", color: "var(--bx-muted-soft)" }}>Min. 8 Karakter</span>
             </label>
             <div className="portal-input-wrap">
               <span className="portal-input-icon">
-                <FlatIcon type="lock" size={16} />
+                <FlatIcon type="lock" size={14} />
               </span>
               <input
                 type={showPassword ? "text" : "password"}
@@ -239,7 +238,7 @@ export default function RegisterForm() {
                   aria-label={showPassword ? "Sembunyikan kata sandi" : "Tampilkan kata sandi"}
                   title={showPassword ? "Sembunyikan" : "Tampilkan"}
                 >
-                  <FlatIcon type={showPassword ? "eye-off" : "eye"} size={16} />
+                  <FlatIcon type={showPassword ? "eye-off" : "eye"} size={14} />
                 </button>
               </span>
             </div>
@@ -254,43 +253,41 @@ export default function RegisterForm() {
                   <div className={`portal-pw-strength-bar ${strength.score >= 4 ? strength.class : ""}`} />
                 </div>
                 <div className="portal-pw-strength-label">
-                  <span>Kekuatan Kata Sandi: <strong>{strength.text}</strong></span>
-                  <span>Gunakan simbol seperti @, #, !</span>
+                  <span>Kekuatan: <strong>{strength.text}</strong></span>
+                  <span>Gunakan huruf besar &amp; simbol</span>
                 </div>
               </>
             )}
           </div>
 
           {/* Terms Agreement Checkbox */}
-          <div className="portal-form-options" style={{ marginTop: "4px" }}>
-            <label className="portal-checkbox-label" style={{ alignItems: "flex-start" }}>
+          <div className="portal-form-options">
+            <label className="portal-checkbox-label">
               <input
                 type="checkbox"
                 required
                 checked={agreeTerms}
                 onChange={(e) => setAgreeTerms(e.target.checked)}
-                style={{ marginTop: "3px" }}
               />
-              <span style={{ fontSize: "0.8125rem", lineHeight: 1.45 }}>
-                Saya menyetujui{" "}
+              <span style={{ fontSize: "0.75rem", lineHeight: 1.3 }}>
+                Setujui{" "}
                 <button
                   type="button"
                   onClick={() => setShowTermsModal(true)}
                   className="portal-link-gold"
-                  style={{ background: "none", border: "none", padding: 0, cursor: "pointer", fontSize: "0.8125rem" }}
+                  style={{ background: "none", border: "none", padding: 0, cursor: "pointer", fontSize: "0.75rem" }}
                 >
                   Ketentuan Layanan
                 </button>{" "}
-                dan{" "}
+                &amp;{" "}
                 <button
                   type="button"
                   onClick={() => setShowTermsModal(true)}
                   className="portal-link-gold"
-                  style={{ background: "none", border: "none", padding: 0, cursor: "pointer", fontSize: "0.8125rem" }}
+                  style={{ background: "none", border: "none", padding: 0, cursor: "pointer", fontSize: "0.75rem" }}
                 >
-                  Kebijakan Privasi
-                </button>{" "}
-                ANVIEO Academy.
+                  Privasi
+                </button>.
               </span>
             </label>
           </div>
@@ -303,13 +300,13 @@ export default function RegisterForm() {
           >
             {isLoading ? (
               <>
-                <span style={{ display: "inline-block", width: "16px", height: "16px", border: "2px solid #0A2E52", borderTopColor: "transparent", borderRadius: "50%", animation: "spin 0.6s linear infinite" }} />
+                <span style={{ display: "inline-block", width: "14px", height: "14px", border: "2px solid #0A2E52", borderTopColor: "transparent", borderRadius: "50%", animation: "spin 0.6s linear infinite" }} />
                 <span>MEMBUAT AKUN PORTAL...</span>
               </>
             ) : (
               <>
                 <span>BUAT AKUN BELAJAR SEKARANG</span>
-                <FlatIcon type="arrow-right" size={15} color="#0A2E52" />
+                <FlatIcon type="arrow-right" size={14} color="#0A2E52" />
               </>
             )}
           </button>
@@ -317,7 +314,7 @@ export default function RegisterForm() {
 
         {/* SSO Divider */}
         <div className="portal-divider">
-          <span>atau daftar cepat dengan</span>
+          <span>atau daftar dengan</span>
         </div>
 
         {/* SSO Social Logins */}
@@ -333,7 +330,7 @@ export default function RegisterForm() {
               handleSubmit({ preventDefault: () => {} } as React.FormEvent);
             }}
           >
-            <FlatIcon type="google" size={16} />
+            <FlatIcon type="google" size={14} />
             <span>Google</span>
           </button>
           <button
@@ -347,22 +344,14 @@ export default function RegisterForm() {
               handleSubmit({ preventDefault: () => {} } as React.FormEvent);
             }}
           >
-            <FlatIcon type="github" size={16} />
+            <FlatIcon type="github" size={14} />
             <span>GitHub</span>
           </button>
         </div>
 
-        {/* Template Notice Badge */}
-        <div className="portal-sim-banner">
-          <FlatIcon type="info" size={16} />
-          <div>
-            <strong>Template UI Node.js:</strong> Registrasi ini berjalan di sisi client tanpa koneksi database. Klik &lsquo;Buat Akun&rsquo; untuk langsung masuk ke dashboard portal.
-          </div>
-        </div>
-
         {/* Switch Prompt */}
         <div className="portal-switch-prompt">
-          Sudah memiliki akun portal ANVIEO?{" "}
+          Sudah memiliki akun portal?{" "}
           <Link href="/login" className="portal-link-gold">
             Masuk Di Sini →
           </Link>
@@ -372,7 +361,7 @@ export default function RegisterForm() {
       {/* Terms Modal */}
       {showTermsModal && (
         <div className="blackbox-modal-backdrop" onClick={() => setShowTermsModal(false)}>
-          <div className="blackbox-modal-card" onClick={(e) => e.stopPropagation()} style={{ maxWidth: "520px" }}>
+          <div className="blackbox-modal-card" onClick={(e) => e.stopPropagation()} style={{ maxWidth: "480px" }}>
             <button
               type="button"
               className="blackbox-modal-close"
@@ -382,19 +371,19 @@ export default function RegisterForm() {
               ×
             </button>
 
-            <h3 style={{ fontFamily: "var(--font-heading)", fontSize: "1.3rem", margin: "0 0 12px", color: "var(--bx-ink-bright)" }}>
+            <h3 style={{ fontFamily: "var(--font-heading)", fontSize: "1.2rem", margin: "0 0 10px", color: "var(--bx-ink-bright)" }}>
               Ketentuan Layanan &amp; Etika Pembelajaran
             </h3>
 
-            <div style={{ maxHeight: "300px", overflowY: "auto", fontSize: "0.8125rem", color: "var(--bx-prose-ink)", lineHeight: 1.6, paddingRight: "8px" }}>
-              <p style={{ marginBottom: "12px" }}>
+            <div style={{ maxHeight: "260px", overflowY: "auto", fontSize: "0.78125rem", color: "var(--bx-prose-ink)", lineHeight: 1.5, paddingRight: "6px" }}>
+              <p style={{ marginBottom: "10px" }}>
                 Selamat datang di ANVIEO Academy. Sebagai pembelajar di platform ini, Anda menyepakati hal-hal berikut:
               </p>
-              <ul style={{ paddingLeft: "18px", marginBottom: "12px", display: "flex", flexDirection: "column", gap: "6px" }}>
-                <li><strong>Integritas Akademik:</strong> Seluruh baris kode tugas submission wajib merupakan hasil karya sendiri atau dikembangkan dengan kaidah atribusi terbuka. Plagiarisme kode akan didiskualifikasi oleh tim reviewer.</li>
-                <li><strong>Reviewer SLA:</strong> Setiap kode tugas Anda akan dievaluasi oleh reviewer ahli dalam kurun waktu 1x24 jam hingga maksimal 3x24 jam.</li>
-                <li><strong>Kerahasiaan Akun:</strong> Akun portal bersifat personal dan tidak diperkenankan dialihkan atau digunakan bersama pihak lain.</li>
-                <li><strong>Perlindungan Data:</strong> Data kontak WhatsApp dan email hanya digunakan untuk kebutuhan notifikasi kelulusan, SLA submission, dan pengiriman sertifikat resmi.</li>
+              <ul style={{ paddingLeft: "16px", marginBottom: "10px", display: "flex", flexDirection: "column", gap: "6px" }}>
+                <li><strong>Integritas Akademik:</strong> Seluruh baris kode submission proyek wajib merupakan hasil karya sendiri atau dikembangkan dengan kaidah atribusi terbuka.</li>
+                <li><strong>Reviewer SLA:</strong> Setiap kode tugas Anda akan dievaluasi oleh praktisi senior dalam kurun waktu 1x24 jam.</li>
+                <li><strong>Kerahasiaan Akun:</strong> Akun portal bersifat personal dan tidak diperkenankan dipindahtangankan.</li>
+                <li><strong>Perlindungan Data:</strong> Data kontak WhatsApp dan email hanya digunakan untuk kebutuhan notifikasi kelulusan dan sertifikat resmi.</li>
               </ul>
             </div>
 
@@ -405,7 +394,7 @@ export default function RegisterForm() {
                 setAgreeTerms(true);
                 setShowTermsModal(false);
               }}
-              style={{ marginTop: "18px" }}
+              style={{ marginTop: "14px" }}
             >
               SAYA MENGERTI &amp; SETUJU
             </button>

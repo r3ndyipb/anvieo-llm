@@ -27,7 +27,7 @@ const ALUMNI_STORIES: AlumniStory[] = [
     role: "Digital Audit Associate",
     company: "PwC Indonesia",
     category: "Data & Digital Governance",
-    image: "https://dicoding-web-img.sgp1.digitaloceanspaces.com/original/impact-report/rahmah-full.jpg",
+    image: "/alumni/alumni_1.jpg",
     quote:
       "Dari latar belakang non-IT, kurikulum terstruktur dan code review mendalam di Anvieo Academy membukakan jalan menuju divisi Digital Assurance di Big 4.",
     salaryMultiplier: "3.2x",
@@ -41,7 +41,7 @@ const ALUMNI_STORIES: AlumniStory[] = [
     role: "Android Engineer Industrial",
     company: "Bank of Korea",
     category: "Mobile Architecture & FinTech",
-    image: "https://dicoding-web-img.sgp1.digitaloceanspaces.com/original/impact-report/dery.jpg",
+    image: "/alumni/alumni_2.jpg",
     quote:
       "Standarisasi kode yang diuji berulang kali saat submit submission membuat saya percaya diri bersaing di level perbankan sentral internasional di Seoul.",
     salaryMultiplier: "4.5x",
@@ -55,7 +55,7 @@ const ALUMNI_STORIES: AlumniStory[] = [
     role: "Back-End Developer",
     company: "Bank Mandiri",
     category: "Enterprise Microservices",
-    image: "https://dicoding-web-img.sgp1.digitaloceanspaces.com/original/impact-report/farhan.jpg",
+    image: "/alumni/alumni_3.jpg",
     quote:
       "Pelatihan intensif cloud dan backend resilience mengajarkan saya arsitektur toleran kegagalan skala jutaan transaksi per menit.",
     salaryMultiplier: "2.8x",
@@ -90,7 +90,7 @@ const FLAGSHIP_PROGRAMS: ProgramItem[] = [
       "Capstone project berbasis tantangan riil UMKM dan industri",
       "Sertifikasi global resmi: Google Associate Android Developer / Cloud Engineer / TensorFlow",
     ],
-    image: "https://dicoding-web-img.sgp1.digitaloceanspaces.com/original/impact-report/program-bangkit-bg.jpg",
+    image: "/articles/article_academic_lab.jpg",
   },
   {
     id: "dbs",
@@ -105,7 +105,7 @@ const FLAGSHIP_PROGRAMS: ProgramItem[] = [
       "Kurikulum terintegrasi literasi perbankan modern dan etika rekayasa data",
       "Peluang fast-track rekrutmen di grup perbankan DBS regional",
     ],
-    image: "https://dicoding-web-img.sgp1.digitaloceanspaces.com/original/impact-report/program-dbs-bg.jpg",
+    image: "/articles/article_fin_quant.jpg",
   },
   {
     id: "aws",
@@ -120,7 +120,7 @@ const FLAGSHIP_PROGRAMS: ProgramItem[] = [
       "Persiapan resmi ujian AWS Certified Cloud Practitioner & Solutions Architect",
       "Diadopsi oleh ratusan startup dan korporasi pengguna infrastruktur AWS",
     ],
-    image: "https://dicoding-web-img.sgp1.digitaloceanspaces.com/original/impact-report/program-aws-bg.jpg",
+    image: "/articles/article_ai_fintech.jpg",
   },
   {
     id: "idcamp",
@@ -135,7 +135,7 @@ const FLAGSHIP_PROGRAMS: ProgramItem[] = [
       "Penyaluran talenta inklusif bagi talenta disabilitas dan daerah 3T",
       "Virtual hackathon tahunan dengan pendanaan inkubasi proyek",
     ],
-    image: "https://dicoding-web-img.sgp1.digitaloceanspaces.com/original/impact-report/program-idcamp-bg.jpg",
+    image: "/articles/article_product_tech.jpg",
   },
   {
     id: "laskarai",
@@ -150,7 +150,7 @@ const FLAGSHIP_PROGRAMS: ProgramItem[] = [
       "Kurikulum model bahasa besar (LLM), RAG, dan computer vision industri",
       "Mentoring langsung oleh praktisi AI dan Solution Architect NVIDIA",
     ],
-    image: "https://dicoding-web-img.sgp1.digitaloceanspaces.com/original/impact-report/program-laskarai-bg.jpg",
+    image: "/articles/article_cyber_law.jpg",
   },
   {
     id: "dts",
@@ -165,7 +165,7 @@ const FLAGSHIP_PROGRAMS: ProgramItem[] = [
       "Penyediaan sertifikasi Google Career Certificates berskala masif",
       "Kerjasama rekrutmen dengan ribuan BUMN dan instansi pemerintah",
     ],
-    image: "https://dicoding-web-img.sgp1.digitaloceanspaces.com/original/impact-report/program-digitalent-bg.jpg",
+    image: "/articles/article_academic_lab.jpg",
   },
 ];
 
@@ -846,7 +846,7 @@ export default function ImpactPage() {
               </p>
               <div className="impact-download-actions">
                 <a
-                  href="/Dicoding Company Profile - January 2025.pdf"
+                  href="/ANVIEO Company Profile - 2026.pdf"
                   className="impact-download-btn"
                   target="_blank"
                   rel="noopener noreferrer"

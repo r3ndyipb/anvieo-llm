@@ -425,15 +425,13 @@ export default function LoginPage() {
                           ANVIEO Academy.
                         </p>
                         <div style={{ fontSize: "0.6875rem", color: "var(--bx-ink-faint)" }}>
-                          Referensi standar operasional:{" "}
-                          <a
-                            href="https://www.dicoding.com/termsofuse"
-                            target="_blank"
-                            rel="noopener noreferrer"
+                          Standar Kepatuhan Operasional:{" "}
+                          <Link
+                            href="/termsofuse"
                             style={{ color: "var(--bx-ink-dim)", textDecoration: "underline" }}
                           >
-                            dicoding.com/termsofuse ↗
-                          </a>
+                            anvieo.ac.id/termsofuse
+                          </Link>
                         </div>
                       </div>
 

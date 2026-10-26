@@ -15,7 +15,7 @@
 ### 1.1 Latar Belakang Bisnis
 Pertumbuhan ekonomi digital di Asia Tenggara menuntut ketersediaan jutaan tenaga ahli teknologi berkualifikasi tinggi di bidang *Software Engineering, Artificial Intelligence, Cloud Infrastructure, Data Science,* dan *Cybersecurity*. Namun, terdapat kesenjangan lebar (*skills gap*) antara materi perkuliahan akademis tradisional dengan standar kebutuhan industri teknologi saat ini.
 
-Platform kursus online konvensional (*video-based MOOC*) terbukti memiliki tingkat penyelesaian (*completion rate*) di bawah 10% karena minimnya interaksi, tidak adanya validasi kode mandiri, dan ketiadaan bimbingan mentor. Mengadopsi kesuksesan platform seperti **Dicoding.com**, bisnis ini dibangun dengan pilar **Human-in-the-Loop Code Review**, kurikulum bertahap dari pemula (*Basic*) hingga mahir (*Advance*), ekosistem komunitas aktif, serta integrasi langsung ke perusahaan pencari kerja (*Hiring Partners*).
+Platform kursus online konvensional (*video-based MOOC*) terbukti memiliki tingkat penyelesaian (*completion rate*) di bawah 10% karena minimnya interaksi, tidak adanya validasi kode mandiri, dan ketiadaan bimbingan mentor. Sebagai pelopor platform engineering modern **ANVIEO Academy**, bisnis ini dibangun dengan pilar **Human-in-the-Loop Code Review**, kurikulum bertahap dari pemula (*Basic*) hingga mahir (*Advance*), ekosistem komunitas aktif, serta integrasi langsung ke perusahaan pencari kerja (*Hiring Partners*).
 
 ### 1.2 Tujuan Dokumen
 Dokumen Kebutuhan Bisnis (BRD) ini bertujuan mendefinisikan:
@@ -129,7 +129,7 @@ graph TD
   - **Developer Coaching:** Sesi mentoring tatap muka daring mingguan bagi siswa langganan.
   - **Virtual Study Room 24/7 & Live Pair-Programming:** Ruang belajar virtual bersama pembelajar lain dengan Pomodoro timer & multi-cursor live coding.
   - Ruang Diskusi Q&A Kontekstual per modul materi dengan sistem *Upvote*, *Best Answer*, dan pencarian semantik AI.
-  - **Reviewer Guild (Dicoding Elite Equivalent):** Wadah instruktur dan reviewer dengan dashboard antrean FIFO dan saldo honorarium otomatis.
+  - **Reviewer Guild (ANVIEO Elite Guild):** Wadah instruktur dan reviewer dengan dashboard antrean FIFO dan saldo honorarium otomatis.
 - **Kompetisi, Gamifikasi & Apresiasi:**
   - **Coding Challenge:** Kompetisi bertarget disponsori oleh korporasi dengan hadiah uang tunai, merchandise, dan token.
   - **Live Coding Arena:** Duel adu cepat algoritma mingguan dengan leaderboard kompetitif.

@@ -76,7 +76,7 @@ export default function SiteFooter() {
 
             <h5>Alamat</h5>
             <p className="footer-address">
-              Dicoding Space Jl. Batik Kumeli No. 50, Sukaluyu, Kec. Cibeunying Kaler, Kota Bandung Jawa Barat 40123
+              ANVIEO Tower, Cyber 2 Building Lt. 18, Jl. H. R. Rasuna Said Blok X-5 No. 13, Kuningan Timur, Jakarta Selatan 12950
             </p>
             <div style={{ marginTop: "18px", display: "flex", alignItems: "center", gap: "8px" }}>
               <span style={{ width: "6px", height: "6px", background: "var(--gold)", display: "inline-block" }} />
@@ -90,11 +90,11 @@ export default function SiteFooter() {
           <div className="footer-col">
             <h5>Company</h5>
             <ul className="footer-links">
-              <li><a href="https://www.dicoding.com/about" target="_blank" rel="noopener noreferrer">Tentang Kami</a></li>
-              <li><a href="https://www.dicoding.com/contact-us" target="_blank" rel="noopener noreferrer">Hubungi Kami</a></li>
-              <li><a href="http://careers.dicoding.com/" target="_blank" rel="noopener noreferrer">Karier</a></li>
-              <li><a href="https://www.dicoding.com/blog/" target="_blank" rel="noopener noreferrer">Blog</a></li>
-              <li><a href="https://help.dicoding.com/" target="_blank" rel="noopener noreferrer">FAQ</a></li>
+              <li><Link href="/about">Tentang Kami</Link></li>
+              <li><Link href="/contact-us">Hubungi Kami</Link></li>
+              <li><Link href="/career">Karier</Link></li>
+              <li><Link href="/blog">Blog</Link></li>
+              <li><Link href="/faq">FAQ</Link></li>
             </ul>
           </div>
 
@@ -112,9 +112,9 @@ export default function SiteFooter() {
               <li><Link href="/hiring-partner">Hiring Partner</Link></li>
               <li><Link href="/csr">Corporate Social Relationship</Link></li>
               <li><Link href="/case-study">Case Study &amp; Rekayasa</Link></li>
-              <li><a href="https://www.dicoding.com/elite" target="_blank" rel="noopener noreferrer">Elite</a></li>
-              <li><a href="https://www.dicoding.com/events" target="_blank" rel="noopener noreferrer">Event</a></li>
-              <li><a href="https://jobs.dicoding.com/" target="_blank" rel="noopener noreferrer">Jobs</a></li>
+              <li><Link href="/elite">Elite Guild</Link></li>
+              <li><Link href="/events">Tech Event</Link></li>
+              <li><Link href="/jobs">Hiring Jobs</Link></li>
             </ul>
           </div>
         </div>
@@ -123,14 +123,14 @@ export default function SiteFooter() {
         <div className="footer-bottom">
           <div className="footer-legal-row">
             <div>
-              <span>© 2026 Dicoding &amp; ANVIEO</span>{" "}
+              <span>© 2026 ANVIEO Academy</span>{" "}
               <span style={{ margin: "0 6px", opacity: 0.5 }}>|</span>{" "}
-              <span>Dicoding adalah merek milik PT Presentologics, perusahaan induk dari PT Dicoding Akademi Indonesia.</span>
+              <span>ANVIEO Academy adalah platform edukasi rekayasa perangkat lunak milik PT ANVIEO TEKNOLOGI NUSANTARA.</span>
             </div>
             <div className="footer-legal-links">
               <Link href="/termsofuse">Terms of Use</Link>
               <span style={{ opacity: 0.5 }}>•</span>
-              <a href="https://www.dicoding.com/privacy" target="_blank" rel="noopener noreferrer">Privacy</a>
+              <Link href="/privacy">Privacy</Link>
               <span style={{ opacity: 0.5 }}>•</span>
               <Link href="/login">Masuk</Link>
               <span style={{ opacity: 0.5 }}>•</span>

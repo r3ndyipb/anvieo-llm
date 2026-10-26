@@ -113,10 +113,8 @@ export default function TermsOfUsePage() {
               >
                 Daftar Akun Baru →
               </Link>
-              <a
-                href="https://www.dicoding.com/termsofuse"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                href="/privacy"
                 style={{
                   display: "inline-flex",
                   alignItems: "center",
@@ -127,8 +125,8 @@ export default function TermsOfUsePage() {
                   marginLeft: "8px"
                 }}
               >
-                Referensi Standar: dicoding.com/termsofuse ↗
-              </a>
+                Kebijakan Privasi &amp; UU PDP →
+              </Link>
             </div>
           </div>
         </div>

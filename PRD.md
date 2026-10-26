@@ -73,7 +73,7 @@ journey
 
 ## 3. Rincian Epics & User Stories (Functional Specifications)
 
-Berikut adalah 20 Epics terintegrasi yang mencakup 100% kesetaraan fitur Dicoding.com serta 8 Pilar Inovasi Keunggulan (*Unfair Advantages*):
+Berikut adalah 20 Epics terintegrasi yang mencakup standar arsitektur fitur komprehensif ANVIEO LMS serta 8 Pilar Inovasi Keunggulan (*Unfair Advantages*):
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
@@ -418,7 +418,7 @@ Berikut adalah 20 Epics terintegrasi yang mencakup 100% kesetaraan fitur Dicodin
 
 ---
 
-### EPIC-16: Coding Challenge, Hackathon & Live Arena Battles (Dicoding Challenge Equivalent + Arena)
+### EPIC-16: Coding Challenge, Hackathon & Live Arena Battles (ANVIEO Challenge & Arena)
 
 #### US-16.1: Eksplorasi & Partisipasi Corporate Challenge
 *Sebagai developer/siswa, saya ingin mengikuti kompetisi pembuatan aplikasi berhadiah yang disponsori perusahaan mitra, agar saya dapat menguji keterampilan dan memenangkan hadiah.*
@@ -427,7 +427,7 @@ Berikut adalah 20 Epics terintegrasi yang mencakup 100% kesetaraan fitur Dicodin
   - Form pengiriman karya challenge menerima: Nama Aplikasi, Deskripsi Solusi, URL GitHub, File APK / Web Demo, dan Video Pitching YouTube unlisted.
   - Status kurasi submission challenge: *Terkirim, Dinilai oleh Juri Sponsor, Pemenang Terpilih*.
 
-#### US-16.2: Weekly Live Algorithmic Coding Arena (*Keunggulan vs Dicoding*)
+#### US-16.2: Weekly Live Algorithmic Coding Arena (*Keunggulan Kompetitif ANVIEO*)
 *Sebagai siswa, saya ingin bertanding adu cepat algoritma 1-on-1 secara live dengan sesama siswa, agar belajar menjadi menyenangkan dan kompetitif.*
 - **Kriteria Keberterimaan:**
   - Sistem *matchmaking* otomatis mempertemukan 2 siswa dengan level keahlian seimbang dalam sesi 15 menit.
@@ -436,9 +436,9 @@ Berikut adalah 20 Epics terintegrasi yang mencakup 100% kesetaraan fitur Dicodin
 
 ---
 
-### EPIC-17: Gamifikasi Poin, RPG Skill Tree & Reward Store Catalog (Dicoding Points Equivalent + RPG)
+### EPIC-17: Gamifikasi Poin, RPG Skill Tree & Reward Store Catalog (ANVIEO Points & RPG Store)
 
-#### US-17.1: Perolehan Poin & Visualisasi RPG Skill Tree (*Keunggulan vs Dicoding*)
+#### US-17.1: Perolehan Poin & Visualisasi RPG Skill Tree (*Keunggulan Kompetitif ANVIEO*)
 *Sebagai siswa, saya ingin melihat pohon keahlian saya berkembang secara visual layaknya game RPG, agar saya termotivasi menyelesaikan modul tiap hari.*
 - **Kriteria Keberterimaan:**
   - Setiap menyelesaikan materi (+5 XP), kuis (+15 XP), lulus submission (+200 XP), dan daily streak 7 hari berturut-turut (+100 XP & +50 Karsa Points).
@@ -454,7 +454,7 @@ Berikut adalah 20 Epics terintegrasi yang mencakup 100% kesetaraan fitur Dicodin
 
 ---
 
-### EPIC-18: Virtual Study Room 24/7 & Real-Time Collaborative Pair Programming (*Keunggulan vs Dicoding*)
+### EPIC-18: Virtual Study Room 24/7 & Real-Time Collaborative Pair Programming (*Keunggulan Kompetitif ANVIEO*)
 
 #### US-18.1: Ruang Belajar Virtual Bersama (Study Room 24/7)
 *Sebagai siswa mandiri, saya ingin belajar di dalam ruang virtual bersama rekan-rekan pembelajar lain, agar saya tetap fokus dan tidak merasa kesepian.*
@@ -471,7 +471,7 @@ Berikut adalah 20 Epics terintegrasi yang mencakup 100% kesetaraan fitur Dicodin
 
 ---
 
-### EPIC-19: Zero-Setup In-Browser Cloud IDE & Code Keystroke Replay Player (*Keunggulan vs Dicoding*)
+### EPIC-19: Zero-Setup In-Browser Cloud IDE & Code Keystroke Replay Player (*Keunggulan Kompetitif ANVIEO*)
 
 #### US-19.1: In-Browser Cloud IDE (Zero-Setup WebContainer)
 *Sebagai siswa pemula, saya ingin langsung mengetik dan menjalankan kode aplikasi web fullstack tanpa harus menginstal Node/Python di laptop saya.*

@@ -4,7 +4,7 @@
 **Dokumen:** Project Brief & High-Level Architecture  
 **Tanggal:** 25 Oktober 2026  
 **Status:** DRAFT - Final Review  
-**Inspirasi Utama:** Dicoding.com, Coursera, Alura, LeetCode  
+**Inspirasi Utama:** ANVIEO Academy, Coursera, Alura, LeetCode  
 
 ---
 
@@ -12,7 +12,7 @@
 
 Platform ini adalah ekosistem *Learning Management System* (LMS) modern terakreditasi industri yang dirancang untuk melahirkan talenta digital (software engineer, data scientist, cloud/devops engineer, AI specialist, UI/UX designer) siap kerja. 
 
-Berbeda dengan LMS video konvensional yang pasif, platform ini mengadopsi model pembelajaran **Active Learning & Project-Based Assessment** ala Dicoding:
+Berbeda dengan LMS video konvensional yang pasif, platform ini mengadopsi model pembelajaran **Active Learning & Project-Based Assessment** standar ANVIEO:
 1. Kurikulum berjenjang terstruktur dalam **Learning Path** (Pemula, Menengah, Mahir/Advance).
 2. Sistem validasi kompetensi riil melalui **Code & Project Submission** yang dinilai langsung oleh **Tim Pengajar & Code Reviewer profesional** dengan rubrik bintang 1–5 serta feedback baris per baris.
 3. Kredensial digital bersertifikasi resmi yang dilengkapi **Public Verification Page** dan integrasi LinkedIn.
@@ -80,7 +80,7 @@ graph TD
 
 ## 5. Cakupan Fitur Utama (Core Modules Breakdown)
 
-Berikut adalah 18 pilar modul terintegrasi yang mencakup **100% kapabilitas Dicoding.com** ditambah **8 Pilar Inovasi Terobosan** yang menjadikan platform ini jauh lebih unggul:
+Berikut adalah 18 pilar modul terintegrasi yang mencakup **seluruh kapabilitas terlengkap ANVIEO Academy** ditambah **8 Pilar Inovasi Terobosan** yang menjadikan platform ini jauh lebih unggul:
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
@@ -121,8 +121,8 @@ Berikut adalah 18 pilar modul terintegrasi yang mencakup **100% kapabilitas Dico
 - **Alur Prasyarat (*Prerequisites*):** Penguncian kelas (*course lock*) sebelum kelas prasyarat diselesaikan dengan nilai minimum.
 - **Perkiraan Waktu & Silabus Transparan:** Durasi belajar (dalam jam), materi yang dipelajari, software/hardware requirements.
 
-### 5.3 Modul 3: Zero-Setup In-Browser Cloud IDE & Interactive Classroom (*Keunggulan vs Dicoding*)
-- **In-Browser Cloud IDE (WebContainers):** Berbeda dengan Dicoding yang mewajibkan siswa menginstal compiler/environment rumit di laptop, siswa platform ini dapat langsung menulis, menjalankan server (Node.js/Python), dan mempratinjau aplikasi fullstack langsung di browser tanpa instalasi lokal!
+### 5.3 Modul 3: Zero-Setup In-Browser Cloud IDE & Interactive Classroom (*Keunggulan Kompetitif ANVIEO*)
+- **In-Browser Cloud IDE (WebContainers):** Berbeda dengan platform konvensional yang mewajibkan siswa menginstal compiler/environment rumit di laptop, siswa platform ini dapat langsung menulis, menjalankan server (Node.js/Python), dan mempratinjau aplikasi fullstack langsung di browser tanpa instalasi lokal!
 - **Tipe Materi:**
   - *Rich Text & Interactive Code Snippets* (dengan syntax highlighting dan copy button).
   - *Video On-Demand Streaming* (multi-resolusi 360p–1080p, pengaturan kecepatan 0.5x–2x, bookmark catatan waktu).
@@ -134,9 +134,9 @@ Berikut adalah 18 pilar modul terintegrasi yang mencakup **100% kapabilitas Dico
   - Soal acak (*randomized questions & options*), batasan waktu pengerjaan (*countdown timer*), ambang batas kelulusan (minimal 80%).
   - Kebijakan penalti waktu cooldown sebelum mencoba kembali jika gagal (30 menit, 2 jam, hingga 24 jam) untuk mencegah tebakan acak.
 
-### 5.5 Modul 5: Dual-Engine Review (Instant AI Pre-Review + Human Expert Audit) (*Keunggulan vs Dicoding*)
+### 5.5 Modul 5: Dual-Engine Review (Instant AI Pre-Review + Human Expert Audit) (*Keunggulan Kompetitif ANVIEO*)
 - **Detik ke-10 (AI Pre-Review):** Begitu proyek diunggah (.zip atau GitHub), AI Engine langsung memindai struktur folder, menjalankan linter, security check, dan deteksi plagiarisme semantik via `pgvector`, menghasilkan laporan umpan balik seketika.
-- **Waktu < 12 Jam (Reviewer Manusia):** Reviewer manusia menerima proyek yang sudah dilengkapi *AI Draft Checklist*. Reviewer fokus menguji arsitektur dan memberikan catatan personal dengan skala Bintang 1–5. Review selesai dalam < 12 jam (3x lebih cepat dibanding antrean Dicoding 1-3 hari).
+- **Waktu < 12 Jam (Reviewer Manusia):** Reviewer manusia menerima proyek yang sudah dilengkapi *AI Draft Checklist*. Reviewer fokus menguji arsitektur dan memberikan catatan personal dengan skala Bintang 1–5. Review selesai dalam < 12 jam (3x lebih cepat dibanding antrean konvensional 1-3 hari).
 - **Sistem Revisi:** Siswa berhak memperbaiki catatan reviewer hingga 3 kali kesempatan tanpa biaya tambahan.
 
 ### 5.6 Modul 6: Sertifikasi Digital Kriptografis & Public Verification
@@ -149,16 +149,16 @@ Berikut adalah 18 pilar modul terintegrasi yang mencakup **100% kapabilitas Dico
   - Integrasi 1-klik "Add to LinkedIn Profile" dengan metadata terakreditasi.
   - Unduh PDF 300 DPI dengan QR code dinamis yang dapat diverifikasi instan oleh sistem ATS perusahaan.
 
-### 5.7 Modul 7: Seminar, Workshop & Developer Coaching (Dicoding Event Equivalent)
+### 5.7 Modul 7: Seminar, Workshop & Developer Coaching (ANVIEO Event Equivalent)
 - **Kategori Event:** Webinar Online, Tech Talk, Workshop Hands-on, Hackathon, Info Session Beasiswa.
 - **Developer Coaching:** Sesi mentoring live mingguan interaktif via streaming eksklusif bagi siswa pelanggan aktif untuk bedah kode langsung bersama tim kurikulum.
 - **Presensi & E-Sertifikat Otomatis:** Token presensi hanya aktif saat acara berlangsung, memicu penerbitan e-sertifikat kehadiran otomatis pasca pengisian survei feedback.
 
-### 5.8 Modul 8: Coding Challenge & Live Arena Battles (Dicoding Challenge Equivalent + Inovasi Baru)
+### 5.8 Modul 8: Coding Challenge & Live Arena Battles (ANVIEO Challenge & Live Arena)
 - **Corporate Coding Challenge:** Kompetisi membangun aplikasi tematik yang disponsori perusahaan/brand teknologi ternama dengan batas waktu dan hadiah uang tunai, gadget, atau kontrak kerja.
 - **Weekly Live Coding Arena (Inovasi Baru):** Fitur pertarungan adu cepat memecahkan soal algoritma 1-on-1 (*live algorithmic battle*) antar siswa dengan leaderboard mingguan berhadiah XP dan lencana prestasi.
 
-### 5.9 Modul 9: Poin Gamifikasi, RPG Skill Tree & Reward Store (Dicoding Points Equivalent + RPG Gamification)
+### 5.9 Modul 9: Poin Gamifikasi, RPG Skill Tree & Reward Store (ANVIEO Points & RPG Gamification)
 - **Gamifikasi XP & Poin Belajar:** Poin diperoleh dari kelulusan kelas, daily streak belajar, kontribusi forum, dan kemenangan challenge.
 - **RPG Visual Skill Tree (Inovasi Baru):** Visualisasi cabang keahlian siswa interaktif layaknya pohon keterampilan game RPG (misal: *Branch Frontend: CSS Grid (Mastered), State Management (Lv.3), Web Security (Unlocked)*).
 - **Reward Store Catalog:** Penukaran poin dengan merchandise fisik eksklusif (hoodie, t-shirt, tumbler), buku teknologi, gadget (laptop, monitor, keyboard mekanikal), atau token voucher langganan kelas.
@@ -171,7 +171,7 @@ Berikut adalah 18 pilar modul terintegrasi yang mencakup **100% kapabilitas Dico
 - **Kategori Konten:** Tutorial Teknis, Berita Industri IT, Kisah Sukses Alumni (*Student Stories*), Tips & Trik Karir, Panduan Wawancara Kerja.
 - **Fitur Pembaca:** Estimasi waktu baca (*read time*), pembagian ke media sosial, sistem apresiasi (*claps/likes*), dan komentar terindeks Google SEO.
 
-### 5.12 Modul 12: Showcase Portofolio & Code Keystroke Replay (*Keunggulan vs Dicoding*)
+### 5.12 Modul 12: Showcase Portofolio & Code Keystroke Replay (*Keunggulan Kompetitif ANVIEO*)
 - **Showcase Portofolio Otomatis:** Menampilkan proyek submission bintang 4-5 di galeri publik siswa lengkap dengan demo aplikasi dan repositori GitHub.
 - **Code Keystroke Replay Player (Anti-Joki untuk Rekruter):** Rekruter dapat memutar ulang rekaman penulisan kode siswa di Cloud IDE dari nol untuk membuktikan keaslian proses berpikir dan pemecahan masalah (membuktikan bukan hasil joki atau copas).
 
@@ -183,15 +183,15 @@ Berikut adalah 18 pilar modul terintegrasi yang mencakup **100% kapabilitas Dico
 - **Diskusi Kontekstual Per Modul:** Tab diskusi tersemat di bilah samping materi pelajaran dengan integrasi syntax highlighting.
 - **AI Semantic Deduplication:** Deteksi instan pertanyaan serupa menggunakan `pgvector` dan sistem pemilihan *Best Answer*.
 
-### 5.15 Modul 15: Virtual Study Room 24/7 & Live Pair Programming (*Keunggulan vs Dicoding*)
+### 5.15 Modul 15: Virtual Study Room 24/7 & Live Pair Programming (*Keunggulan Kompetitif ANVIEO*)
 - **Virtual Study Room (Study with Me):** Ruang belajar virtual 24/7 dengan pengatur waktu Pomodoro dan ambient lofi music untuk mengikis rasa kesepian saat belajar mandiri.
 - **Collaborative Pair Programming:** Kemampuan dua siswa atau siswa bersama mentor membuka kanvas kode yang sama secara real-time (*multi-cursor live coding*) untuk memecahkan bug bersama.
 
-### 5.16 Modul 16: Tim Pengajar & Reviewer Guild (Dicoding Elite Equivalent)
+### 5.16 Modul 16: Tim Pengajar & Reviewer Guild (ANVIEO Elite Guild)
 - **Reviewer Guild Dashboard:** Antrean tugas review berbasis keahlian teknis (FIFO) dengan penguncian klaim otomatis 3 jam.
 - **Kompensasi Transparan:** Pelacakan otomatis saldo honorarium per review (Pemula Rp 15rb, Menengah Rp 35rb, Advance Rp 75rb-120rb) dengan audit sampling mutu review berkala.
 
-### 5.17 Modul 17: AI Mock Technical Interview Simulator (*Keunggulan vs Dicoding*)
+### 5.17 Modul 17: AI Mock Technical Interview Simulator (*Keunggulan Kompetitif ANVIEO*)
 - **Simulasi Wawancara Kerja AI:** Sebelum lulus kelas Advance, siswa diuji oleh AI interviewer yang mensimulasikan sesi wawancara teknis perusahaan unicorn (live coding challenge, pertanyaan kompleksitas algoritma Big-O, dan pertanyaan behavioral).
 
 ### 5.18 Modul 18: Monetisasi, Langganan Pass & B2B Enterprise Dashboard
