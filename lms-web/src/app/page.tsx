@@ -2521,63 +2521,29 @@ export default function HomePage() {
           <BlackboxRails position="top" />
 
           <div className="blackbox-frame">
-            <div className="cta-career-card">
-              <div className="cta-career-content">
-                {/* Eyebrow Label */}
+            <div className="cta-career-strip">
+              {/* Left Column: Eyebrow + Headline */}
+              <div className="cta-career-left">
                 <div className="cta-career-tag">
                   <span className="cta-career-tag-line" aria-hidden="true" />
                   <span className="cta-career-tag-text">AKSELERASI KARIR // MULAI LANGKAH ANDA</span>
                 </div>
 
-                {/* Title */}
                 <h2 className="cta-career-title">
                   Bangun Karier Impian di <span className="cta-career-title-gold">Industri Masa Depan.</span>
                 </h2>
+              </div>
 
-                {/* Description */}
-                <p className="cta-career-desc">
-                  Tingkatkan keahlian profesional melalui kurikulum terstruktur berstandar dunia, studi kasus riil bersama praktisi industri, dan buka akses prioritas ke 850+ jaringan mitra rekrutmen korporasi terdepan.
-                </p>
-
-                {/* CTA Action Buttons */}
-                <div className="cta-career-actions">
-                  <button
-                    type="button"
-                    className="blackbox-pill blackbox-pill-black cta-career-btn-black"
-                    onClick={() => setModalType("register")}
-                  >
-                    <span>GABUNG SEKARANG</span>
-                    <span className="cta-career-arrow" aria-hidden="true">→</span>
-                  </button>
-
-                  <a
-                    href="#learning-paths"
-                    className="blackbox-outline cta-career-btn-outline"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      const el = document.getElementById("learning-paths");
-                      if (el) el.scrollIntoView({ behavior: "smooth" });
-                    }}
-                  >
-                    <span>JELAJAHI LEARNING PATH</span>
-                  </a>
-                </div>
-
-                {/* Trust Badges Bar */}
-                <div className="cta-career-trust-bar">
-                  <div className="cta-trust-item">
-                    <span className="cta-trust-check">✓</span>
-                    <span>Review Kode &amp; Tugas &lt; 12 Jam</span>
-                  </div>
-                  <div className="cta-trust-item">
-                    <span className="cta-trust-check">✓</span>
-                    <span>Kurikulum Standar IEEE, NIST, CFA &amp; Big 4</span>
-                  </div>
-                  <div className="cta-trust-item">
-                    <span className="cta-trust-check">✓</span>
-                    <span>94.2% Penyerapan Kerja Terverifikasi</span>
-                  </div>
-                </div>
+              {/* Right Column: Tombol Gabung Sekarang (Kotak Tombol Hitam Radius) */}
+              <div className="cta-career-right">
+                <button
+                  type="button"
+                  className="blackbox-pill blackbox-pill-black cta-career-btn-black"
+                  onClick={() => setModalType("register")}
+                >
+                  <span>GABUNG SEKARANG</span>
+                  <span className="cta-career-arrow" aria-hidden="true">→</span>
+                </button>
               </div>
             </div>
           </div>
