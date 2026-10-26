@@ -34,16 +34,6 @@ export default function RegisterForm() {
 
   const strength = getPasswordStrength(password);
 
-  // Autofill sample data for fast testing
-  const fillSampleData = () => {
-    setFullName("Muhammad Farhan");
-    setEmail("farhan.alghifari@gmail.com");
-    setPhone("081298765432");
-    setTrack("fullstack");
-    setPassword("Anvieo2026#Dev");
-    setAgreeTerms(true);
-  };
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!agreeTerms) {
@@ -84,24 +74,13 @@ export default function RegisterForm() {
     <>
       <div className="portal-card-wrap">
         {/* Navigation Tabs (Masuk vs Daftar) */}
-        <div className="portal-nav-tabs" style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end" }}>
-          <div style={{ display: "flex", gap: "20px" }}>
-            <Link href="/login" className="portal-nav-tab">
-              Masuk Portal
-            </Link>
-            <Link href="/register" className="portal-nav-tab active">
-              Daftar Akun Baru
-            </Link>
-          </div>
-          <button
-            type="button"
-            className="portal-demo-pill"
-            onClick={fillSampleData}
-            title="Isi formulir dengan data sampel peserta"
-            style={{ marginBottom: "6px" }}
-          >
-            📋 Isi Demo
-          </button>
+        <div className="portal-nav-tabs">
+          <Link href="/login" className="portal-nav-tab">
+            Masuk Portal
+          </Link>
+          <Link href="/register" className="portal-nav-tab active">
+            Daftar Akun Baru
+          </Link>
         </div>
 
         {/* Main Register Form */}

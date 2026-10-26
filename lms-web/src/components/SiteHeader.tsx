@@ -60,9 +60,10 @@ function SiteHeaderContent({ activeTabOverride }: SiteHeaderProps) {
   };
 
   const isLearningPathActive =
-    activeTabOverride === "learning-path" ||
-    activeTabOverride === "learningpaths" ||
-    Boolean(pathname && pathname.startsWith("/learningpaths"));
+    pathname !== "/" &&
+    (activeTabOverride === "learning-path" ||
+      activeTabOverride === "learningpaths" ||
+      Boolean(pathname && pathname.startsWith("/learningpaths")));
 
   const isLanggananActive =
     activeTabOverride === "langganan" ||

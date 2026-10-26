@@ -7,8 +7,8 @@ import FlatIcon from "./FlatIcon";
 
 export default function LoginForm() {
   const router = useRouter();
-  const [email, setEmail] = useState("student@anvieo.edu");
-  const [password, setPassword] = useState("anvieo2026!pass");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [rememberMe, setRememberMe] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
@@ -44,27 +44,13 @@ export default function LoginForm() {
     <>
       <div className="portal-card-wrap">
         {/* Navigation Tabs (Masuk vs Daftar) */}
-        <div className="portal-nav-tabs" style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end" }}>
-          <div style={{ display: "flex", gap: "20px" }}>
-            <Link href="/login" className="portal-nav-tab active">
-              Masuk Portal
-            </Link>
-            <Link href="/register" className="portal-nav-tab">
-              Daftar Akun Baru
-            </Link>
-          </div>
-          <button
-            type="button"
-            className="portal-demo-pill"
-            onClick={() => {
-              setEmail("student@anvieo.edu");
-              setPassword("anvieo2026!pass");
-            }}
-            title="Isi formulir dengan kredensial akun demo"
-            style={{ marginBottom: "6px" }}
-          >
-            📋 Akun Demo
-          </button>
+        <div className="portal-nav-tabs">
+          <Link href="/login" className="portal-nav-tab active">
+            Masuk Portal
+          </Link>
+          <Link href="/register" className="portal-nav-tab">
+            Daftar Akun Baru
+          </Link>
         </div>
 
         {/* Main Login Form */}

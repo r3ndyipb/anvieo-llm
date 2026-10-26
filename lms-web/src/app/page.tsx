@@ -1268,7 +1268,7 @@ const ARTICLES_DATA: ArticleItem[] = [
 ];
 
 export default function HomePage() {
-  const [activeTab, setActiveTab] = useState<string>("learning-path");
+  const [activeTab, setActiveTab] = useState<string>("home");
   const [theme, setTheme] = useState<"light" | "dark">("light");
   const [selectedDiscipline, setSelectedDiscipline] = useState<Discipline>("tech");
   const [selectedLevel, setSelectedLevel] = useState<DifficultyLevel>("all");

@@ -105,7 +105,7 @@ export default function HiringPartnerPage() {
       <SiteHeader activeTabOverride="others" />
 
       {/* Breadcrumb Navigation */}
-      <div className="lp-breadcrumb-wrap" style={{ position: "relative" }}>
+      <div className="lp-breadcrumb-wrap">
         <BlackboxRails position="bottom" />
         <div className="blackbox-frame">
           <nav aria-label="Breadcrumb" className="lp-breadcrumb">

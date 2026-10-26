@@ -42,16 +42,16 @@ export default function AuthShowcase() {
         {/* Line Model Eyebrow (Model Garis AUI) */}
         <div className="portal-showcase-line-label">
           <span className="portal-gold-line" aria-hidden="true" />
-          <span>PORTAL AKADEMI TERAKREDITASI</span>
+          <span>PORTAL AKADEMIK &amp; SISWA TERAKREDITASI</span>
         </div>
 
         {/* Main Display Heading (Fraunces Serif) */}
         <h1 className="portal-showcase-heading">
-          Akselerasi Disiplin Berstandar Industri
+          Eksplorasi Akademik, Event &amp; Prestasi Siswa
         </h1>
 
         <p className="portal-showcase-subtext">
-          Portal terpadu untuk mengakses silabus mutakhir, evaluasi kode 1-on-1 bersama praktisi terverifikasi, dan sertifikasi kompetensi berbobot internasional.
+          Portal terpadu siswa untuk mengakses materi silabus mutakhir, workshop &amp; hackathon berkala, evaluasi kode 1-on-1 bersama praktisi terverifikasi, dan portofolio kompetensi berbobot internasional.
         </p>
 
         {/* High-Impact Feature Highlights */}
@@ -61,21 +61,21 @@ export default function AuthShowcase() {
               <FlatIcon type="brain" size={17} />
             </div>
             <div>
-              <div className="portal-feature-title">Socratic AI &amp; Interactive Guidance</div>
+              <div className="portal-feature-title">Perjalanan Akademik &amp; Socratic AI</div>
               <div className="portal-feature-desc">
-                Petunjuk logika komputasi dan bedah error interaktif 24/7 tanpa jalan pintas instan.
+                Bimbingan logika komputasi 24/7, bedah error interaktif, dan tracking progres belajar mandiri.
               </div>
             </div>
           </div>
 
           <div className="portal-feature-item">
             <div className="portal-feature-icon-box">
-              <FlatIcon type="terminal" size={17} />
+              <FlatIcon type="trophy" size={17} />
             </div>
             <div>
-              <div className="portal-feature-title">Evaluasi Kode Human-Reviewer 1x24 Jam</div>
+              <div className="portal-feature-title">Event, Workshop &amp; Evaluasi Kode 1x24 Jam</div>
               <div className="portal-feature-desc">
-                Setiap baris kode tugas akhir ditelaah manual oleh praktisi senior sesuai rubrik industri.
+                Akses hackathon akademik berkala, webinar pakar industri, serta telaah tugas akhir per baris.
               </div>
             </div>
           </div>
@@ -107,12 +107,12 @@ export default function AuthShowcase() {
             <span className="portal-stat-label">Siswa Aktif</span>
           </div>
           <div className="portal-stat-col">
-            <span className="portal-stat-num">98.4%</span>
-            <span className="portal-stat-label">Tingkat Lulus</span>
+            <span className="portal-stat-num">350+</span>
+            <span className="portal-stat-label">Event &amp; Workshop</span>
           </div>
           <div className="portal-stat-col">
-            <span className="portal-stat-num">4.9 / 5.0</span>
-            <span className="portal-stat-label">Rating Reviewer</span>
+            <span className="portal-stat-num">98.4%</span>
+            <span className="portal-stat-label">Tingkat Lulus</span>
           </div>
         </div>
       </div>

@@ -203,11 +203,11 @@ export default function SertifikasiPage() {
   ];
 
   return (
-    <div className="sertifikasi-page-wrap sert-page-wrap" style={{ paddingTop: "64px", minHeight: "100vh" }}>
+    <div className="sertifikasi-page-wrap sert-page-wrap">
       <SiteHeader activeTabOverride="programs" />
 
       {/* Breadcrumb Header */}
-      <div className="lp-breadcrumb-wrap" style={{ position: "relative" }}>
+      <div className="lp-breadcrumb-wrap">
         <BlackboxRails position="bottom" />
         <div className="blackbox-frame">
           <nav aria-label="Breadcrumb" className="lp-breadcrumb">

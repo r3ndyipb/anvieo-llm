@@ -1743,10 +1743,12 @@ export default function LearningPathPage() {
 
   return (
     <div className="learning-path-wrapper">
-      <SiteHeader activeTabOverride="learning-path" />
+      {/* Sticky Top Unified Header Stack: Menu + Breadcrumbs + Tab Group */}
+      <div className="lp-sticky-header-stack">
+        <SiteHeader activeTabOverride="learning-path" />
 
-      {/* Breadcrumb Navigation Rail */}
-      <div className="lp-breadcrumb-wrap" style={{ position: "relative" }}>
+        {/* Breadcrumb Navigation Rail */}
+        <div className="lp-breadcrumb-wrap">
         <BlackboxRails position="bottom" />
         <div className="blackbox-frame">
           <nav aria-label="Breadcrumb" className="lp-breadcrumb">
@@ -1825,6 +1827,7 @@ export default function LearningPathPage() {
         </div>
         <BlackboxRails position="bottom" />
       </nav>
+    </div>
 
       {/* ====================================================================
           VIEW A: DETAIL ALUR KURIKULUM (KETIKA BUKAN "SEMUA KELAS")

@@ -3854,7 +3854,7 @@ button {
 .hiring-partner-page-wrap,
 .impact-page-wrapper {
   min-height: 100vh;
-  padding-top: 64px;
+  padding-top: 0;
   display: flex;
   flex-direction: column;
   background: var(--bx-bg);
@@ -3872,12 +3872,16 @@ button {
 .lp-breadcrumb-wrap {
   background: var(--cream);
   border-bottom: 1px solid var(--bx-grid);
-  padding: 12px 0;
+  padding: 10px 0;
   transition: background var(--transition-base), border-color var(--transition-base);
+  position: sticky;
+  top: 64px;
+  z-index: 990;
 }
 
 [data-theme="dark"] .lp-breadcrumb-wrap {
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(18, 18, 22, 0.98);
+  border-bottom-color: rgba(255, 255, 255, 0.08);
 }
 
 .lp-breadcrumb {
@@ -6030,7 +6034,7 @@ button {
 .corporate-training-page-wrap,
 .corp-page-wrap {
   min-height: 100vh;
-  padding-top: 64px;
+  padding-top: 0;
   background-color: var(--bx-bg);
   color: var(--bx-ink);
 }
@@ -6882,7 +6886,7 @@ button {
    ========================================================================== */
 .bootcamp-page-wrap {
   min-height: 100vh;
-  padding-top: 64px;
+  padding-top: 0;
   background-color: var(--bx-bg);
   color: var(--bx-ink);
 }
@@ -7428,7 +7432,7 @@ button {
 .sert-page-wrap,
 .sertifikasi-page-wrap {
   min-height: 100vh;
-  padding-top: 64px;
+  padding-top: 0;
   background-color: var(--bx-bg);
   color: var(--bx-ink);
 }
@@ -7766,7 +7770,7 @@ button {
    ========================================================================== */
 .impact-page-wrapper {
   min-height: 100vh;
-  padding-top: 64px;
+  padding-top: 0;
   background-color: var(--bx-bg);
   color: var(--bx-ink);
 }
@@ -9212,11 +9216,58 @@ button {
 /* ==========================================================================
    LEARNING PATH SUBNAV & ALL CLASSES CATALOG (ANVIEO COMPLIANT)
    ========================================================================== */
+/* Sticky Top Unified Header Stack: Menu + Breadcrumbs + Tab Group */
+.lp-sticky-header-stack {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background: var(--bx-bg);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="dark"] .lp-sticky-header-stack {
+  background: #0A0A0C;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.45);
+}
+
+.lp-sticky-header-stack .blackbox-site-header {
+  position: relative !important;
+  top: 0 !important;
+  z-index: 10;
+}
+
+.lp-sticky-header-stack .lp-breadcrumb-wrap {
+  position: relative !important;
+  top: 0 !important;
+  z-index: 9;
+  background: var(--cream);
+  border-bottom: 1px solid var(--bx-border);
+}
+
+[data-theme="dark"] .lp-sticky-header-stack .lp-breadcrumb-wrap {
+  background: rgba(18, 18, 22, 0.98);
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+.lp-sticky-header-stack .lp-subnav-bar {
+  position: relative !important;
+  top: 0 !important;
+  z-index: 8;
+  background: var(--bx-bg);
+  border-bottom: 1px solid var(--bx-border);
+}
+
+[data-theme="dark"] .lp-sticky-header-stack .lp-subnav-bar {
+  background: #0A0A0C;
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
 .lp-subnav-bar {
   background: var(--bx-bg);
   border-bottom: 1px solid var(--bx-border);
   position: sticky;
-  top: 60px;
+  top: 64px;
   z-index: 950;
   width: 100%;
 }
@@ -9418,7 +9469,7 @@ button {
    ========================================================================== */
 .auth-page-wrapper {
   min-height: 100vh;
-  padding-top: 64px;
+  padding-top: 0;
   background-color: var(--bx-bg);
   color: var(--bx-ink);
   display: flex;
