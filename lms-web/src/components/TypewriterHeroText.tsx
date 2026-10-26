@@ -88,10 +88,7 @@ export default function TypewriterHeroText() {
       className="blackbox-hero-h1-blue hero-typewriter-wrapper"
       aria-label={`akselerasi karir impianmu. ${HERO_TYPEWRITER_PHRASES[phraseIndex]}`}
     >
-      <span className="hero-typewriter-text">{displayedText}</span>
-      <span className="hero-typewriter-cursor" aria-hidden="true">
-        |
-      </span>
+      <span className="hero-typewriter-text">{displayedText}</span><span className="hero-typewriter-cursor" aria-hidden="true">|</span>
     </span>
   );
 }

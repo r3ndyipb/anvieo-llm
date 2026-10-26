@@ -296,7 +296,7 @@ button {
 
 /* ==================== SITE HEADER ==================== */
 .blackbox-site-header {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   right: 0;
@@ -750,15 +750,17 @@ button {
 /* ==================== HERO SECTION (FIT HEIGHT & FULL WIDTH) ==================== */
 .blackbox-hero-sec {
   position: relative;
-  min-height: 100vh;
-  min-height: 100dvh;
-  height: auto;
+  min-height: calc(100vh - 64px);
+  min-height: calc(100dvh - 64px);
+  height: calc(100vh - 64px);
+  height: calc(100dvh - 64px);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding-top: calc(4.5rem + env(safe-area-inset-top, 0px));
+  padding-top: 0;
   padding-bottom: 0;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 .blackbox-hero-sec > .blackbox-frame {
@@ -766,17 +768,18 @@ button {
   flex: 1;
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
 }
 
 .blackbox-hero-grid {
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
+  grid-template-columns: 1.25fr 0.75fr;
   align-items: stretch;
-  gap: clamp(2rem, 3.5vw, 4rem);
+  gap: clamp(1.5rem, 2.8vw, 3rem);
   width: 100%;
+  height: 100%;
   flex: 1;
-  min-height: calc(100vh - 4.5rem);
-  min-height: calc(100dvh - 4.5rem);
+  min-height: 0;
 }
 
 .blackbox-hero-content {
@@ -785,15 +788,16 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-top: 1rem;
-  padding-bottom: 1.5rem;
+  padding-top: clamp(6px, 1.2vh, 16px);
+  padding-bottom: clamp(6px, 1.2vh, 16px);
+  min-height: 0;
 }
 
 .blackbox-hero-tag {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 1.25rem;
+  gap: 10px;
+  margin-bottom: clamp(8px, 1.2vh, 14px);
   padding: 0;
   border: none;
   background: transparent;
@@ -803,7 +807,7 @@ button {
   font-family: var(--font-sans);
   font-size: 0.72rem;
   font-weight: 700;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--gold);
   transition: all var(--transition-fast);
@@ -846,12 +850,12 @@ button {
 .blackbox-hero-h1 {
   font-family: var(--font-heading);
   font-weight: 700;
-  font-size: clamp(2.5rem, 4.4vw, 4.2rem);
-  line-height: 1.14;
+  font-size: clamp(2rem, 3.4vw, 3.6rem);
+  line-height: 1.15;
   letter-spacing: -0.015em;
   text-transform: none;
   color: var(--brand);
-  margin: 0 0 18px 0;
+  margin: 0 0 clamp(8px, 1.2vh, 14px) 0;
 }
 
 [data-theme="dark"] .blackbox-hero-h1 {
@@ -866,10 +870,11 @@ button {
 
 /* ==================== HERO TYPEWRITER EFFECT ==================== */
 .hero-typewriter-wrapper {
-  display: inline-block;
+  display: inline;
   position: relative;
-  min-height: 1.15em;
-  vertical-align: bottom;
+  white-space: normal;
+  word-break: normal;
+  overflow-wrap: break-word;
 }
 
 .hero-typewriter-text {
@@ -878,11 +883,12 @@ button {
 
 .hero-typewriter-cursor {
   display: inline-block;
-  margin-left: 3px;
+  margin-left: 2px;
   font-style: normal;
   font-weight: 300;
   color: var(--gold);
   line-height: 0.9;
+  vertical-align: baseline;
   animation: typewriterBlink 0.9s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   user-select: none;
   -webkit-user-select: none;
@@ -899,11 +905,11 @@ button {
 
 .blackbox-hero-desc {
   font-family: var(--font-reading);
-  font-size: 1.0625rem;
-  line-height: 1.65;
+  font-size: clamp(0.9375rem, 1vw, 1.02rem);
+  line-height: 1.55;
   color: var(--bx-prose-ink);
-  max-width: 40rem;
-  margin: 0 0 28px 0;
+  max-width: 38rem;
+  margin: 0 0 clamp(12px, 1.8vh, 20px) 0;
 }
 
 .blackbox-hero-desc strong {
@@ -920,15 +926,15 @@ button {
   align-items: center;
   gap: 10px;
   flex-wrap: wrap;
-  margin-bottom: 28px;
+  margin-bottom: clamp(10px, 1.5vh, 18px);
 }
 
 .blackbox-hero-highlights {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 12px 18px;
-  padding-top: 22px;
-  margin-top: 24px;
+  gap: 8px 16px;
+  padding-top: clamp(10px, 1.4vh, 16px);
+  margin-top: clamp(10px, 1.4vh, 16px);
   border-top: 1px dashed var(--bx-border);
 }
 
@@ -963,6 +969,7 @@ button {
   height: 100%;
   margin-bottom: 0;
   line-height: 0;
+  overflow: hidden;
 }
 
 .hero-student-glow {
@@ -985,9 +992,10 @@ button {
 .hero-student-img-direct {
   display: block;
   width: auto;
-  max-width: 108%;
-  height: clamp(560px, 84vh, 850px);
-  max-height: 92vh;
+  max-width: 100%;
+  height: 100%;
+  max-height: calc(100vh - 64px);
+  max-height: calc(100dvh - 64px);
   object-fit: contain;
   object-position: bottom center;
   vertical-align: bottom;
@@ -3487,16 +3495,21 @@ button {
 }
 
 /* Responsive */
-@media (max-width: 1024px), (max-height: 720px) {
+@media (max-width: 991px) {
   .blackbox-hero-sec {
     height: auto;
-    min-height: 100vh;
-    padding-top: 5.5rem;
+    min-height: auto;
+    padding-top: 1.5rem;
     padding-bottom: 2rem;
+    overflow: visible;
   }
   .blackbox-hero-grid {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 32px;
+    height: auto;
+  }
+  .hero-student-img-direct {
+    max-height: 460px;
     height: auto;
   }
   .blackbox-stats-grid {

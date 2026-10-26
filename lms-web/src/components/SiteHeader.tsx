@@ -104,7 +104,7 @@ function SiteHeaderContent({ activeTabOverride }: SiteHeaderProps) {
 
   return (
     <>
-      <header className="blackbox-site-header" ref={navRef} style={{ position: "relative" }}>
+      <header className="blackbox-site-header" ref={navRef} style={{ position: "sticky", top: 0, zIndex: 1000 }}>
         <BlackboxRails position="bottom" />
 
         <div className="blackbox-frame">
