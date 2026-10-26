@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Karsa Academy — Platform Edukasi Teknologi & Akselerator Karir Digital</title>
+  <meta name="description" content="Platform pembelajaran teknologi berstandar industri dengan Learning Path kuratif, code review per baris oleh praktisi, dan asisten AI Sokratik.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
+</head>
+<body>
+
+  <!-- ==================== HEADER & TOP NAVIGATION ==================== -->
+  <header class="header">
+    <div class="container header-container">
+      <div class="logo-group">
+        <a href="#home" class="logo-text" id="brand-logo" onclick="switchTab('learning-path')">
+          <div class="logo-badge-icon">K</div>
+          <span>Karsa Academy</span>
+          <span class="logo-tag">AI-Powered</span>
+        </a>
+      </div>
+
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <button class="nav-link active" onclick="switchTab('learning-path')">Learning Path</button>
+        <button class="nav-link" onclick="switchTab('langganan')">Langganan</button>
+        <button class="nav-link" onclick="switchTab('bootcamp')">Bootcamp</button>
+        <button class="nav-link" onclick="switchTab('corporate-training')">Corporate Training</button>
+        <button class="nav-link" onclick="switchTab('program')">Program</button>
+        <button class="nav-link" onclick="switchTab('capaian-dampak')">Capaian & Dampak</button>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Theme Toggle -->
+        <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Ganti Tema Dark/Light" title="Ganti Mode Gelap / Terang">
+          <span id="theme-icon">🌙</span>
+        </button>
+
+        <!-- Auth Action Buttons -->
+        <button class="btn btn-secondary btn-sm" id="btn-open-login" onclick="openModal('login-modal')">Masuk</button>
+        <button class="btn btn-primary btn-sm" id="btn-open-register" onclick="openModal('register-modal')">Daftar Akun</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <section class="hero-section" id="home">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-pill">
+          <span class="badge badge-ai">✨ NEXT-GEN LMS</span>
+          <span>Dual-Engine Review & In-Browser IDE</span>
+        </div>
+
+        <h1 class="hero-title">
+          Akselerasi Karir Teknologi <br>
+          <span class="gradient-text">Berstandar Industri Global</span>
+        </h1>
+
+        <p class="hero-description">
+          Belajar mandiri terstruktur melalui <strong>Learning Path</strong> berjenjang, divalidasi langsung oleh praktisi industri per baris kode (*Human Review*), serta didukung asisten kecerdasan buatan (*AI Socratic Tutor*).
+        </p>
+
+        <div class="hero-cta-group">
+          <button class="btn btn-primary btn-lg" onclick="openModal('register-modal')">
+            <span>Mulai Belajar Gratis</span>
+            <span>➔</span>
+          </button>
+          <button class="btn btn-secondary btn-lg" onclick="switchTab('learning-path')">
+            Eksplorasi Kurikulum
+          </button>
+        </div>
+
+        <div class="hero-stats-row">
+          <div class="hero-stat-item">
+            <h4>250.000+</h4>
+            <p>Siswa Terdaftar</p>
+          </div>
+          <div class="hero-stat-item">
+            <h4>< 12 Jam</h4>
+            <p>SLA Reviewer Proyek</p>
+          </div>
+          <div class="hero-stat-item">
+            <h4>94.2%</h4>
+            <p>Penyerapan Kerja</p>
+          </div>
+          <div class="hero-stat-item">
+            <h4>850+</h4>
+            <p>Hiring Partners</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Interactive Mockup Preview -->
+      <div class="hero-preview-wrapper">
+        <div class="mockup-window">
+          <div class="mockup-header">
+            <div class="mockup-dot dot-red"></div>
+            <div class="mockup-dot dot-yellow"></div>
+            <div class="mockup-dot dot-green"></div>
+            <span class="mockup-tab-title">main.py — In-Browser Cloud IDE</span>
+            <span class="badge badge-emerald" style="margin-left: auto; font-size: 0.65rem;">Live Test Passed (4/4)</span>
+          </div>
+          <div class="mockup-body">
+            <p><span class="code-comment"># Validasi Token JWT & Transaksi Order</span></p>
+            <p><span class="code-keyword">async def</span> <span class="code-func">verify_order_submission</span>(payload: OrderSchema):</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;token = <span class="code-func">decode_jwt</span>(payload.auth_token)</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-keyword">if not</span> token.is_valid:</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-keyword">raise</span> HTTPException(status_code=401)</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-keyword">return</span> {<span class="code-str">"status"</span>: <span class="code-str">"verified"</span>, <span class="code-str">"grade"</span>: 5}</p>
+
+            <div class="mockup-ai-card">
+              <div class="mockup-ai-icon">🤖</div>
+              <div class="mockup-ai-text">
+                <h5>AI Socratic Copilot:</h5>
+                <p>"Struktur Clean Code sudah sangat baik! Jangan lupa sertakan handling saat koneksi Redis timeout pada baris 18 sebelum submit ke reviewer manusia."</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="floating-review-badge">
+          <div class="floating-avatar">★ 5</div>
+          <div>
+            <div style="font-size: 0.8125rem; font-weight: 700; color: var(--text-main);">Verified by Senior Reviewer</div>
+            <div style="font-size: 0.75rem; color: var(--text-muted);">Selesai dinilai dalam 6 jam 14 menit</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== STICKY SECTION NAV TABS ==================== -->
+  <section class="section-nav-tabs">
+    <div class="container">
+      <div class="tabs-scroller" role="tablist">
+        <button class="tab-btn active" role="tab" id="tab-nav-learning-path" onclick="switchTab('learning-path')">
+          <span>📚</span> Learning Path
+        </button>
+        <button class="tab-btn" role="tab" id="tab-nav-langganan" onclick="switchTab('langganan')">
+          <span>💎</span> Langganan
+        </button>
+        <button class="tab-btn" role="tab" id="tab-nav-bootcamp" onclick="switchTab('bootcamp')">
+          <span>⚡</span> Bootcamp Intensif
+        </button>
+        <button class="tab-btn" role="tab" id="tab-nav-corporate-training" onclick="switchTab('corporate-training')">
+          <span>🏢</span> Corporate Training
+        </button>
+        <button class="tab-btn" role="tab" id="tab-nav-program" onclick="switchTab('program')">
+          <span>🎓</span> Program Beasiswa
+        </button>
+        <button class="tab-btn" role="tab" id="tab-nav-capaian-dampak" onclick="switchTab('capaian-dampak')">
+          <span>📊</span> Capaian & Dampak
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TAB PANELS ==================== -->
+  <main>
+    <!-- 1. TAB: LEARNING PATH -->
+    <section class="tab-content-panel active" id="panel-learning-path">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge badge-primary">KURIKULUM TERSTRUKTUR</span>
+          <h2 class="section-title">Pilih Jalur Belajar Impian Anda</h2>
+          <p class="section-subtitle">Disusun berjenjang dari tingkat Pemula, Menengah, hingga Mahir sesuai standar kebutuhan industri teknologi global.</p>
+        </div>
+
+        <div class="cards-grid-3">
+          <!-- Card 1 -->
+          <div class="card" onclick="openCourseModal('Back-End Developer (Python & FastAPI)', 'Pemula ➔ Mahir', '140 Jam Belajar', 'Kuasai arsitektur RESTful API, PostgreSQL pgvector, Docker, CI/CD, Clean Architecture, dan microservices berbasis Python.')">
+            <div class="card-cover" style="background: linear-gradient(135deg, #1E3A8A, #0F172A);">
+              <span class="card-cover-icon">🐍</span>
+              <span class="card-top-tag badge badge-primary">BACKEND TRACK</span>
+              <span class="card-duration-tag">⏱ 140 Jam</span>
+            </div>
+            <div class="card-body">
+              <span class="card-category">Python & FastAPI</span>
+              <h3 class="card-title">Back-End Developer Specialist</h3>
+              <p class="card-desc">Pelajari pembuatan API berskala enterprise, optimasi query basis data, caching Redis, serta pengujian automated testing.</p>
+              <div class="card-meta-row">
+                <span class="card-rating"><span class="star-icon">★</span> 4.9 (12.4k siswa)</span>
+                <span class="badge badge-emerald">Pemula ➔ Mahir</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="card" onclick="openCourseModal('Front-End Web Developer (Next.js & React 19)', 'Pemula ➔ Mahir', '120 Jam Belajar', 'Bangun web aplikasi ultra-cepat dengan Next.js App Router, TypeScript, Tailwind CSS, Monaco Editor, dan WebContainers.')">
+            <div class="card-cover" style="background: linear-gradient(135deg, #065F46, #064E3B);">
+              <span class="card-cover-icon">⚛️</span>
+              <span class="card-top-tag badge badge-emerald">FRONTEND TRACK</span>
+              <span class="card-duration-tag">⏱ 120 Jam</span>
+            </div>
+            <div class="card-body">
+              <span class="card-category">React & Next.js 15</span>
+              <h3 class="card-title">Front-End Web Specialist</h3>
+              <p class="card-desc">Kuasai pembuatan antarmuka modern yang interaktif, animasi responsif, optimasi Core Web Vitals, dan integrasi API.</p>
+              <div class="card-meta-row">
+                <span class="card-rating"><span class="star-icon">★</span> 4.9 (18.1k siswa)</span>
+                <span class="badge badge-emerald">Pemula ➔ Mahir</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="card" onclick="openCourseModal('Multiplatform Mobile Developer (Flutter & Dart)', 'Pemula ➔ Mahir', '135 Jam Belajar', 'Ciptakan aplikasi Android dan iOS dari satu basis kode menggunakan Flutter, state management BLoC, dan integrasi native.')">
+            <div class="card-cover" style="background: linear-gradient(135deg, #4C1D95, #312E81);">
+              <span class="card-cover-icon">📱</span>
+              <span class="card-top-tag badge badge-ai">MOBILE TRACK</span>
+              <span class="card-duration-tag">⏱ 135 Jam</span>
+            </div>
+            <div class="card-body">
+              <span class="card-category">Flutter & Dart</span>
+              <h3 class="card-title">Mobile Developer Specialist</h3>
+              <p class="card-desc">Kembangkan aplikasi mobile performa tinggi dengan arsitektur bersih, local database, offline caching, dan push notifications.</p>
+              <div class="card-meta-row">
+                <span class="card-rating"><span class="star-icon">★</span> 4.8 (9.8k siswa)</span>
+                <span class="badge badge-emerald">Pemula ➔ Mahir</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="card" onclick="openCourseModal('Machine Learning & AI Specialist', 'Menengah ➔ Mahir', '160 Jam Belajar', 'Bangun model Machine Learning, LLM Fine-Tuning, RAG dengan pgvector, dan deployment AI agent otomatis.')">
+            <div class="card-cover" style="background: linear-gradient(135deg, #7C2D12, #431407);">
+              <span class="card-cover-icon">🧠</span>
+              <span class="card-top-tag badge badge-amber">AI & DATA TRACK</span>
+              <span class="card-duration-tag">⏱ 160 Jam</span>
+            </div>
+            <div class="card-body">
+              <span class="card-category">AI Engineering</span>
+              <h3 class="card-title">Applied AI & Machine Learning</h3>
+              <p class="card-desc">Rancang aplikasi cerdas menggunakan model generatif, embeddings semantik, agen LLM mandiri, dan evaluasi akurasi.</p>
+              <div class="card-meta-row">
+                <span class="card-rating"><span class="star-icon">★</span> 4.9 (7.2k siswa)</span>
+                <span class="badge badge-amber">Menengah ➔ Mahir</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="card" onclick="openCourseModal('Cloud & DevOps Engineer Specialist', 'Menengah ➔ Mahir', '150 Jam Belajar', 'Kuasai otomatisasi CI/CD pipelines, Kubernetes, Terraform IaC, AWS/GCP architecture, dan monitoring observability.')">
+            <div class="card-cover" style="background: linear-gradient(135deg, #0F766E, #134E4A);">
+              <span class="card-cover-icon">☁️</span>
+              <span class="card-top-tag badge badge-primary">DEVOPS TRACK</span>
+              <span class="card-duration-tag">⏱ 150 Jam</span>
+            </div>
+            <div class="card-body">
+              <span class="card-category">AWS, GCP & Kubernetes</span>
+              <h3 class="card-title">Cloud Architecture & DevOps</h3>
+              <p class="card-desc">Pelajari orkestrasi kontainer dengan Kubernetes, otomatisasi deployment tanpa downtime, dan pengerasan keamanan cloud.</p>
+              <div class="card-meta-row">
+                <span class="card-rating"><span class="star-icon">★</span> 4.8 (6.5k siswa)</span>
+                <span class="badge badge-amber">Menengah ➔ Mahir</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="card" onclick="openCourseModal('iOS Developer Specialist (Swift & SwiftUI)', 'Pemula ➔ Mahir', '130 Jam Belajar', 'Bangun aplikasi iOS native elegan menggunakan SwiftUI, Swift Concurrency, CoreData, dan arsitektur MVVM.')">
+            <div class="card-cover" style="background: linear-gradient(135deg, #831843, #500724);">
+              <span class="card-cover-icon">🍏</span>
+              <span class="card-top-tag badge badge-rose">APPLE TRACK</span>
+              <span class="card-duration-tag">⏱ 130 Jam</span>
+            </div>
+            <div class="card-body">
+              <span class="card-category">Swift & SwiftUI</span>
+              <h3 class="card-title">Native iOS Developer</h3>
+              <p class="card-desc">Ciptakan pengalaman pengguna Apple berstandar tinggi dengan memanfaatkan framework iOS terkini dan animasi dinamis.</p>
+              <div class="card-meta-row">
+                <span class="card-rating"><span class="star-icon">★</span> 4.9 (4.8k siswa)</span>
+                <span class="badge badge-emerald">Pemula ➔ Mahir</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. TAB: LANGGANAN -->
+    <section class="tab-content-panel" id="panel-langganan">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge badge-primary">BIAYA INVESTASI BELAJAR</span>
+          <h2 class="section-title">Pilihan Paket Langganan All-Access</h2>
+          <p class="section-subtitle">Akses tanpa batas ke seluruh kelas Learning Path, pengiriman submission tanpa antre lama, dan asisten AI eksklusif.</p>
+        </div>
+
+        <div class="cards-grid-3">
+          <!-- Plan 1: 1 Bulan -->
+          <div class="pricing-card">
+            <h3>Paket Bulanan</h3>
+            <p style="font-size: 0.875rem; color: var(--text-secondary);">Cocok untuk mencoba dan fokus menyelesaikan 1-2 modul intensif.</p>
+            <div class="price-box">
+              <span class="price-currency">Rp</span>
+              <span class="price-amount">299.000</span>
+              <span class="price-period">/ bulan</span>
+            </div>
+            <ul class="feature-list">
+              <li class="feature-item"><span class="feature-check">✓</span> Akses ke seluruh kelas Academy</li>
+              <li class="feature-item"><span class="feature-check">✓</span> Submission tugas akhir tanpa batas</li>
+              <li class="feature-item"><span class="feature-check">✓</span> Code Reviewer Manusia (SLA < 24 jam)</li>
+              <li class="feature-item"><span class="feature-check">✓</span> Akses AI Socratic Coding Tutor</li>
+              <li class="feature-item"><span class="feature-check">✓</span> E-Sertifikat Kompetensi Resmi</li>
+            </ul>
+            <button class="btn btn-secondary" onclick="openModal('login-modal')">Pilih Paket Bulanan</button>
+          </div>
+
+          <!-- Plan 2: 6 Bulan (Featured) -->
+          <div class="pricing-card featured">
+            <span class="pricing-badge-popular">Paling Diminati</span>
+            <h3>Paket 6 Bulan</h3>
+            <p style="font-size: 0.875rem; color: var(--text-secondary);">Durasi ideal untuk menyelesaikan satu Learning Path hingga lulus siap kerja.</p>
+            <div class="price-box">
+              <span class="price-currency">Rp</span>
+              <span class="price-amount">1.499.000</span>
+              <span class="price-period">/ 6 bulan (Hemat 17%)</span>
+            </div>
+            <ul class="feature-list">
+              <li class="feature-item"><span class="feature-check">✓</span> <strong>Semua benefit paket bulanan</strong></li>
+              <li class="feature-item"><span class="feature-check">✓</span> Prioritas antrean review kode (SLA < 12 jam)</li>
+              <li class="feature-item"><span class="feature-check">✓</span> Akses In-Browser Zero-Setup Cloud IDE</li>
+              <li class="feature-item"><span class="feature-check">✓</span> Sesi Developer Coaching Live Mingguan</li>
+              <li class="feature-item"><span class="feature-check">✓</span> Profil otomatis masuk Talent Hub Rekruter</li>
+            </ul>
+            <button class="btn btn-primary" onclick="openModal('login-modal')">Langganan 6 Bulan Sekarang</button>
+          </div>
+
+          <!-- Plan 3: 1 Tahun -->
+          <div class="pricing-card">
+            <h3>Paket 1 Tahun (Full Pass)</h3>
+            <p style="font-size: 0.875rem; color: var(--text-secondary);">Investasi terbaik untuk menguasai multi-keahlian (*Fullstack & Cloud*).</p>
+            <div class="price-box">
+              <span class="price-currency">Rp</span>
+              <span class="price-amount">2.499.000</span>
+              <span class="price-period">/ tahun (Hemat 30%)</span>
+            </div>
+            <ul class="feature-list">
+              <li class="feature-item"><span class="feature-check">✓</span> <strong>Semua benefit paket 6 bulan</strong></li>
+              <li class="feature-item"><span class="feature-check">✓</span> AI Mock Technical Interview Simulator</li>
+              <li class="feature-item"><span class="feature-check">✓</span> Code Keystroke Replay untuk portofolio</li>
+              <li class="feature-item"><span class="feature-check">✓</span> Bonus 500 Karsa Points di Reward Store</li>
+              <li class="feature-item"><span class="feature-check">✓</span> Akses seumur hidup jaringan alumni eksklusif</li>
+            </ul>
+            <button class="btn btn-secondary" onclick="openModal('login-modal')">Pilih Paket 1 Tahun</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. TAB: BOOTCAMP -->
+    <section class="tab-content-panel" id="panel-bootcamp">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge badge-ai">INTENSIVE CAREER ACCELERATOR</span>
+          <h2 class="section-title">Bootcamp Karir Intensif 16 Minggu</h2>
+          <p class="section-subtitle">Pelatihan sinkronus dan asinkronus intensif dengan pendampingan mentor 1-on-1, proyek nyata klien, dan jaminan wawancara kerja.</p>
+        </div>
+
+        <div class="cards-grid-3">
+          <div class="card">
+            <div class="card-cover" style="background: linear-gradient(135deg, #1E1B4B, #312E81);">
+              <span class="card-cover-icon">🚀</span>
+              <span class="card-top-tag badge badge-ai">BATCH 14 • LIVE</span>
+            </div>
+            <div class="card-body">
+              <span class="card-category">Fullstack Engineering</span>
+              <h3 class="card-title">Fullstack Python & Next.js Bootcamp</h3>
+              <p class="card-desc">16 minggu live coding class, pengerjaan proyek berskala microservices, code review intensif harian, dan persiapan technical test.</p>
+              <div class="card-meta-row">
+                <span>🗓 Mulai: 15 November 2026</span>
+                <span class="badge badge-primary">Sisa 6 Kursi</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-cover" style="background: linear-gradient(135deg, #14532D, #052E16);">
+              <span class="card-cover-icon">🤖</span>
+              <span class="card-top-tag badge badge-emerald">BATCH 8 • LIVE</span>
+            </div>
+            <div class="card-body">
+              <span class="card-category">AI Engineering</span>
+              <h3 class="card-title">Generative AI & LLM Engineer Bootcamp</h3>
+              <p class="card-desc">Fokus pada RAG (Retrieval-Augmented Generation), vector databases pgvector, autonomous multi-agent, dan deployment cloud.</p>
+              <div class="card-meta-row">
+                <span>🗓 Mulai: 01 Desember 2026</span>
+                <span class="badge badge-emerald">Sisa 4 Kursi</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-cover" style="background: linear-gradient(135deg, #701A75, #4A044E);">
+              <span class="card-cover-icon">☁️</span>
+              <span class="card-top-tag badge badge-amber">BATCH 10 • LIVE</span>
+            </div>
+            <div class="card-body">
+              <span class="card-category">DevOps & Cloud</span>
+              <h3 class="card-title">Cloud Native & Site Reliability Bootcamp</h3>
+              <p class="card-desc">Pelajari arsitektur tahan banting dengan Kubernetes, Terraform, ArgoCD, Prometheus, dan strategi penanganan disaster recovery.</p>
+              <div class="card-meta-row">
+                <span>🗓 Mulai: 20 November 2026</span>
+                <span class="badge badge-amber">Sisa 8 Kursi</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. TAB: CORPORATE TRAINING -->
+    <section class="tab-content-panel" id="panel-corporate-training">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge badge-primary">B2B ENTERPRISE SOLUTIONS</span>
+          <h2 class="section-title">Corporate Tech Upskilling & Reskilling</h2>
+          <p class="section-subtitle">Tingkatkan produktivitas tim IT perusahaan Anda dengan kurikulum yang dikustomisasi sesuai tech stack internal.</p>
+        </div>
+
+        <div class="features-grid-3">
+          <div class="feature-card">
+            <div class="feature-icon-box">🎯</div>
+            <h4 class="feature-card-title">Customized Curriculum</h4>
+            <p class="feature-card-text">Silabus disusun khusus mengikuti arsitektur sistem, aturan clean code, dan dev-tools yang digunakan di internal korporasi Anda.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon-box">📈</div>
+            <h4 class="feature-card-title">Enterprise Analytics Dashboard</h4>
+            <p class="feature-card-text">HRD dan Engineering Lead dapat memantau jam belajar karyawan, performa kuis, dan kualitas submission kode secara real-time.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon-box">👨‍🏫</div>
+            <h4 class="feature-card-title">Dedicated Industry Reviewers</h4>
+            <p class="feature-card-text">Setiap proyek karyawan direview secara mendalam oleh praktisi ahli dengan jaminan SLA respons di bawah 8 jam.</p>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 48px;">
+          <button class="btn btn-primary btn-lg" onclick="showToast('Tim Kemitraan Bisnis kami akan segera menghubungi Anda!')">Konsultasikan Kebutuhan Perusahaan Anda</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. TAB: PROGRAM BEASISWA -->
+    <section class="tab-content-panel" id="panel-program">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge badge-emerald">CSR & GOVERNMENT PARTNERSHIPS</span>
+          <h2 class="section-title">Program Beasiswa Talenta Digital</h2>
+          <p class="section-subtitle">Peluang belajar gratis bersertifikasi internasional yang didukung oleh korporasi teknologi global dan kementerian.</p>
+        </div>
+
+        <div class="cards-grid-3">
+          <div class="card">
+            <div class="card-cover" style="background: linear-gradient(135deg, #0284C7, #075985);">
+              <span class="card-cover-icon">📡</span>
+              <span class="card-top-tag badge badge-primary">KEMITRAAN TELCO</span>
+            </div>
+            <div class="card-body">
+              <span class="card-category">IDCamp 2026</span>
+              <h3 class="card-title">Indosat Ooredoo Digital Camp</h3>
+              <p class="card-desc">Beasiswa koding gratis untuk 50.000 peserta dengan jalur Front-End, Back-End, Android, dan Cyber Security.</p>
+              <div class="card-meta-row">
+                <span class="badge badge-emerald">Pendaftaran Dibuka</span>
+                <button class="btn btn-outline btn-sm" onclick="showToast('Membuka formulir beasiswa IDCamp...')">Daftar Beasiswa</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-cover" style="background: linear-gradient(135deg, #B91C1C, #7F1D1D);">
+              <span class="card-cover-icon">🏦</span>
+              <span class="card-top-tag badge badge-rose">KEMITRAAN FINANSIAL</span>
+            </div>
+            <div class="card-body">
+              <span class="card-category">DBS Foundation</span>
+              <h3 class="card-title">DBS Foundation Coding Camp</h3>
+              <p class="card-desc">Akselerasi keahlian pemrograman web dan machine learning bagi mahasiswa dan tenaga pendidik di seluruh Indonesia.</p>
+              <div class="card-meta-row">
+                <span class="badge badge-emerald">Pendaftaran Dibuka</span>
+                <button class="btn btn-outline btn-sm" onclick="showToast('Membuka formulir beasiswa DBS...')">Daftar Beasiswa</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-cover" style="background: linear-gradient(135deg, #D97706, #78350F);">
+              <span class="card-cover-icon">☁️</span>
+              <span class="card-top-tag badge badge-amber">KEMITRAAN CLOUD</span>
+            </div>
+            <div class="card-body">
+              <span class="card-category">AWS Academy</span>
+              <h3 class="card-title">AWS Back-End Cloud Academy</h3>
+              <p class="card-desc">Pelatihan intensif arsitektur cloud AWS dan backend engineering berstandar persiapan sertifikasi AWS Certified.</p>
+              <div class="card-meta-row">
+                <span class="badge badge-emerald">Pendaftaran Dibuka</span>
+                <button class="btn btn-outline btn-sm" onclick="showToast('Membuka formulir beasiswa AWS...')">Daftar Beasiswa</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. TAB: CAPAIAN & DAMPAK -->
+    <section class="tab-content-panel" id="panel-capaian-dampak">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge badge-primary">DAMPAK NYATA</span>
+          <h2 class="section-title">Capaian & Transformasi Talenta Digital</h2>
+          <p class="section-subtitle">Komitmen kami dalam melahirkan talenta teknologi unggul yang diakui dan diserap langsung oleh industri.</p>
+        </div>
+
+        <div class="impact-hero-grid">
+          <div class="impact-counter-card">
+            <div class="impact-number">250.000+</div>
+            <div class="impact-label">Alumni Terdaftar</div>
+            <div class="impact-sub">Tersebar di 38 provinsi di Indonesia</div>
+          </div>
+          <div class="impact-counter-card">
+            <div class="impact-number">1.250.000+</div>
+            <div class="impact-label">Submission Direview</div>
+            <div class="impact-sub">Dievaluasi mendalam baris per baris</div>
+          </div>
+          <div class="impact-counter-card">
+            <div class="impact-number">94.2%</div>
+            <div class="impact-label">Penyerapan Kerja</div>
+            <div class="impact-sub">Lulusan bekerja dalam < 6 bulan</div>
+          </div>
+          <div class="impact-counter-card">
+            <div class="impact-number">850+</div>
+            <div class="impact-label">Hiring Partners</div>
+            <div class="impact-sub">Startup, BUMN, dan korporasi teknologi</div>
+          </div>
+        </div>
+
+        <!-- Testimonials -->
+        <div class="cards-grid-3">
+          <div class="card" style="padding: 24px;">
+            <div style="font-size: 1.5rem; color: var(--accent-amber);">★★★★★</div>
+            <p style="font-size: 0.9375rem; color: var(--text-secondary); margin: 12px 0 16px; font-style: italic;">
+              "Dulu saya bingung belajar dari mana. Melalui Learning Path dan feedback detail reviewer kode, saya berhasil switch career menjadi Software Engineer di unicorn!"
+            </p>
+            <div style="display: flex; align-items: center; gap: 12px; margin-top: auto;">
+              <div class="floating-avatar" style="background: linear-gradient(135deg, #2563EB, #1D4ED8);">RA</div>
+              <div>
+                <strong style="font-size: 0.875rem; color: var(--text-main);">Rian Ardiansyah</strong>
+                <div style="font-size: 0.75rem; color: var(--text-muted);">Software Engineer @ FinTech Unicorn</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" style="padding: 24px;">
+            <div style="font-size: 1.5rem; color: var(--accent-amber);">★★★★★</div>
+            <p style="font-size: 0.9375rem; color: var(--text-secondary); margin: 12px 0 16px; font-style: italic;">
+              "Fitur In-Browser Cloud IDE dan Socratic AI Copilot-nya penyelamat banget! Gak perlu pusing setup laptop, langsung bisa coding dan paham logika error seketika."
+            </p>
+            <div style="display: flex; align-items: center; gap: 12px; margin-top: auto;">
+              <div class="floating-avatar" style="background: linear-gradient(135deg, #10B981, #059669);">SN</div>
+              <div>
+                <strong style="font-size: 0.875rem; color: var(--text-main);">Siti Nurhaliza</strong>
+                <div style="font-size: 0.75rem; color: var(--text-muted);">Frontend Engineer @ Decacorn Tech</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" style="padding: 24px;">
+            <div style="font-size: 1.5rem; color: var(--accent-amber);">★★★★★</div>
+            <p style="font-size: 0.9375rem; color: var(--text-secondary); margin: 12px 0 16px; font-style: italic;">
+              "Sebagai Tech Recruiter, fitur Code Keystroke Replay memberi kepastian 100% bahwa kandidat memang menulis kodenya sendiri dan menguasai problem solving."
+            </p>
+            <div style="display: flex; align-items: center; gap: 12px; margin-top: auto;">
+              <div class="floating-avatar" style="background: linear-gradient(135deg, #8B5CF6, #6D28D9);">JW</div>
+              <div>
+                <strong style="font-size: 0.875rem; color: var(--text-main);">Jessica Wijaya</strong>
+                <div style="font-size: 0.75rem; color: var(--text-muted);">Head of Talent Acquisition</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: 8 KEUNGGULAN TEROBOSAN KITA (WHY BETTER) -->
+    <section class="why-better-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge badge-ai">THE UNFAIR ADVANTAGES</span>
+          <h2 class="section-title">Mengapa Platform Kami Jauh Lebih Unggul?</h2>
+          <p class="section-subtitle">Inovasi terdepan yang dirancang untuk mengatasi kelemahan kursus online konvensional dan mencetak developer handal.</p>
+        </div>
+
+        <div class="features-grid-3">
+          <div class="feature-card">
+            <div class="feature-icon-box">⚡</div>
+            <h4 class="feature-card-title">Zero-Setup In-Browser IDE</h4>
+            <p class="feature-card-text">Tulis dan jalankan aplikasi fullstack langsung di browser dengan WebContainers tanpa perlu instalasi rumit di laptop.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon-box">⏱️</div>
+            <h4 class="feature-card-title">Dual-Engine Review (< 12 Jam)</h4>
+            <p class="feature-card-text">AI Pre-Review instan dalam 10 detik, disempurnakan audit mendalam reviewer manusia dalam waktu kurang dari 12 jam.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon-box">🤖</div>
+            <h4 class="feature-card-title">Socratic AI Coding Tutor</h4>
+            <p class="feature-card-text">Asisten kelas cerdas yang membimbing nalar logika dan debugging tanpa membocorkan jawaban tugas akhir.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon-box">📼</div>
+            <h4 class="feature-card-title">Code Keystroke Replay for HR</h4>
+            <p class="feature-card-text">Rekruter dapat memutar ulang rekaman proses coding siswa untuk memverifikasi orisinalitas karya (anti-joki).</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon-box">🌳</div>
+            <h4 class="feature-card-title">RPG Visual Skill Tree</h4>
+            <p class="feature-card-text">Visualisasi pohon keahlian layaknya game RPG dan kompetisi mingguan Live Coding Arena berhadiah poin reward.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon-box">🔐</div>
+            <h4 class="feature-card-title">Verifiable Digital Credential</h4>
+            <p class="feature-card-text">Sertifikat berstandar kriptografi SHA-256 dengan QR verifikasi publik dan integrasi 1-klik ke profil LinkedIn.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER (SESUAI PERSYARATAN USER) ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <!-- Kolom 1: Alamat -->
+        <div class="footer-col">
+          <h5>Alamat</h5>
+          <p class="footer-address">
+            Dicoding Space Jl. Batik Kumeli No. 50, Sukaluyu, Kec. Cibeunying Kaler, Kota Bandung Jawa Barat 40123
+          </p>
+        </div>
+
+        <!-- Kolom 2: Company -->
+        <div class="footer-col">
+          <h5>Company</h5>
+          <ul class="footer-links">
+            <li><a href="https://www.dicoding.com/about" target="_blank" rel="noopener">Tentang Kami</a></li>
+            <li><a href="https://www.dicoding.com/contact-us" target="_blank" rel="noopener">Hubungi Kami</a></li>
+            <li><a href="http://careers.dicoding.com/" target="_blank" rel="noopener">Karier</a></li>
+            <li><a href="https://www.dicoding.com/blog/" target="_blank" rel="noopener">Blog</a></li>
+            <li><a href="https://help.dicoding.com/" target="_blank" rel="noopener">FAQ</a></li>
+          </ul>
+        </div>
+
+        <!-- Kolom 3: Product -->
+        <div class="footer-col">
+          <h5>Product</h5>
+          <ul class="footer-links">
+            <li><a href="https://www.dicoding.com/elite" target="_blank" rel="noopener">Elite</a></li>
+            <li><a href="https://www.dicoding.com/events" target="_blank" rel="noopener">Event</a></li>
+            <li><a href="https://www.dicoding.com/challenges" target="_blank" rel="noopener">Challenge</a></li>
+            <li><a href="https://www.dicoding.com/mentoring" target="_blank" rel="noopener">Mentoring</a></li>
+            <li><a href="https://jobs.dicoding.com/" target="_blank" rel="noopener">Jobs</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-legal-row">
+          <div>
+            © 2026 Dicoding | Dicoding adalah merek milik PT Presentologics, perusahaan induk dari PT Dicoding Akademi Indonesia.
+          </div>
+          <div class="footer-legal-links">
+            <a href="https://www.dicoding.com/termsofuse" target="_blank" rel="noopener">Terms</a>
+            <span>|</span>
+            <a href="https://www.dicoding.com/privacy" target="_blank" rel="noopener">Privacy</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== MODAL: LOGIN ==================== -->
+  <div class="modal-backdrop" id="login-modal" onclick="closeModalOnBackdrop(event, 'login-modal')">
+    <div class="modal-card">
+      <button class="modal-close-btn" onclick="closeModal('login-modal')" aria-label="Tutup Modal">&times;</button>
+      <div class="modal-header">
+        <h3 class="modal-title">Masuk ke Akun</h3>
+        <p class="modal-subtitle">Lanjutkan perjalanan belajar teknologi Anda</p>
+      </div>
+
+      <div class="social-auth-grid">
+        <button class="btn btn-secondary btn-sm" onclick="socialAuth('Google')">
+          <span>Google SSO</span>
+        </button>
+        <button class="btn btn-secondary btn-sm" onclick="socialAuth('GitHub')">
+          <span>GitHub SSO</span>
+        </button>
+      </div>
+
+      <div class="divider-text">Atau dengan Email</div>
+
+      <form id="form-login" onsubmit="handleLogin(event)">
+        <div class="form-group">
+          <label class="form-label" for="login-email">Alamat Email</label>
+          <input type="email" id="login-email" class="form-input" placeholder="nama@email.com" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="login-password">Kata Sandi</label>
+          <input type="password" id="login-password" class="form-input" placeholder="••••••••" required>
+        </div>
+        <div class="form-row-between">
+          <label style="display: flex; align-items: center; gap: 6px; cursor: pointer;">
+            <input type="checkbox" id="login-remember"> Ingat saya
+          </label>
+          <a href="#" style="color: var(--brand-primary);" onclick="showToast('Tautan reset sandi telah dikirim ke email!')">Lupa Sandi?</a>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%;">Masuk Sekarang</button>
+      </form>
+
+      <p style="text-align: center; font-size: 0.8125rem; color: var(--text-muted); margin-top: 20px;">
+        Belum punya akun? <a href="#" style="color: var(--brand-primary); font-weight: 700;" onclick="switchModal('login-modal', 'register-modal')">Daftar Akun Baru</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- ==================== MODAL: REGISTER ==================== -->
+  <div class="modal-backdrop" id="register-modal" onclick="closeModalOnBackdrop(event, 'register-modal')">
+    <div class="modal-card">
+      <button class="modal-close-btn" onclick="closeModal('register-modal')" aria-label="Tutup Modal">&times;</button>
+      <div class="modal-header">
+        <h3 class="modal-title">Daftar Akun Baru</h3>
+        <p class="modal-subtitle">Bergabung dengan 250.000+ calon developer Indonesia</p>
+      </div>
+
+      <div class="social-auth-grid">
+        <button class="btn btn-secondary btn-sm" onclick="socialAuth('Google')">
+          <span>Google SSO</span>
+        </button>
+        <button class="btn btn-secondary btn-sm" onclick="socialAuth('GitHub')">
+          <span>GitHub SSO</span>
+        </button>
+      </div>
+
+      <div class="divider-text">Atau Formulir Mandiri</div>
+
+      <form id="form-register" onsubmit="handleRegister(event)">
+        <div class="form-group">
+          <label class="form-label" for="reg-name">Nama Lengkap</label>
+          <input type="text" id="reg-name" class="form-input" placeholder="Budi Santoso" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="reg-email">Alamat Email</label>
+          <input type="email" id="reg-email" class="form-input" placeholder="budi@domain.com" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="reg-password">Kata Sandi (Minimal 8 Karakter)</label>
+          <input type="password" id="reg-password" class="form-input" placeholder="••••••••" required minlength="8">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="reg-track">Pilihan Fokus Minat</label>
+          <select id="reg-track" class="form-input" style="cursor: pointer;">
+            <option value="backend">Back-End Developer (Python / Node.js)</option>
+            <option value="frontend">Front-End Web (React / Next.js)</option>
+            <option value="mobile">Mobile Developer (Flutter / Android)</option>
+            <option value="ai">Machine Learning & Artificial Intelligence</option>
+            <option value="devops">Cloud Architecture & DevOps</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%;">Daftar & Mulai Belajar</button>
+      </form>
+
+      <p style="text-align: center; font-size: 0.8125rem; color: var(--text-muted); margin-top: 20px;">
+        Sudah memiliki akun? <a href="#" style="color: var(--brand-primary); font-weight: 700;" onclick="switchModal('register-modal', 'login-modal')">Masuk di sini</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- ==================== MODAL: COURSE DETAIL ==================== -->
+  <div class="modal-backdrop" id="course-modal" onclick="closeModalOnBackdrop(event, 'course-modal')">
+    <div class="modal-card" style="max-width: 580px;">
+      <button class="modal-close-btn" onclick="closeModal('course-modal')" aria-label="Tutup Modal">&times;</button>
+      <div class="modal-header" style="text-align: left;">
+        <span class="badge badge-primary" id="modal-course-badge">LEARNING PATH</span>
+        <h3 class="modal-title" id="modal-course-title" style="margin-top: 8px;">Detail Kelas</h3>
+        <p class="modal-subtitle" id="modal-course-meta">140 Jam Belajar • Bintang 4.9</p>
+      </div>
+
+      <div style="font-size: 0.9375rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 24px;" id="modal-course-desc">
+        Deskripsi kurikulum kelas lengkap.
+      </div>
+
+      <div style="background: var(--bg-subtle); padding: 16px; border-radius: var(--radius-md); margin-bottom: 24px;">
+        <h5 style="font-size: 0.875rem; color: var(--text-main); margin-bottom: 8px;">Apa yang Akan Anda Dapatkan:</h5>
+        <ul style="font-size: 0.8125rem; color: var(--text-secondary); display: flex; flex-direction: column; gap: 6px;">
+          <li>✓ Akses In-Browser Zero-Setup Cloud IDE</li>
+          <li>✓ Evaluasi Proyek oleh Expert Reviewer (< 12 Jam)</li>
+          <li>✓ Sertifikat Kompetensi Digital Kriptografis</li>
+          <li>✓ Akses ke AI Socratic Tutor & Forum Tanya-Jawab</li>
+        </ul>
+      </div>
+
+      <div style="display: flex; gap: 12px;">
+        <button class="btn btn-primary" style="flex: 1;" onclick="enrollCourse()">Mulai Belajar Sekarang</button>
+        <button class="btn btn-secondary" onclick="closeModal('course-modal')">Tutup</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== TOAST NOTIFICATION CONTAINER ==================== -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- ==================== LOGIC JAVASCRIPT ==================== -->
+  <script src="app.js"></script>
+</body>
+</html>
