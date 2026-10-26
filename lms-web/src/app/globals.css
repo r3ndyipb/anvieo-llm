@@ -37,6 +37,8 @@
   --bx-border: rgba(10, 46, 82, 0.14);
   --bx-border-bright: rgba(10, 46, 82, 0.25);
   --bx-border-blue: rgba(201, 150, 46, 0.45);
+  --bx-grid: rgba(10, 46, 82, 0.14);
+  --bx-grid-bright: rgba(10, 46, 82, 0.25);
 
   --bx-ink: #152232;
   --bx-ink-bright: #0A2E52;
@@ -88,6 +90,8 @@
   --bx-border: rgba(10, 46, 82, 0.14);
   --bx-border-bright: rgba(10, 46, 82, 0.25);
   --bx-border-blue: rgba(201, 150, 46, 0.45);
+  --bx-grid: rgba(10, 46, 82, 0.14);
+  --bx-grid-bright: rgba(10, 46, 82, 0.25);
 
   --bx-ink: #152232;
   --bx-ink-bright: #0A2E52;
@@ -122,6 +126,8 @@
   --bx-border: rgba(255, 255, 255, 0.12);
   --bx-border-bright: rgba(255, 255, 255, 0.22);
   --bx-border-blue: rgba(201, 150, 46, 0.5);
+  --bx-grid: rgba(255, 255, 255, 0.12);
+  --bx-grid-bright: rgba(255, 255, 255, 0.22);
 
   --bx-ink: #EDEDEF;
   --bx-ink-bright: #FFFFFF;
@@ -7221,19 +7227,22 @@ button {
 .b-traj-step-value.before,
 .b-traj-step-title.before {
   color: var(--bx-text-meta);
-  text-decoration: line-through;
+  font-weight: 500;
+  text-decoration: none;
 }
 
 .b-traj-step-value.after,
 .b-traj-step-title.after {
   color: var(--bx-ink-bright);
+  font-weight: 700;
 }
 
 .b-traj-divider-arrow {
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 4px 0;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 6px 0;
   color: var(--bx-blue);
   font-family: var(--font-mono);
   font-size: 0.6875rem;
@@ -7241,7 +7250,7 @@ button {
 }
 
 .b-traj-arrow-icon {
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: 900;
   color: var(--gold);
 }
@@ -7268,14 +7277,20 @@ button {
   letter-spacing: 0.04em;
 }
 
+.b-alumni-quote,
 .b-alumni-quote-block {
-  font-size: 0.84375rem;
-  line-height: 1.65;
+  font-size: 0.875rem;
+  line-height: 1.7;
   color: var(--bx-prose-ink);
   font-style: italic;
   margin: 0;
-  padding-left: 12px;
+  padding: 14px 16px;
+  background: var(--bx-bg);
   border-left: 3px solid var(--gold);
+  border-radius: 0 var(--radius-xs) var(--radius-xs) 0;
+  border-top: 1px solid var(--bx-border);
+  border-right: 1px solid var(--bx-border);
+  border-bottom: 1px solid var(--bx-border);
 }
 
 .b-alumni-capstone-tag {

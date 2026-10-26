@@ -1833,7 +1833,7 @@ export default function LearningPathPage() {
         <>
           {/* Hero Section */}
           <section className="learning-path-hero blackbox-compute-band" style={{ position: "relative" }}>
-            <BlackboxRails position="bottom" />
+            <BlackboxRails position="both" />
             <div className="blackbox-frame">
               <div className="learning-path-hero__content">
                 <div className="lp-hero-badge-wrap">
@@ -2189,7 +2189,8 @@ export default function LearningPathPage() {
           VIEW B: KATALOG SEMUA KELAS & HARGA PER KURIKULUM KOTAK
           ==================================================================== */}
       {activeTrackId === "all-classes" && (
-        <section style={{ padding: "40px 0 80px", background: "var(--bx-bg)" }}>
+        <section style={{ padding: "40px 0 80px", background: "var(--bx-bg)", position: "relative" }}>
+          <BlackboxRails position="both" />
           <div className="blackbox-frame">
             {/* Header Strip */}
             <div className="blackbox-strip">

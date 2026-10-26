@@ -45,7 +45,7 @@ export default function CorporateTrainingPage() {
 
       {/* Hero Section */}
       <section className="corp-hero-section blackbox-compute-band" style={{ position: "relative" }}>
-        <BlackboxRails position="bottom" />
+        <BlackboxRails position="both" />
         <div className="blackbox-frame">
           <div className="corp-hero-content">
             <div className="corp-hero-badge">

@@ -35,7 +35,7 @@ export default function TermsOfUsePage() {
       <SiteHeader />
 
       {/* Breadcrumb Rails */}
-      <section style={{ borderBottom: "1px solid var(--bx-grid)", background: "var(--bx-surface)" }}>
+      <section style={{ borderBottom: "1px solid var(--bx-border)", background: "var(--bx-surface)", position: "relative" }}>
         <BlackboxRails position="top" />
         <div className="blackbox-frame" style={{ padding: "14px 24px" }}>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: "12px" }}>
@@ -57,7 +57,8 @@ export default function TermsOfUsePage() {
       </section>
 
       {/* Hero Header Strip */}
-      <section style={{ borderBottom: "1px solid var(--bx-grid)", background: "var(--bx-bg)", padding: "40px 0 32px" }}>
+      <section style={{ borderBottom: "1px solid var(--bx-border)", background: "var(--bx-bg)", padding: "40px 0 32px", position: "relative" }}>
+        <BlackboxRails position="bottom" />
         <div className="blackbox-frame" style={{ padding: "0 24px" }}>
           <div style={{ maxWidth: "860px" }}>
             <div style={{
@@ -133,7 +134,7 @@ export default function TermsOfUsePage() {
       </section>
 
       {/* Main Content with Table of Contents Layout */}
-      <main style={{ flex: 1, padding: "40px 0 64px" }}>
+      <main style={{ flex: 1, padding: "40px 0 64px", position: "relative" }}>
         <div className="blackbox-frame" style={{ padding: "0 24px" }}>
           <div style={{
             display: "grid",
@@ -507,6 +508,7 @@ export default function TermsOfUsePage() {
 
           </div>
         </div>
+        <BlackboxRails position="bottom" />
       </main>
 
       <SiteFooter />

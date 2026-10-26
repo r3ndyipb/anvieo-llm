@@ -345,7 +345,7 @@ export default function CaseStudyPage() {
             padding: "60px 0 50px",
             background: "var(--bx-bg)",
             position: "relative",
-            borderBottom: "1px solid var(--bx-grid)",
+            borderBottom: "1px solid var(--bx-border)",
           }}
         >
           <div className="blackbox-frame">
@@ -469,7 +469,7 @@ export default function CaseStudyPage() {
         </section>
 
         {/* SECTION 01: FILTER & PRODUCTION CASE STUDIES */}
-        <section id="cases-grid" style={{ padding: "60px 0 70px", background: "var(--bx-bg)" }}>
+        <section id="cases-grid" style={{ padding: "60px 0 70px", background: "var(--bx-bg)", position: "relative" }}>
           <div className="blackbox-frame">
             <div className="blackbox-section-strip">
               <span>01 // PRODUCTION ARCHITECTURE ARCHIVE</span>
@@ -737,7 +737,7 @@ export default function CaseStudyPage() {
         </section>
 
         {/* SECTION 02: 4-STAGE ENGINEERING METHODOLOGY */}
-        <section id="methodology" style={{ padding: "70px 0", background: "var(--bx-bg)" }}>
+        <section id="methodology" style={{ padding: "70px 0", background: "var(--bx-bg)", position: "relative" }}>
           <div className="blackbox-frame">
             <div className="blackbox-section-strip">
               <span>02 // ENGINEERING DISCIPLINE</span>
@@ -854,7 +854,7 @@ export default function CaseStudyPage() {
         </section>
 
         {/* SECTION 03: CLIENT TESTIMONIALS */}
-        <section style={{ padding: "60px 0 70px", background: "var(--bx-bg)" }}>
+        <section style={{ padding: "60px 0 70px", background: "var(--bx-bg)", position: "relative" }}>
           <div className="blackbox-frame">
             <div className="blackbox-section-strip">
               <span>03 // ENTERPRISE VERIFICATION</span>
@@ -929,7 +929,7 @@ export default function CaseStudyPage() {
         </section>
 
         {/* SECTION 04: ARCHITECTURE AUDIT & CONSULTATION REQUEST FORM */}
-        <section id="consultation-form" style={{ padding: "70px 0 80px", background: "var(--bx-bg)" }}>
+        <section id="consultation-form" style={{ padding: "70px 0 80px", background: "var(--bx-bg)", position: "relative" }}>
           <div className="blackbox-frame">
             <div className="blackbox-section-strip">
               <span>04 // ARCHITECTURE ADVISORY INQUIRY</span>

@@ -316,7 +316,8 @@ export default function BelajarDasarAiAcademyPage() {
         </section>
 
         {/* SECTION: FASILITAS BELAJAR */}
-        <section style={{ padding: "36px 0", background: "var(--bx-surface)", borderBottom: "1px solid var(--bx-grid)" }}>
+        <section style={{ padding: "36px 0", background: "var(--bx-surface)", borderBottom: "1px solid var(--bx-border)", position: "relative" }}>
+          <BlackboxRails position="bottom" />
           <div className="blackbox-frame">
             <div
               style={{
@@ -398,7 +399,7 @@ export default function BelajarDasarAiAcademyPage() {
         </nav>
 
         {/* SECTION: DESKRIPSI & TARGET SASARAN */}
-        <section id="course-description-section" style={{ padding: "50px 0", background: "var(--bx-bg)" }}>
+        <section id="course-description-section" style={{ padding: "50px 0", background: "var(--bx-bg)", position: "relative" }}>
           <div className="blackbox-frame">
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "36px" }}>
               {/* Left Column: Description */}
@@ -443,7 +444,8 @@ export default function BelajarDasarAiAcademyPage() {
         </section>
 
         {/* SECTION: POSISI PADA LEARNING PATH */}
-        <section id="learning-path-position" style={{ padding: "40px 0", background: "var(--bx-surface)", borderBottom: "1px solid var(--bx-grid)" }}>
+        <section id="learning-path-position" style={{ padding: "40px 0", background: "var(--bx-surface)", borderBottom: "1px solid var(--bx-border)", position: "relative" }}>
+          <BlackboxRails position="bottom" />
           <div className="blackbox-frame">
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "12px", marginBottom: "20px" }}>
               <div>
@@ -499,7 +501,7 @@ export default function BelajarDasarAiAcademyPage() {
         </section>
 
         {/* SECTION: SILABUS LENGKAP (ACCORDION PER KATEGORI STANDAR ANVIEO) */}
-        <section id="course-syllabus-section" style={{ padding: "60px 0 80px", background: "var(--bx-bg)" }}>
+        <section id="course-syllabus-section" style={{ padding: "60px 0 80px", background: "var(--bx-bg)", position: "relative" }}>
           <div className="blackbox-frame">
             <div className="blackbox-section-strip">
               <span>01 // COMPLETE COURSE SYLLABUS</span>
@@ -724,7 +726,7 @@ export default function BelajarDasarAiAcademyPage() {
         </section>
 
         {/* SECTION: TESTIMONI SISWA */}
-        <section id="student-reviews" style={{ padding: "60px 0", background: "var(--bx-bg)" }}>
+        <section id="student-reviews" style={{ padding: "60px 0", background: "var(--bx-bg)", position: "relative" }}>
           <div className="blackbox-frame">
             <div className="blackbox-section-strip">
               <span>02 // VERIFIED STUDENT REVIEWS</span>

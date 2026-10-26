@@ -97,7 +97,7 @@ export default function SingleCourseCheckoutPage() {
 
       <main className="blackbox-page" style={{ paddingTop: "60px", minHeight: "100vh" }}>
         {/* Breadcrumb Navigation Rail */}
-        <section style={{ borderBottom: "1px solid var(--bx-grid)", padding: "14px 0", background: "var(--bx-bg)" }}>
+        <section style={{ borderBottom: "1px solid var(--bx-border)", padding: "14px 0", background: "var(--bx-bg)", position: "relative" }}>
           <div className="blackbox-frame">
             <nav aria-label="Breadcrumb" style={{ display: "flex", alignItems: "center", gap: "8px", fontSize: "0.8125rem" }}>
               <Link href="/" style={{ color: "var(--bx-ink-faint)", textDecoration: "none" }}>
@@ -115,7 +115,7 @@ export default function SingleCourseCheckoutPage() {
         </section>
 
         {/* CHECKOUT CONTENT WRAPPER */}
-        <section style={{ padding: "40px 0 80px", background: "var(--bx-bg)" }}>
+        <section style={{ padding: "40px 0 80px", background: "var(--bx-bg)", position: "relative" }}>
           <div className="blackbox-frame">
             <div
               style={{
@@ -708,6 +708,7 @@ export default function SingleCourseCheckoutPage() {
               </div>
             </div>
           </div>
+          <BlackboxRails position="bottom" />
         </section>
 
         {/* PAYMENT CONFIRMATION MODAL */}

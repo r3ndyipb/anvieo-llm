@@ -211,7 +211,7 @@ export default function BootcampPage() {
 
       {/* Hero Section */}
       <section className="bootcamp-hero-sec blackbox-compute-band" style={{ position: "relative" }}>
-        <BlackboxRails position="bottom" />
+        <BlackboxRails position="both" />
         <div className="blackbox-frame">
           <div className="bootcamp-hero-content">
             <div className="bootcamp-hero-tag">
@@ -450,6 +450,7 @@ export default function BootcampPage() {
           <div className="bootcamp-alumni-grid">
             {BOOTCAMP_ALUMNI.map((alumni, idx) => (
               <div key={idx} className="b-alumni-card">
+                {/* Top Profile Header */}
                 <div className="b-alumni-top">
                   <div className="b-alumni-avatar-wrap">
                     <img
@@ -461,38 +462,52 @@ export default function BootcampPage() {
                     />
                   </div>
                   <div className="b-alumni-meta-top">
-                    <h4 className="b-alumni-name">{alumni.name}</h4>
+                    <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: "8px", flexWrap: "wrap" }}>
+                      <h4 className="b-alumni-name">{alumni.name}</h4>
+                      <span className="b-alumni-verified-tag">
+                        <FlatIcon type="check" size={11} color="#10B981" /> Verified Graduate
+                      </span>
+                    </div>
                     <div className="b-alumni-badges-row">
-                      <span className="b-alumni-badge">{alumni.badge}</span>
+                      <span className="b-alumni-batch-tag">{alumni.badge}</span>
+                      <span style={{ color: "var(--bx-text-meta)", opacity: 0.5 }}>•</span>
+                      <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.75rem", fontWeight: 700, color: "var(--gold)" }}>
+                        {alumni.company}
+                      </span>
                     </div>
                   </div>
                 </div>
 
+                {/* Career Trajectory Box (Un-squished & Clear) */}
                 <div className="b-alumni-trajectory-box">
-                  <div className="b-traj-step">
-                    <span className="b-traj-step-label">SEBELUM</span>
-                    <span className="b-traj-step-title before">{alumni.roleBefore}</span>
-                  </div>
-                  <div className="b-traj-divider-arrow">
-                    <span className="b-traj-arrow-icon">→</span>
-                    <span className="b-traj-salary-pill">Kenaikan {alumni.salaryMultiplier}</span>
-                  </div>
-                  <div className="b-traj-step">
-                    <span className="b-traj-step-label">SEKARANG</span>
-                    <span className="b-traj-step-title after">{alumni.roleAfter}</span>
+                  <div style={{ display: "grid", gridTemplateColumns: "1fr auto 1fr", alignItems: "center", gap: "10px" }}>
+                    <div className="b-traj-step">
+                      <span className="b-traj-step-label">SEBELUM BOOTCAMP</span>
+                      <span className="b-traj-step-title before">{alumni.roleBefore}</span>
+                    </div>
+
+                    <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "2px" }}>
+                      <span className="b-traj-arrow-icon">→</span>
+                      <span className="b-traj-salary-pill">+{alumni.salaryMultiplier}</span>
+                    </div>
+
+                    <div className="b-traj-step" style={{ textAlign: "right" }}>
+                      <span className="b-traj-step-label">SETELAH LULUS</span>
+                      <span className="b-traj-step-title after">{alumni.roleAfter}</span>
+                    </div>
                   </div>
                 </div>
 
-                <div className="b-alumni-meta-tags" style={{ display: "flex", gap: "8px", flexWrap: "wrap", margin: "4px 0 10px 0" }}>
-                  <span style={{ fontSize: "0.6875rem", fontFamily: "var(--font-mono)", padding: "2px 8px", background: "var(--bx-bg)", border: "1px solid var(--bx-border)", borderRadius: "var(--radius-xs)", color: "var(--gold)" }}>
-                    Perusahaan: {alumni.company}
-                  </span>
-                  <span style={{ fontSize: "0.6875rem", fontFamily: "var(--font-mono)", padding: "2px 8px", background: "var(--bx-bg)", border: "1px solid var(--bx-border)", borderRadius: "var(--radius-xs)", color: "var(--bx-ink-faint)" }}>
-                    Capstone: {alumni.capstone}
-                  </span>
+                {/* Capstone Project Tag */}
+                <div className="b-alumni-capstone-tag">
+                  <FlatIcon type="code" size={13} color="var(--gold)" />
+                  <span>Proyek Capstone: <strong style={{ color: "var(--bx-ink-bright)" }}>{alumni.capstone}</strong></span>
                 </div>
 
-                <p className="b-alumni-quote">{alumni.story}</p>
+                {/* Testimonial Quote */}
+                <blockquote className="b-alumni-quote">
+                  {alumni.story}
+                </blockquote>
               </div>
             ))}
           </div>

@@ -125,7 +125,7 @@ export default function TokenActivationPage() {
 
       {/* Main Activation Section */}
       <section className="token-main-section blackbox-compute-band" style={{ position: "relative" }}>
-        <BlackboxRails position="bottom" />
+        <BlackboxRails position="both" />
         <div className="blackbox-frame">
           <div className="blackbox-strip">
             <span className="blackbox-strip-label">01 // TOKEN &amp; VOUCHER REDEMPTION</span>

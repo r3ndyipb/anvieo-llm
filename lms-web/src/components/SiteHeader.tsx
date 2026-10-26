@@ -4,6 +4,7 @@ import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import FlatIcon from "@/components/FlatIcon";
+import BlackboxRails from "@/components/BlackboxRails";
 
 interface SiteHeaderProps {
   activeTabOverride?: string;
@@ -103,11 +104,8 @@ function SiteHeaderContent({ activeTabOverride }: SiteHeaderProps) {
 
   return (
     <>
-      <header className="blackbox-site-header" ref={navRef}>
-        {/* Top subtle border rail */}
-        <div className="blackbox-rails blackbox-rails-bottom" aria-hidden="true">
-          <div className="blackbox-rails-track"></div>
-        </div>
+      <header className="blackbox-site-header" ref={navRef} style={{ position: "relative" }}>
+        <BlackboxRails position="bottom" />
 
         <div className="blackbox-frame">
           <div className="header-row">

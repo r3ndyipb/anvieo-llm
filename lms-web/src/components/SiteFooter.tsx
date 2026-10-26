@@ -2,13 +2,12 @@
 
 import React from "react";
 import Link from "next/link";
+import BlackboxRails from "@/components/BlackboxRails";
 
 export default function SiteFooter() {
   return (
-    <footer className="blackbox-footer-wrap">
-      <div className="blackbox-rails blackbox-rails-top" aria-hidden="true">
-        <div className="blackbox-rails-track"></div>
-      </div>
+    <footer className="blackbox-footer-wrap" style={{ position: "relative" }}>
+      <BlackboxRails position="top" />
 
       <div className="blackbox-frame">
         <div className="footer-top-grid">

@@ -52,7 +52,7 @@ export default function LoginPage() {
       <SiteHeader />
 
       {/* Breadcrumb Rails */}
-      <section style={{ borderBottom: "1px solid var(--bx-grid)", background: "var(--bx-surface)" }}>
+      <section style={{ borderBottom: "1px solid var(--bx-border)", background: "var(--bx-surface)", position: "relative" }}>
         <BlackboxRails position="top" />
         <div className="blackbox-frame" style={{ padding: "14px 24px" }}>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: "12px" }}>
@@ -71,7 +71,7 @@ export default function LoginPage() {
       </section>
 
       {/* Main Content Split Area */}
-      <main style={{ flex: 1 }}>
+      <main style={{ flex: 1, position: "relative" }}>
         <div className="blackbox-frame">
           <div className="auth-split-grid">
             
@@ -691,6 +691,7 @@ export default function LoginPage() {
 
           </div>
         </div>
+        <BlackboxRails position="bottom" />
       </main>
 
       {/* Forgot Password Modal (Mockup) */}

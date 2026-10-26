@@ -197,7 +197,7 @@ export default function ImpactPage() {
 
       {/* Hero Section */}
       <section className="impact-hero-section blackbox-compute-band" style={{ position: "relative" }}>
-        <BlackboxRails position="bottom" />
+        <BlackboxRails position="both" />
         <div className="blackbox-frame">
           <div className="impact-hero-header">
             <div className="impact-eyebrow">

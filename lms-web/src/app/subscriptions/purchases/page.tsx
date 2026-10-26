@@ -191,7 +191,7 @@ export default function SubscriptionsPurchasesPage() {
 
       {/* Main Banner Header */}
       <section className="subs-hero-banner blackbox-compute-band" style={{ position: "relative" }}>
-        <BlackboxRails position="bottom" />
+        <BlackboxRails position="both" />
         <div className="blackbox-frame">
           <div className="subs-hero-badge">
             <span>PROGRAM INVESTASI BELAJAR RESMI</span>

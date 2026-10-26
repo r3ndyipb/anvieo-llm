@@ -7,7 +7,6 @@ import FlatIcon from "./FlatIcon";
 
 export default function LoginForm() {
   const router = useRouter();
-  const [role, setRole] = useState<"siswa" | "reviewer" | "instruktur">("siswa");
   const [email, setEmail] = useState("student@anvieo.edu");
   const [password, setPassword] = useState("anvieo2026!pass");
   const [showPassword, setShowPassword] = useState(false);
@@ -17,39 +16,18 @@ export default function LoginForm() {
   const [forgotEmail, setForgotEmail] = useState("");
   const [forgotSuccess, setForgotSuccess] = useState(false);
 
-  // Autofill helpers for rapid testing
-  const setDemoRole = (selectedRole: "siswa" | "reviewer" | "instruktur") => {
-    setRole(selectedRole);
-    if (selectedRole === "siswa") {
-      setEmail("student@anvieo.edu");
-      setPassword("siswa2026!secret");
-    } else if (selectedRole === "reviewer") {
-      setEmail("reviewer.expert@anvieo.edu");
-      setPassword("reviewer2026!pass");
-    } else {
-      setEmail("lead.instructor@anvieo.edu");
-      setPassword("instructor2026!pass");
-    }
-  };
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
 
     setTimeout(() => {
       if (typeof window !== "undefined") {
-        const displayName =
-          role === "siswa"
-            ? "Rian Sanjaya"
-            : role === "reviewer"
-            ? "Dr. Ir. Hendra Gunawan"
-            : "Prof. Sarah Agustina";
         localStorage.setItem(
           "portal_user",
           JSON.stringify({
-            name: displayName,
+            name: "Rian Sanjaya",
             email: email || "student@anvieo.edu",
-            role: role,
+            role: "siswa",
             enrolledTrack: "Fullstack Web & AI Architecture",
             streak: 7,
             xp: 2840,
@@ -59,7 +37,7 @@ export default function LoginForm() {
       }
       setIsLoading(false);
       router.push("/dashboard");
-    }, 600);
+    }, 500);
   };
 
   return (
@@ -75,68 +53,6 @@ export default function LoginForm() {
           </Link>
         </div>
 
-        {/* Role Selector Tabs */}
-        <div>
-          <div className="portal-role-tabs">
-            <button
-              type="button"
-              className={`portal-role-tab ${role === "siswa" ? "active" : ""}`}
-              onClick={() => setDemoRole("siswa")}
-            >
-              <FlatIcon type="user" size={13} />
-              <span>Siswa</span>
-            </button>
-            <button
-              type="button"
-              className={`portal-role-tab ${role === "reviewer" ? "active" : ""}`}
-              onClick={() => setDemoRole("reviewer")}
-            >
-              <FlatIcon type="terminal" size={13} />
-              <span>Reviewer</span>
-            </button>
-            <button
-              type="button"
-              className={`portal-role-tab ${role === "instruktur" ? "active" : ""}`}
-              onClick={() => setDemoRole("instruktur")}
-            >
-              <FlatIcon type="briefcase" size={13} />
-              <span>Instruktur</span>
-            </button>
-          </div>
-        </div>
-
-        {/* 1-Click Demo Fill Pill Bar */}
-        <div className="portal-demo-autofill">
-          <span style={{ color: "var(--gold)", fontWeight: 700, display: "inline-flex", alignItems: "center", gap: "3px" }}>
-            <FlatIcon type="sparkle" size={12} color="var(--gold)" />
-            Coba Demo:
-          </span>
-          <button
-            type="button"
-            className="portal-demo-pill"
-            onClick={() => setDemoRole("siswa")}
-            title="Isi akun demo siswa"
-          >
-            Siswa
-          </button>
-          <button
-            type="button"
-            className="portal-demo-pill"
-            onClick={() => setDemoRole("reviewer")}
-            title="Isi akun demo reviewer"
-          >
-            Reviewer
-          </button>
-          <button
-            type="button"
-            className="portal-demo-pill"
-            onClick={() => setDemoRole("instruktur")}
-            title="Isi akun demo instruktur"
-          >
-            Instruktur
-          </button>
-        </div>
-
         {/* Main Login Form */}
         <form onSubmit={handleSubmit} className="portal-form">
           {/* Email Field */}
@@ -146,7 +62,7 @@ export default function LoginForm() {
             </label>
             <div className="portal-input-wrap">
               <span className="portal-input-icon">
-                <FlatIcon type="email" size={14} />
+                <FlatIcon type="email" size={17} />
               </span>
               <input
                 type="email"
@@ -171,14 +87,14 @@ export default function LoginForm() {
                 type="button"
                 onClick={() => setShowForgotModal(true)}
                 className="portal-link-gold"
-                style={{ fontSize: "0.71875rem", background: "none", border: "none", cursor: "pointer", padding: 0 }}
+                style={{ background: "none", border: "none", cursor: "pointer", padding: 0 }}
               >
                 Lupa Sandi?
               </button>
             </label>
             <div className="portal-input-wrap">
               <span className="portal-input-icon">
-                <FlatIcon type="lock" size={14} />
+                <FlatIcon type="lock" size={17} />
               </span>
               <input
                 type={showPassword ? "text" : "password"}
@@ -199,7 +115,7 @@ export default function LoginForm() {
                   aria-label={showPassword ? "Sembunyikan kata sandi" : "Tampilkan kata sandi"}
                   title={showPassword ? "Sembunyikan" : "Tampilkan"}
                 >
-                  <FlatIcon type={showPassword ? "eye-off" : "eye"} size={14} />
+                  <FlatIcon type={showPassword ? "eye-off" : "eye"} size={17} />
                 </button>
               </span>
             </div>
@@ -215,7 +131,7 @@ export default function LoginForm() {
               />
               <span>Ingat saya di perangkat ini</span>
             </label>
-            <span style={{ fontSize: "0.6875rem", color: "var(--bx-muted-soft)" }}>
+            <span style={{ fontSize: "0.8125rem", color: "var(--bx-muted-soft)" }}>
               Sesi 30 Hari
             </span>
           </div>
@@ -228,13 +144,13 @@ export default function LoginForm() {
           >
             {isLoading ? (
               <>
-                <span style={{ display: "inline-block", width: "14px", height: "14px", border: "2px solid #0A2E52", borderTopColor: "transparent", borderRadius: "50%", animation: "spin 0.6s linear infinite" }} />
+                <span style={{ display: "inline-block", width: "16px", height: "16px", border: "2px solid #0A2E52", borderTopColor: "transparent", borderRadius: "50%", animation: "spin 0.6s linear infinite" }} />
                 <span>MEMVERIFIKASI...</span>
               </>
             ) : (
               <>
                 <span>MASUK KE PORTAL BELAJAR</span>
-                <FlatIcon type="arrow-right" size={14} color="#0A2E52" />
+                <FlatIcon type="arrow-right" size={16} color="#0A2E52" />
               </>
             )}
           </button>
@@ -255,7 +171,7 @@ export default function LoginForm() {
               handleSubmit({ preventDefault: () => {} } as React.FormEvent);
             }}
           >
-            <FlatIcon type="google" size={14} />
+            <FlatIcon type="google" size={17} />
             <span>Google</span>
           </button>
           <button
@@ -266,7 +182,7 @@ export default function LoginForm() {
               handleSubmit({ preventDefault: () => {} } as React.FormEvent);
             }}
           >
-            <FlatIcon type="github" size={14} />
+            <FlatIcon type="github" size={17} />
             <span>GitHub</span>
           </button>
         </div>
@@ -289,7 +205,7 @@ export default function LoginForm() {
             setForgotSuccess(false);
           }}
         >
-          <div className="blackbox-modal-card" onClick={(e) => e.stopPropagation()} style={{ maxWidth: "420px" }}>
+          <div className="blackbox-modal-card" onClick={(e) => e.stopPropagation()} style={{ maxWidth: "440px" }}>
             <button
               type="button"
               className="blackbox-modal-close"
@@ -302,27 +218,27 @@ export default function LoginForm() {
               ×
             </button>
 
-            <div style={{ textAlign: "center", marginBottom: "16px" }}>
-              <div style={{ width: "42px", height: "42px", margin: "0 auto 10px", background: "rgba(201,150,46,0.12)", border: "1px solid var(--gold)", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                <FlatIcon type="key" size={20} color="var(--gold)" />
+            <div style={{ textAlign: "center", marginBottom: "18px" }}>
+              <div style={{ width: "46px", height: "46px", margin: "0 auto 12px", background: "rgba(201,150,46,0.12)", border: "1px solid var(--gold)", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                <FlatIcon type="key" size={22} color="var(--gold)" />
               </div>
-              <h3 style={{ fontFamily: "var(--font-heading)", fontSize: "1.2rem", margin: "0 0 4px", color: "var(--bx-ink-bright)" }}>
+              <h3 style={{ fontFamily: "var(--font-heading)", fontSize: "1.25rem", margin: "0 0 6px", color: "var(--bx-ink-bright)" }}>
                 Pemulihan Kata Sandi
               </h3>
-              <p style={{ fontSize: "0.78125rem", color: "var(--bx-muted)", margin: 0 }}>
-                Masukkan email yang terdaftar untuk menerima tautan instruksi reset.
+              <p style={{ fontSize: "0.875rem", color: "var(--bx-muted)", margin: 0 }}>
+                Masukkan alamat email yang terdaftar untuk menerima tautan instruksi reset.
               </p>
             </div>
 
             {forgotSuccess ? (
-              <div style={{ textAlign: "center", padding: "12px 0" }}>
-                <div style={{ color: "#10B981", marginBottom: "6px", display: "flex", justifyContent: "center" }}>
-                  <FlatIcon type="check-circle" size={32} color="#10B981" />
+              <div style={{ textAlign: "center", padding: "14px 0" }}>
+                <div style={{ color: "#10B981", marginBottom: "8px", display: "flex", justifyContent: "center" }}>
+                  <FlatIcon type="check-circle" size={36} color="#10B981" />
                 </div>
-                <h4 style={{ fontSize: "0.9375rem", color: "var(--bx-ink-bright)", marginBottom: "4px" }}>
+                <h4 style={{ fontSize: "1rem", color: "var(--bx-ink-bright)", marginBottom: "6px" }}>
                   Tautan Reset Telah Terkirim!
                 </h4>
-                <p style={{ fontSize: "0.78125rem", color: "var(--bx-muted)", marginBottom: "14px" }}>
+                <p style={{ fontSize: "0.875rem", color: "var(--bx-muted)", marginBottom: "16px" }}>
                   Silakan periksa folder kotak masuk atau spam pada <strong>{forgotEmail || email}</strong>.
                 </p>
                 <button
@@ -342,10 +258,10 @@ export default function LoginForm() {
                   e.preventDefault();
                   setForgotSuccess(true);
                 }}
-                style={{ display: "flex", flexDirection: "column", gap: "12px" }}
+                style={{ display: "flex", flexDirection: "column", gap: "14px" }}
               >
                 <div>
-                  <label style={{ display: "block", fontSize: "0.75rem", fontWeight: 600, marginBottom: "4px", color: "var(--bx-ink)" }}>
+                  <label style={{ display: "block", fontSize: "0.875rem", fontWeight: 600, marginBottom: "6px", color: "var(--bx-ink)" }}>
                     Email Terdaftar
                   </label>
                   <input
@@ -356,12 +272,12 @@ export default function LoginForm() {
                     onChange={(e) => setForgotEmail(e.target.value)}
                     style={{
                       width: "100%",
-                      padding: "8px 12px",
+                      padding: "10px 14px",
                       background: "var(--bx-bg)",
                       border: "1px solid var(--bx-border)",
-                      borderRadius: "5px",
+                      borderRadius: "6px",
                       color: "var(--bx-ink-bright)",
-                      fontSize: "0.8125rem",
+                      fontSize: "0.9375rem",
                     }}
                   />
                 </div>

@@ -142,7 +142,7 @@ export default function CsrPage() {
 
       {/* Hero Section */}
       <section className="csr-hero-sec blackbox-compute-band" style={{ position: "relative" }}>
-        <BlackboxRails position="bottom" />
+        <BlackboxRails position="both" />
         <div className="blackbox-frame">
           <div className="bootcamp-hero-content">
             <div className="bootcamp-hero-tag">
