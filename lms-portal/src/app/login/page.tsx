@@ -3,7 +3,7 @@ import PortalHeader from "@/components/PortalHeader";
 import AuthShowcase from "@/components/AuthShowcase";
 import LoginForm from "@/components/LoginForm";
 import BlackboxRails from "@/components/BlackboxRails";
-import SiteFooter from "@/components/SiteFooter";
+import PortalBottomBar from "@/components/PortalBottomBar";
 
 export const metadata = {
   title: "Masuk ke Portal Belajar — ANVIEO Academy",
@@ -29,8 +29,8 @@ export default function LoginPage() {
         </div>
       </main>
 
-      {/* Official LMS Web Site Footer */}
-      <SiteFooter />
+      {/* Clean Bottom Bar (Copyright left, Terms/Privacy/Help right) */}
+      <PortalBottomBar />
     </div>
   );
 }

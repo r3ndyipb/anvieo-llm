@@ -863,6 +863,39 @@ button {
   font-weight: 700;
 }
 
+/* ==================== HERO TYPEWRITER EFFECT ==================== */
+.hero-typewriter-wrapper {
+  display: inline-block;
+  position: relative;
+  min-height: 1.15em;
+  vertical-align: bottom;
+}
+
+.hero-typewriter-text {
+  display: inline;
+}
+
+.hero-typewriter-cursor {
+  display: inline-block;
+  margin-left: 3px;
+  font-style: normal;
+  font-weight: 300;
+  color: var(--gold);
+  line-height: 0.9;
+  animation: typewriterBlink 0.9s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+@keyframes typewriterBlink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
 .blackbox-hero-desc {
   font-family: var(--font-reading);
   font-size: 1.0625rem;

@@ -9350,6 +9350,7 @@ button {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   background-color: var(--bx-bg);
   position: relative;
 }
@@ -9471,7 +9472,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: clamp(36px, 5vw, 68px) 0;
+  padding: clamp(16px, 3vh, 40px) 0;
   position: relative;
   z-index: 1;
 }
@@ -10041,6 +10042,79 @@ button {
   border-color: var(--gold);
   color: var(--gold);
   transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   PORTAL BOTTOM BAR (MINIMAL FOOTER BAR: COPYRIGHT & LEGAL LINKS)
+   ========================================================================== */
+.portal-bottom-bar {
+  width: 100%;
+  border-top: 1px solid var(--bx-border);
+  background: var(--bx-surface);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  position: relative;
+  z-index: 20;
+}
+
+[data-theme="dark"] .portal-bottom-bar {
+  background: rgba(14, 14, 18, 0.85);
+}
+
+.portal-bottom-bar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 48px;
+  padding: 8px 0;
+}
+
+.portal-bottom-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--bx-muted);
+  font-size: 0.78125rem;
+  letter-spacing: 0.01em;
+}
+
+.portal-bottom-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.portal-bottom-link {
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: inherit;
+  font-size: 0.78125rem;
+  font-weight: 500;
+  color: var(--bx-muted);
+  cursor: pointer;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.portal-bottom-link:hover {
+  color: var(--gold);
+  text-decoration: underline;
+}
+
+.portal-bottom-dot {
+  color: var(--bx-border-bright, rgba(255, 255, 255, 0.2));
+  font-size: 0.625rem;
+  user-select: none;
+}
+
+@media (max-width: 640px) {
+  .portal-bottom-bar-inner {
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px 0;
+    text-align: center;
+  }
 }
 
 /* ==========================================================================
