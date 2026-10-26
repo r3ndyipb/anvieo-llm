@@ -2596,10 +2596,8 @@ button {
     grid-template-columns: repeat(2, 1fr);
   }
   .alumni-card-tall {
-    grid-row: span 1;
-  }
-  .alumni-card-wide {
     grid-column: span 2;
+    grid-row: span 1;
   }
 }
 

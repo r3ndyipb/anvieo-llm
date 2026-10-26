@@ -835,7 +835,7 @@ export const VERIFIED_ALUMNI_IMPACT: VerifiedImpactItem[] = [
     timeToHired: "40 Hari Pasca Lulus",
     graduationYear: "Alumni 2024",
     credentialId: "ANV-CERT-2026-GM771",
-    gridSpan: "wide",
+    gridSpan: "compact",
     keySkills: ["Dynamic 3-Statement Modeling", "LBO Deal Structuring", "Monte Carlo Simulation", "DCF Multi-Stage", "Debt Covenants"],
     quote: "Kurikulum valuasi DCF dan LBO di Anvieo diajarkan langsung dari standar dealmaking global Wall Street. Ini memberikan keunggulan kompetitif mutlak saat presentasi ke komite investasi.",
     capstoneProject: {
@@ -868,7 +868,7 @@ export const VERIFIED_ALUMNI_IMPACT: VerifiedImpactItem[] = [
     timeToHired: "50 Hari Pasca Lulus",
     graduationYear: "Alumni 2025",
     credentialId: "ANV-CERT-2026-RA912",
-    gridSpan: "wide",
+    gridSpan: "compact",
     keySkills: ["Enterprise RAG Pipelines", "vLLM / Ollama Cluster", "pgvector HNSW Optimization", "LangChain Multi-Agent", "GPU Sizing"],
     quote: "Praktek langsung implementasi RAG, multi-agent orchestrator, dan optimasi GPU inference di Anvieo membawa terobosan automasi operasional di institusi kami.",
     capstoneProject: {
@@ -883,39 +883,6 @@ export const VERIFIED_ALUMNI_IMPACT: VerifiedImpactItem[] = [
       reviewerSLAExperience: "Tugas capstone saya diuji dengan beban konkurensi 100 request/detik untuk memastikan memory footprint GPU tidak mengalami out-of-memory (OOM). Reviewer memberi wawasan optimasi kuantisasi model yang sangat bernilai.",
       careerBreakthrough: "Board of Directors konglomerasi multifinance langsung menunjuk saya sebagai Principal AI & Cloud Architect untuk mengepalai unit inovasi AI lintas 8 anak perusahaan.",
       quoteBanner: "AI bukan sekadar prompt engineering. Memahami infrastruktur komputasi GPU, vector search, dan data security adalah keahlian bernilai tinggi yang sesungguhnya."
-    }
-  },
-  {
-    id: "impact-6",
-    initials: "AK",
-    name: "Amanda Kusuma, S.H., LL.M.",
-    role: "Head of Corporate Legal & M&A",
-    company: "Venture Capital",
-    course: "CORPORATE LEGAL & IP",
-    accentColor: "#EC4899",
-    accentBg: "rgba(236, 72, 153, 0.15)",
-    image: "/alumni/alumni_6.jpg",
-    headline: "Mengawal Hak Cipta Kode Software & Novasi Kontrak Ekosistem Venture Capital Regional",
-    previousRole: "In-House Legal Staff",
-    salaryJump: "+135% Kenaikan Gaji",
-    timeToHired: "35 Hari Pasca Lulus",
-    graduationYear: "Alumni 2024",
-    credentialId: "ANV-CERT-2026-AK628",
-    gridSpan: "compact",
-    keySkills: ["Novasi Kontrak KUHPerdata", "Source Code Escrow", "IP Due Diligence", "SaaS MSA & SLA", "Venture Term Sheets"],
-    quote: "Bedah kasus novasi kontrak Pasal 1413 KUHPerdata dan audit due diligence IP software adalah materi paling praktis dan tajam yang pernah saya ikuti.",
-    capstoneProject: {
-      title: "Paket Novasi Kontrak & Audit Escrow Source Code Multi-Tenant Enterprise",
-      desc: "Rancangan instrumen hukum pengambilalihan hak cipta software (Pasal 1413 KUHPerdata), perjanjian penitipan kode sumber escrow pihak ketiga, dan klausul audit forensik repositori Git.",
-      techStack: ["UU Hak Cipta 28/2014", "KUHPerdata", "Escrow Agreement", "Git Commit Forensics"]
-    },
-    inspirationalStory: {
-      lead: "Banyak sengketa startup terjadi karena kepemilikan source code yang kabur dengan vendor pengembang. Amanda menguasai seni audit kepemilikan kode dan restrukturisasi kontrak legal teknologi.",
-      background: "Dalam praktik bisnis ventura, saya sering menemukan portofolio startup yang tersandung sengketa lisensi software saat audit due diligence Seri B. Dokumen SPK konvensional seringkali gagal melindungi aset kekayaan intelektual (IP) kode yang telah dibayar ratusan juta rupiah.",
-      turningPoint: "Di Anvieo Academy, saya membedah konstruksi hukum novasi kontrak (Pasal 1413 KUHPerdata) dan mekanisme penahanan source code escrow yang memadukan hukum perdata dengan alur version control Git.",
-      reviewerSLAExperience: "Reviewer dari firma hukum M&A terkemuka menguji setiap klausul force majeure, batasan liabilitas wanprestasi, dan klausul audit forensik repositori dengan standar negosiasi internasional.",
-      careerBreakthrough: "Keahlian langka ini membuat saya dipercaya memimpin unit Corporate Legal & Venture M&A di firma modal ventura regional, mengawal lebih dari 15 transaksi pendanaan Seri A dan B.",
-      quoteBanner: "Di era ekonomi digital, kode software adalah aset paling berharga sebuah perusahaan. Mengunci kepemilikan IP dengan kontrak yang kedap hukum adalah benteng pertahanan terbaik korporasi."
     }
   }
 ];
